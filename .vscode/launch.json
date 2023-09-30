@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Debug ANTLR4 grammar",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "example.txt",
+            "grammar": "grammar/KokanuParser.g4",
+            // "actionFile": "grammars/exampleActions.js",
+            "startRule": "sentence",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}

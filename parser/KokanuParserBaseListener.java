@@ -1,4 +1,4 @@
-// Generated from /home/jake/Code/antlr-kokanu/grammar/KokanuParser.g4 by ANTLR 4.10.1
+// Generated from /home/jake/Code/antlr-kokanu/grammar/KokanuParser.g4 by ANTLR 4.9.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -27,73 +27,145 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLeadingSubject(KokanuParser.LeadingSubjectContext ctx) { }
+	@Override public void enterNounPhrase(KokanuParser.NounPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLeadingSubject(KokanuParser.LeadingSubjectContext ctx) { }
+	@Override public void exitNounPhrase(KokanuParser.NounPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModifiers(KokanuParser.ModifiersContext ctx) { }
+	@Override public void enterModifierPhrase(KokanuParser.ModifierPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModifiers(KokanuParser.ModifiersContext ctx) { }
+	@Override public void exitModifierPhrase(KokanuParser.ModifierPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdjectiveClause(KokanuParser.AdjectiveClauseContext ctx) { }
+	@Override public void enterRelativeClause(KokanuParser.RelativeClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdjectiveClause(KokanuParser.AdjectiveClauseContext ctx) { }
+	@Override public void exitRelativeClause(KokanuParser.RelativeClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVerb(KokanuParser.VerbContext ctx) { }
+	@Override public void enterVerbPhrase(KokanuParser.VerbPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVerb(KokanuParser.VerbContext ctx) { }
+	@Override public void exitVerbPhrase(KokanuParser.VerbPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrepositions(KokanuParser.PrepositionsContext ctx) { }
+	@Override public void enterPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrepositions(KokanuParser.PrepositionsContext ctx) { }
+	@Override public void exitPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNoun(KokanuParser.NounContext ctx) { }
+	@Override public void enterContentWord(KokanuParser.ContentWordContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNoun(KokanuParser.NounContext ctx) { }
+	@Override public void exitContentWord(KokanuParser.ContentWordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBaseVerb(KokanuParser.BaseVerbContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBaseVerb(KokanuParser.BaseVerbContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPronoun(KokanuParser.PronounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPronoun(KokanuParser.PronounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBaseNoun(KokanuParser.BaseNounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBaseNoun(KokanuParser.BaseNounContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBaseModifier(KokanuParser.BaseModifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBaseModifier(KokanuParser.BaseModifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConnector(KokanuParser.ConnectorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConnector(KokanuParser.ConnectorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterQuantity(KokanuParser.QuantityContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitQuantity(KokanuParser.QuantityContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
