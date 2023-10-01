@@ -4,58 +4,93 @@ options {
     tokenVocab=KokanuLexer;
 }
 
+sentences
+    : sentence (Period sentence)* Period? EOF
+    ;
+
+
 sentence
-    : nounPhrase? verbPhrase prepositionalClause*
+    : sentenceClause
+      ( connector
+        sentenceClause
+      )*
+    ;
+
+sentenceClause
+    : nounPhrase?
+      verbPhrase
+      prepClause*
     ;
 
 nounPhrase
-    : contentWord (relativeClause | modifierPhrase)*
-    | Te contentWord modifierPhrase* prepositionalClause*
+    : quantityPhrase?
+      ( relativeVerbClause Comma? 
+      | expandedWord )
+      ( relativeClause Comma?
+      | modPhrase+)*
+
     ;
 
-modifierPhrase
-    : (Je | Wo)? contentWord+
-    | relativeClause
+modPhrase
+    :  (Je | Wo)? ( expandedWord
+                  | relativeClause )
     ;
 
+relativeVerbClause
+    : Te expandedWord
+      ( relativeClause Comma?
+      | (prepClause | modPhrase+)+ )*
+    ;
+
+terminator
+    : Comma
+    | Period
+    | EOF
+    ;
 
 relativeClause
-    : Ta (contentWord modifierPhrase*)? verbPhrase prepositionalClause*
-    | Te contentWord modifierPhrase* prepositionalClause*
+    : ( Ta sentenceClause 
+      | relativeVerbClause )
+      terminator 
     ;
+
 
 verbPhrase
-    : Le contentWord
-    (   (Je | Wo)? contentWord+
-    |   relativeClause
-    )*
-    | O contentWord
-    (   (Je | Wo)? contentWord+
-    |   relativeClause
-    )*
+    : Le contentWord modPhrase?
+    | O contentWord modPhrase?
     ;
 
 
-prepositionalClause
-    : In ( contentWord modifierPhrase*
-         | relativeClause )
-    | Men contentWord modifierPhrase*
-    | Win contentWord modifierPhrase*
-    | Po contentWord modifierPhrase*
-    | An contentWord modifierPhrase*
-    | Wija contentWord modifierPhrase*
-    | Ke contentWord modifierPhrase*
-    | Kan contentWord modifierPhrase*
-    | So contentWord modifierPhrase*
-    | Sun contentWord modifierPhrase*
-    | Nenka contentWord modifierPhrase*
+quantityPhrase
+    : relativeQuantity? nominalQuantity+ 
+    ;
+
+prepClause
+    : In expandedWord modPhrase*
+    | In? relativeClause
+    | Men expandedWord modPhrase*
+    | Win expandedWord modPhrase*
+    | Po expandedWord modPhrase*
+    | An expandedWord modPhrase*
+    | Wija expandedWord modPhrase*
+    | Ke expandedWord modPhrase*
+    | Kan expandedWord modPhrase*
+    | So expandedWord modPhrase*
+    | Sun expandedWord modPhrase*
+    | Nenka expandedWord modPhrase*
     ;
 
 contentWord
-    : pronoun
-    | baseNoun
+    : baseNoun
     | baseVerb 
     | baseModifier
+    ;
+
+expandedWord
+    : pronoun
+    | relativeQuantity
+    | nominalQuantity
+    | contentWord
     ;
 
 baseVerb
@@ -386,23 +421,25 @@ connector
     | Ili
     ;
 
-quantity
+relativeQuantity
     : Jati
     | Mese
-    | Nula
+    | Menu
+    | Niju
+    | Ani
+    ;
+
+nominalQuantity
+    : Nula
     | Wan
+    | Toso
+    | San
     | Lijo
     | Lima
-    | San
-    | Menu
-    | Setan
     | Saka
-    | Sijen
-    | Toso
-    | Tiju
+    | Setan
     | Etu
     | Nanku
-    | Ani
-    | Pan
-    | Niju
+    | Sijen
+    | Tiju
     ;

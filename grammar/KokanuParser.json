@@ -1,0 +1,12 @@
+{
+    "count": 3,
+    "clear": true,
+    "convergenceFactor": 0.1,
+    "minParserIterations": 0,
+    "maxParserIterations": 1,
+    "minLexerIterations": 0,
+    "maxLexerIterations": 10,
+    "maxRecursions": 1,
+    "ruleMappings": {},
+    "actionFile": ""
+}

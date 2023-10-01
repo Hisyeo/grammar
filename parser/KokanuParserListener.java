@@ -7,6 +7,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface KokanuParserListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link KokanuParser#sentences}.
+	 * @param ctx the parse tree
+	 */
+	void enterSentences(KokanuParser.SentencesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#sentences}.
+	 * @param ctx the parse tree
+	 */
+	void exitSentences(KokanuParser.SentencesContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link KokanuParser#sentence}.
 	 * @param ctx the parse tree
 	 */
@@ -16,6 +26,16 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSentence(KokanuParser.SentenceContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#sentenceClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterSentenceClause(KokanuParser.SentenceClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#sentenceClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitSentenceClause(KokanuParser.SentenceClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#nounPhrase}.
 	 * @param ctx the parse tree
@@ -27,15 +47,35 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 */
 	void exitNounPhrase(KokanuParser.NounPhraseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#modifierPhrase}.
+	 * Enter a parse tree produced by {@link KokanuParser#modPhrase}.
 	 * @param ctx the parse tree
 	 */
-	void enterModifierPhrase(KokanuParser.ModifierPhraseContext ctx);
+	void enterModPhrase(KokanuParser.ModPhraseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#modifierPhrase}.
+	 * Exit a parse tree produced by {@link KokanuParser#modPhrase}.
 	 * @param ctx the parse tree
 	 */
-	void exitModifierPhrase(KokanuParser.ModifierPhraseContext ctx);
+	void exitModPhrase(KokanuParser.ModPhraseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#relativeVerbClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#relativeVerbClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#terminator}.
+	 * @param ctx the parse tree
+	 */
+	void enterTerminator(KokanuParser.TerminatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#terminator}.
+	 * @param ctx the parse tree
+	 */
+	void exitTerminator(KokanuParser.TerminatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#relativeClause}.
 	 * @param ctx the parse tree
@@ -57,15 +97,25 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 */
 	void exitVerbPhrase(KokanuParser.VerbPhraseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#prepositionalClause}.
+	 * Enter a parse tree produced by {@link KokanuParser#quantityPhrase}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx);
+	void enterQuantityPhrase(KokanuParser.QuantityPhraseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#prepositionalClause}.
+	 * Exit a parse tree produced by {@link KokanuParser#quantityPhrase}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx);
+	void exitQuantityPhrase(KokanuParser.QuantityPhraseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#prepClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrepClause(KokanuParser.PrepClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#prepClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrepClause(KokanuParser.PrepClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#contentWord}.
 	 * @param ctx the parse tree
@@ -76,6 +126,16 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitContentWord(KokanuParser.ContentWordContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#expandedWord}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpandedWord(KokanuParser.ExpandedWordContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#expandedWord}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpandedWord(KokanuParser.ExpandedWordContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#baseVerb}.
 	 * @param ctx the parse tree
@@ -127,13 +187,23 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 */
 	void exitConnector(KokanuParser.ConnectorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#quantity}.
+	 * Enter a parse tree produced by {@link KokanuParser#relativeQuantity}.
 	 * @param ctx the parse tree
 	 */
-	void enterQuantity(KokanuParser.QuantityContext ctx);
+	void enterRelativeQuantity(KokanuParser.RelativeQuantityContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#quantity}.
+	 * Exit a parse tree produced by {@link KokanuParser#relativeQuantity}.
 	 * @param ctx the parse tree
 	 */
-	void exitQuantity(KokanuParser.QuantityContext ctx);
+	void exitRelativeQuantity(KokanuParser.RelativeQuantityContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#nominalQuantity}.
+	 * @param ctx the parse tree
+	 */
+	void enterNominalQuantity(KokanuParser.NominalQuantityContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#nominalQuantity}.
+	 * @param ctx the parse tree
+	 */
+	void exitNominalQuantity(KokanuParser.NominalQuantityContext ctx);
 }

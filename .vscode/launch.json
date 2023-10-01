@@ -8,7 +8,7 @@
             "input": "example.txt",
             "grammar": "grammar/KokanuParser.g4",
             // "actionFile": "grammars/exampleActions.js",
-            "startRule": "sentence",
+            "startRule": "sentences",
             "printParseTree": true,
             "visualParseTree": true
         }

@@ -2,11 +2,17 @@ lexer grammar KokanuLexer;
 
 WS: [ \n\t\r]+ -> skip;
 
-Terminator
-    : '.'
-    | ','
+Comma
+    : ','
+    ;
+
+Colon
+    : ':'
     | '-'
-    | EOF
+    ;
+
+Period
+    : '.'
     ;
 
 A : 'a';

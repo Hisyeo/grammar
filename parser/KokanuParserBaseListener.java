@@ -15,6 +15,18 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSentences(KokanuParser.SentencesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSentences(KokanuParser.SentencesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterSentence(KokanuParser.SentenceContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -22,6 +34,18 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSentence(KokanuParser.SentenceContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSentenceClause(KokanuParser.SentenceClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSentenceClause(KokanuParser.SentenceClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -39,13 +63,37 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModifierPhrase(KokanuParser.ModifierPhraseContext ctx) { }
+	@Override public void enterModPhrase(KokanuParser.ModPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModifierPhrase(KokanuParser.ModifierPhraseContext ctx) { }
+	@Override public void exitModPhrase(KokanuParser.ModPhraseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTerminator(KokanuParser.TerminatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTerminator(KokanuParser.TerminatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -75,13 +123,25 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx) { }
+	@Override public void enterQuantityPhrase(KokanuParser.QuantityPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrepositionalClause(KokanuParser.PrepositionalClauseContext ctx) { }
+	@Override public void exitQuantityPhrase(KokanuParser.QuantityPhraseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPrepClause(KokanuParser.PrepClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrepClause(KokanuParser.PrepClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -94,6 +154,18 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitContentWord(KokanuParser.ContentWordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpandedWord(KokanuParser.ExpandedWordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpandedWord(KokanuParser.ExpandedWordContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -159,13 +231,25 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterQuantity(KokanuParser.QuantityContext ctx) { }
+	@Override public void enterRelativeQuantity(KokanuParser.RelativeQuantityContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitQuantity(KokanuParser.QuantityContext ctx) { }
+	@Override public void exitRelativeQuantity(KokanuParser.RelativeQuantityContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNominalQuantity(KokanuParser.NominalQuantityContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNominalQuantity(KokanuParser.NominalQuantityContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
