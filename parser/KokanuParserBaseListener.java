@@ -63,25 +63,49 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModPhrase(KokanuParser.ModPhraseContext ctx) { }
+	@Override public void enterNounClause(KokanuParser.NounClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModPhrase(KokanuParser.ModPhraseContext ctx) { }
+	@Override public void exitNounClause(KokanuParser.NounClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx) { }
+	@Override public void enterModifierClause(KokanuParser.ModifierClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx) { }
+	@Override public void exitModifierClause(KokanuParser.ModifierClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -94,18 +118,6 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTerminator(KokanuParser.TerminatorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterRelativeClause(KokanuParser.RelativeClauseContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitRelativeClause(KokanuParser.RelativeClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

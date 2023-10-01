@@ -47,25 +47,45 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 */
 	void exitNounPhrase(KokanuParser.NounPhraseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#modPhrase}.
+	 * Enter a parse tree produced by {@link KokanuParser#nounClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterModPhrase(KokanuParser.ModPhraseContext ctx);
+	void enterNounClause(KokanuParser.NounClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#modPhrase}.
+	 * Exit a parse tree produced by {@link KokanuParser#nounClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitModPhrase(KokanuParser.ModPhraseContext ctx);
+	void exitNounClause(KokanuParser.NounClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#relativeVerbClause}.
+	 * Enter a parse tree produced by {@link KokanuParser#modifierClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx);
+	void enterModifierClause(KokanuParser.ModifierClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#relativeVerbClause}.
+	 * Exit a parse tree produced by {@link KokanuParser#modifierClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitRelativeVerbClause(KokanuParser.RelativeVerbClauseContext ctx);
+	void exitModifierClause(KokanuParser.ModifierClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#newAgentAdjectiveClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#newAgentAdjectiveClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#sameAgentAdjectiveClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#sameAgentAdjectiveClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#terminator}.
 	 * @param ctx the parse tree
@@ -76,16 +96,6 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTerminator(KokanuParser.TerminatorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link KokanuParser#relativeClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterRelativeClause(KokanuParser.RelativeClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link KokanuParser#relativeClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitRelativeClause(KokanuParser.RelativeClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#verbPhrase}.
 	 * @param ctx the parse tree

@@ -12,34 +12,44 @@ sentences
 sentence
     : sentenceClause
       ( connector
-        sentenceClause
-      )*
+        sentenceClause )*
+    | O contentWord
+      ( prepClause
+      | modifierClause+ )*
     ;
 
 sentenceClause
-    : nounPhrase?
+    : prepClause*
+      nounPhrase?
+      prepClause*
       verbPhrase
       prepClause*
     ;
 
 nounPhrase
     : quantityPhrase?
-      ( relativeVerbClause Comma? 
+      ( nounClause terminator
       | expandedWord )
-      ( relativeClause Comma?
-      | modPhrase+)*
-
+      modifierClause*
     ;
 
-modPhrase
-    :  (Je | Wo)? ( expandedWord
-                  | relativeClause )
+nounClause
+    : Te contentWord modifierClause* prepClause*
     ;
 
-relativeVerbClause
-    : Te expandedWord
-      ( relativeClause Comma?
-      | (prepClause | modPhrase+)+ )*
+modifierClause
+    : (Je | Wo)?
+      ( sameAgentAdjectiveClause terminator
+      | newAgentAdjectiveClause terminator
+      | expandedWord modifierClause*? )
+    ;
+
+newAgentAdjectiveClause
+    : Ta sentenceClause
+    ;
+
+sameAgentAdjectiveClause
+    : Te contentWord modifierClause* prepClause*
     ;
 
 terminator
@@ -48,16 +58,9 @@ terminator
     | EOF
     ;
 
-relativeClause
-    : ( Ta sentenceClause 
-      | relativeVerbClause )
-      terminator 
-    ;
-
 
 verbPhrase
-    : Le contentWord modPhrase?
-    | O contentWord modPhrase?
+    : Le contentWord modifierClause*
     ;
 
 
@@ -66,18 +69,18 @@ quantityPhrase
     ;
 
 prepClause
-    : In expandedWord modPhrase*
-    | In? relativeClause
-    | Men expandedWord modPhrase*
-    | Win expandedWord modPhrase*
-    | Po expandedWord modPhrase*
-    | An expandedWord modPhrase*
-    | Wija expandedWord modPhrase*
-    | Ke expandedWord modPhrase*
-    | Kan expandedWord modPhrase*
-    | So expandedWord modPhrase*
-    | Sun expandedWord modPhrase*
-    | Nenka expandedWord modPhrase*
+    : In ( expandedWord modifierClause*
+         | sameAgentAdjectiveClause )
+    | Men expandedWord modifierClause*
+    | Win expandedWord modifierClause*
+    | Po expandedWord modifierClause*
+    | An expandedWord modifierClause*
+    | Wija expandedWord modifierClause*
+    | Ke expandedWord modifierClause*
+    | Kan expandedWord modifierClause*
+    | So expandedWord modifierClause*
+    | Sun expandedWord modifierClause*
+    | Nenka expandedWord modifierClause*
     ;
 
 contentWord
