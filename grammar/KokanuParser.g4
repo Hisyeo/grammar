@@ -5,51 +5,54 @@ options {
 }
 
 sentences
-    : sentence (Period sentence)* Period? EOF
+    : sentence (Period sentence)* Period
     ;
 
 
 sentence
     : sentenceClause
-      ( connector
-        sentenceClause )*
     | O contentWord
-      ( prepClause
+      ( prepPhrase
       | modifierClause+ )*
     ;
 
 sentenceClause
-    : prepClause*
-      nounPhrase?
-      prepClause*
-      verbPhrase
-      prepClause*
+    : prepPhrase?
+      ( nounPhrase ( connector nounPhrase )* )*
+      prepPhrase?
+      (Le verbPhrase)+
+      prepPhrase?
     ;
 
 nounPhrase
-    : quantityPhrase?
-      ( nounClause terminator
-      | expandedWord )
-      modifierClause*
+    : ( quantityPhrase? nounClause terminator modifierClause*
+      | quantityPhrase? expandedWord modifierClause* )
     ;
 
 nounClause
-    : Te contentWord modifierClause* prepClause*
+    : Te contentWord modifierClause* prepPhrase*
     ;
 
 modifierClause
-    : (Je | Wo)?
-      ( sameAgentAdjectiveClause terminator
-      | newAgentAdjectiveClause terminator
-      | expandedWord modifierClause*? )
+    : <assoc=right> Je
+      ( expandedWord modifierClause*
+      | sameAgentAdjClause
+      | newAgentAdjClause )
+    | Wo
+      ( expandedWord modifierClause*
+      | sameAgentAdjClause
+      | newAgentAdjClause )
+    | ( expandedWord
+      | sameAgentAdjClause
+      | newAgentAdjClause )
     ;
 
-newAgentAdjectiveClause
-    : Ta sentenceClause
+newAgentAdjClause
+    : Ta sentenceClause 
     ;
 
-sameAgentAdjectiveClause
-    : Te contentWord modifierClause* prepClause*
+sameAgentAdjClause
+    : Te verbPhrase prepPhrase*
     ;
 
 terminator
@@ -60,7 +63,7 @@ terminator
 
 
 verbPhrase
-    : Le contentWord modifierClause*
+    : contentWord modifierClause*
     ;
 
 
@@ -68,19 +71,15 @@ quantityPhrase
     : relativeQuantity? nominalQuantity+ 
     ;
 
+
+prepPhrase
+    : prepClause (Comma? prepClause)*
+    ;
+
 prepClause
-    : In ( expandedWord modifierClause*
-         | sameAgentAdjectiveClause )
-    | Men expandedWord modifierClause*
-    | Win expandedWord modifierClause*
-    | Po expandedWord modifierClause*
-    | An expandedWord modifierClause*
-    | Wija expandedWord modifierClause*
-    | Ke expandedWord modifierClause*
-    | Kan expandedWord modifierClause*
-    | So expandedWord modifierClause*
-    | Sun expandedWord modifierClause*
-    | Nenka expandedWord modifierClause*
+    : ( In|Men|Win|Po|An|Wija|Ke|Kan|So|Sun|Nenka )
+      nounPhrase
+      (connector nounPhrase)*
     ;
 
 contentWord

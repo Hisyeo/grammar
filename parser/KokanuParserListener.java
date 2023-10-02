@@ -67,25 +67,25 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 */
 	void exitModifierClause(KokanuParser.ModifierClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#newAgentAdjectiveClause}.
+	 * Enter a parse tree produced by {@link KokanuParser#newAgentAdjClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx);
+	void enterNewAgentAdjClause(KokanuParser.NewAgentAdjClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#newAgentAdjectiveClause}.
+	 * Exit a parse tree produced by {@link KokanuParser#newAgentAdjClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx);
+	void exitNewAgentAdjClause(KokanuParser.NewAgentAdjClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KokanuParser#sameAgentAdjectiveClause}.
+	 * Enter a parse tree produced by {@link KokanuParser#sameAgentAdjClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx);
+	void enterSameAgentAdjClause(KokanuParser.SameAgentAdjClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KokanuParser#sameAgentAdjectiveClause}.
+	 * Exit a parse tree produced by {@link KokanuParser#sameAgentAdjClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx);
+	void exitSameAgentAdjClause(KokanuParser.SameAgentAdjClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#terminator}.
 	 * @param ctx the parse tree
@@ -116,6 +116,16 @@ public interface KokanuParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitQuantityPhrase(KokanuParser.QuantityPhraseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link KokanuParser#prepPhrase}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrepPhrase(KokanuParser.PrepPhraseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link KokanuParser#prepPhrase}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrepPhrase(KokanuParser.PrepPhraseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link KokanuParser#prepClause}.
 	 * @param ctx the parse tree

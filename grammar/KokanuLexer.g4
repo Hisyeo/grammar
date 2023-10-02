@@ -1,11 +1,8 @@
 lexer grammar KokanuLexer;
 
-WS: [ \n\t\r]+ -> skip;
+WS: [ \n\t\r]+ -> channel(HIDDEN);
 
-Comma
-    : ','
-    ;
-
+Comma : ',' ;
 Colon
     : ':'
     | '-'

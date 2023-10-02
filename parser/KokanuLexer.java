@@ -1252,7 +1252,7 @@ public class KokanuLexer extends Lexer {
 		"\u02c4\3\2\2\2\u0a2d\u0a2e\7k\2\2\u0a2e\u0a2f\7p\2\2\u0a2f\u0a30\7r\2"+
 		"\2\u0a30\u0a31\7c\2\2\u0a31\u0a32\7n\2\2\u0a32\u0a33\7k\2\2\u0a33\u02c6"+
 		"\3\2\2\2\u0a34\u0a35\7p\2\2\u0a35\u0a36\7g\2\2\u0a36\u0a37\7p\2\2\u0a37"+
-		"\u0a38\7m\2\2\u0a38\u0a39\7c\2\2\u0a39\u02c8\3\2\2\2\4\2\u02cc\3\b\2\2";
+		"\u0a38\7m\2\2\u0a38\u0a39\7c\2\2\u0a39\u02c8\3\2\2\2\4\2\u02cc\3\2\3\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

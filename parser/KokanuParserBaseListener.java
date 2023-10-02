@@ -87,25 +87,25 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx) { }
+	@Override public void enterNewAgentAdjClause(KokanuParser.NewAgentAdjClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNewAgentAdjectiveClause(KokanuParser.NewAgentAdjectiveClauseContext ctx) { }
+	@Override public void exitNewAgentAdjClause(KokanuParser.NewAgentAdjClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx) { }
+	@Override public void enterSameAgentAdjClause(KokanuParser.SameAgentAdjClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSameAgentAdjectiveClause(KokanuParser.SameAgentAdjectiveClauseContext ctx) { }
+	@Override public void exitSameAgentAdjClause(KokanuParser.SameAgentAdjClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -142,6 +142,18 @@ public class KokanuParserBaseListener implements KokanuParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitQuantityPhrase(KokanuParser.QuantityPhraseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPrepPhrase(KokanuParser.PrepPhraseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrepPhrase(KokanuParser.PrepPhraseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
