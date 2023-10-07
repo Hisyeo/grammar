@@ -4,7 +4,7 @@
         "language": "Java",
         "listeners": true,
         "visitors": false,
-        "outputDir": "../parser",
+        "outputDir": "../out",
         "importDir": "../grammar"
     },
 }

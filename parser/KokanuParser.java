@@ -16,85 +16,87 @@ public class KokanuParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		WS=1, Comma=2, Colon=3, Period=4, A=5, In=6, Le=7, Men=8, O=9, Ta=10, 
-		Te=11, We=12, Win=13, Wo=14, Lijule=15, Pese=16, Kapaja=17, Kilima=18, 
-		Sito=19, Iman=20, Tasuwi=21, Akiki=22, Ukun=23, Aja=24, Sala=25, Talika=26, 
-		Kapan=27, Kisa=28, Mu=29, Mata=30, Mutakin=31, Mita=32, Jasa=33, Jamin=34, 
-		Apaki=35, Luwa=36, Konpa=37, Kela=38, Lika=39, Otota=40, Ka=41, Tisilin=42, 
-		Janlu=43, Jamu=44, Pututi=45, Minuli=46, Oti=47, Kota=48, Pani=49, Unitu=50, 
-		Loso=51, Kima=52, Pi=53, Anan=54, Tenkin=55, Patun=56, Sikin=57, Usen=58, 
-		Panli=59, Tunti=60, Sinsi=61, Wanku=62, Papon=63, Junja=64, Jati=65, Unsi=66, 
-		Nan=67, Ju=68, Anpipi=69, Mese=70, Ten=71, Puka=72, Kanisa=73, Pulusi=74, 
-		Muwesi=75, Moto=76, Pankosi=77, Nula=78, Pela=79, Otan=80, Kujo=81, Tan=82, 
-		Tun=83, Ela=84, Kemika=85, Po=86, Mani=87, No=88, Oke=89, Wan=90, Suwi=91, 
-		Sin=92, Tati=93, Tolu=94, Lipu=95, Osa=96, Tomiwa=97, Pesuwan=98, Ken=99, 
-		Tepu=100, Anwije=101, Lisi=102, Lan=103, Soto=104, Eme=105, Nin=106, Lijo=107, 
-		Toki=108, An=109, Ato=110, Kumi=111, Kapu=112, Un=113, Polan=114, Wisan=115, 
-		Mijalo=116, Neso=117, Kaso=118, Tawe=119, Konen=120, Kikuwa=121, Kiju=122, 
-		Jone=123, Akoli=124, Mamaki=125, Lana=126, Wa=127, Ja=128, Wiki=129, Naki=130, 
-		Sone=131, Katin=132, Kula=133, Kun=134, Kusa=135, Tanwa=136, Tipa=137, 
-		Teka=138, Tile=139, Tusa=140, Tijante=141, Nankin=142, Nalan=143, Niwa=144, 
-		Pite=145, Pasan=146, Pintu=147, Pula=148, Mepu=149, Luka=150, Laki=151, 
-		Lekin=152, Wita=153, Saminta=154, Sanpanti=155, Saman=156, Satalan=157, 
-		Sula=158, Sitija=159, Lima=160, Jan=161, Makan=162, Keke=163, Latito=164, 
-		Ankolo=165, Poloko=166, Komo=167, Matiko=168, Mi=169, Nelo=170, Powele=171, 
-		Peko=172, Sapole=173, Kate=174, Sopa=175, Suki=176, Osole=177, Umami=178, 
-		Juka=179, Apijo=180, Niku=181, Musi=182, Kaki=183, Akasa=184, Tenti=185, 
-		Kawa=186, Penpe=187, Kumon=188, Namu=189, Tuko=190, Tuwi=191, Olon=192, 
-		Alu=193, Kuto=194, Kosan=195, Alijun=196, Tu=197, Wija=198, Asa=199, Kijata=200, 
-		Malo=201, Sena=202, Leseka=203, Pintan=204, Inkatan=205, Ke=206, Pen=207, 
-		San=208, Kuwan=209, Sipa=210, Sintuwan=211, Iwe=212, Pansin=213, Si=214, 
-		Joli=215, Putun=216, Kuwosi=217, Tonsa=218, Kuwanko=219, Timi=220, Limijen=221, 
-		Tajen=222, Kan=223, Na=224, Tunpu=225, Matuwa=226, Pa=227, Taka=228, Kali=229, 
-		Tune=230, Tene=231, Namuna=232, Nile=233, Panta=234, Jon=235, Tonko=236, 
-		Sunkan=237, Onja=238, Ukama=239, Koton=240, Mitin=241, Lito=242, Lamo=243, 
-		Aluko=244, Konpute=245, Nepa=246, Kuku=247, Meja=248, Momu=249, Neje=250, 
-		Pawo=251, Tutu=252, Ukiki=253, Wonpa=254, Peman=255, Napa=256, Nase=257, 
-		Je=258, Jatan=259, Kisowa=260, Lenka=261, Pasu=262, Lansa=263, Menu=264, 
-		Opotu=265, Uta=266, Maku=267, Pelete=268, Pitijo=269, Sapi=270, Ili=271, 
-		Tula=272, Pata=273, Pumi=274, Matija=275, Waju=276, Salila=277, Sila=278, 
-		Ko=279, Setan=280, Suwina=281, Samo=282, Tenja=283, Ipuwe=284, Muku=285, 
-		Kalawa=286, Konje=287, Sa=288, Saka=289, Wala=290, Asete=291, Akala=292, 
-		Amo=293, Kanta=294, Sekano=295, Sijen=296, Toso=297, Kenelo=298, Onko=299, 
-		Umo=300, Pikante=301, Posa=302, Anta=303, Takuwa=304, Tawapu=305, Lanki=306, 
-		Titi=307, Tiju=308, Tapala=309, Talili=310, Lipan=311, Lunti=312, Takilo=313, 
-		Kalan=314, Ulokan=315, Etu=316, Kontatu=317, Nanku=318, Mulu=319, Watan=320, 
-		Wili=321, Ani=322, Iputu=323, Tina=324, Ne=325, Titan=326, Pon=327, Pan=328, 
-		Len=329, Santi=330, Sankan=331, One=332, Tanu=333, Sepo=334, Teneme=335, 
-		Solu=336, Tope=337, Tamaka=338, Tuntan=339, Niju=340, Non=341, So=342, 
-		Ewin=343, Enteken=344, Menwa=345, Sun=346, Muntu=347, Insu=348, Onton=349, 
-		Kikolo=350, Lo=351, Tiku=352, Ikama=353, Inpali=354, Nenka=355;
+		WS=1, ProperNoun=2, Comma=3, Colon=4, Period=5, A=6, In=7, Le=8, Men=9, 
+		O=10, Ta=11, Te=12, We=13, Win=14, Wo=15, Lijule=16, Pese=17, Kapaja=18, 
+		Kilima=19, Sito=20, Iman=21, Tasuwi=22, Akiki=23, Ukun=24, Aja=25, Sala=26, 
+		Talika=27, Kapan=28, Kisa=29, Mu=30, Mata=31, Mutakin=32, Mita=33, Jasa=34, 
+		Jamin=35, Apaki=36, Luwa=37, Konpa=38, Kela=39, Lika=40, Otota=41, Ka=42, 
+		Tisilin=43, Janlu=44, Jamu=45, Pututi=46, Minuli=47, Oti=48, Kota=49, 
+		Pani=50, Unitu=51, Loso=52, Kima=53, Pi=54, Anan=55, Tenkin=56, Patun=57, 
+		Sikin=58, Usen=59, Panli=60, Tunti=61, Sinsi=62, Wanku=63, Papon=64, Junja=65, 
+		Jati=66, Unsi=67, Nan=68, Ju=69, Anpipi=70, Mese=71, Ten=72, Puka=73, 
+		Kanisa=74, Pulusi=75, Muwesi=76, Moto=77, Pankosi=78, Nula=79, Pela=80, 
+		Otan=81, Kujo=82, Tan=83, Tun=84, Ela=85, Kemika=86, Po=87, Mani=88, No=89, 
+		Oke=90, Wan=91, Suwi=92, Sin=93, Tati=94, Tolu=95, Lipu=96, Osa=97, Tomiwa=98, 
+		Pesuwan=99, Ken=100, Tepu=101, Anwije=102, Lisi=103, Lan=104, Soto=105, 
+		Eme=106, Nin=107, Lijo=108, Toki=109, An=110, Ato=111, Kumi=112, Kapu=113, 
+		Un=114, Polan=115, Wisan=116, Mijalo=117, Neso=118, Kaso=119, Tawe=120, 
+		Konen=121, Kikuwa=122, Kiju=123, Jone=124, Akoli=125, Mamaki=126, Lana=127, 
+		Wa=128, Ja=129, Wiki=130, Naki=131, Sone=132, Katin=133, Kula=134, Kun=135, 
+		Kusa=136, Tanwa=137, Tipa=138, Teka=139, Tile=140, Tusa=141, Tijante=142, 
+		Nankin=143, Nalan=144, Niwa=145, Pite=146, Pasan=147, Pintu=148, Pula=149, 
+		Mepu=150, Luka=151, Laki=152, Lekin=153, Wita=154, Saminta=155, Sanpanti=156, 
+		Saman=157, Satalan=158, Sula=159, Sitija=160, Lima=161, Jan=162, Makan=163, 
+		Keke=164, Latito=165, Ankolo=166, Poloko=167, Komo=168, Matiko=169, Mi=170, 
+		Nelo=171, Powele=172, Peko=173, Sapole=174, Kate=175, Sopa=176, Suki=177, 
+		Osole=178, Umami=179, Juka=180, Apijo=181, Niku=182, Musi=183, Kaki=184, 
+		Akasa=185, Tenti=186, Kawa=187, Penpe=188, Kumon=189, Namu=190, Tuko=191, 
+		Tuwi=192, Olon=193, Alu=194, Kuto=195, Kosan=196, Alijun=197, Tu=198, 
+		Wija=199, Asa=200, Kijata=201, Malo=202, Sena=203, Leseka=204, Pintan=205, 
+		Inkatan=206, Ke=207, Pen=208, San=209, Kuwan=210, Sipa=211, Sintuwan=212, 
+		Iwe=213, Pansin=214, Si=215, Joli=216, Putun=217, Kuwosi=218, Tonsa=219, 
+		Kuwanko=220, Timi=221, Limijen=222, Tajen=223, Kan=224, Na=225, Tunpu=226, 
+		Matuwa=227, Pa=228, Taka=229, Kali=230, Tune=231, Tene=232, Namuna=233, 
+		Nile=234, Panta=235, Jon=236, Tonko=237, Sunkan=238, Onja=239, Ukama=240, 
+		Koton=241, Mitin=242, Lito=243, Lamo=244, Aluko=245, Konpute=246, Nepa=247, 
+		Kuku=248, Meja=249, Momu=250, Neje=251, Pawo=252, Tutu=253, Ukiki=254, 
+		Wonpa=255, Peman=256, Napa=257, Nase=258, Je=259, Jatan=260, Kisowa=261, 
+		Lenka=262, Pasu=263, Lansa=264, Menu=265, Opotu=266, Uta=267, Maku=268, 
+		Pelete=269, Pitijo=270, Sapi=271, Ili=272, Tula=273, Pata=274, Pumi=275, 
+		Matija=276, Waju=277, Salila=278, Sila=279, Ko=280, Setan=281, Suwina=282, 
+		Samo=283, Tenja=284, Ipuwe=285, Muku=286, Kalawa=287, Konje=288, Sa=289, 
+		Saka=290, Wala=291, Asete=292, Akala=293, Amo=294, Kanta=295, Sekano=296, 
+		Sijen=297, Toso=298, Kenelo=299, Onko=300, Umo=301, Pikante=302, Posa=303, 
+		Anta=304, Takuwa=305, Tawapu=306, Lanki=307, Titi=308, Tiju=309, Tapala=310, 
+		Talili=311, Lipan=312, Lunti=313, Takilo=314, Kalan=315, Ulokan=316, Etu=317, 
+		Kontatu=318, Nanku=319, Mulu=320, Watan=321, Wili=322, Ani=323, Iputu=324, 
+		Tina=325, Ne=326, Titan=327, Pon=328, Pan=329, Len=330, Santi=331, Sankan=332, 
+		One=333, Tanu=334, Sepo=335, Teneme=336, Solu=337, Tope=338, Tamaka=339, 
+		Tuntan=340, Niju=341, Non=342, So=343, Ewin=344, Enteken=345, Menwa=346, 
+		Sun=347, Muntu=348, Insu=349, Onton=350, Kikolo=351, Lo=352, Tiku=353, 
+		Ikama=354, Inpali=355, Nenka=356;
 	public static final int
-		RULE_sentences = 0, RULE_sentence = 1, RULE_sentenceClause = 2, RULE_nounPhrase = 3, 
+		RULE_sentences = 0, RULE_sentence = 1, RULE_sentenceClause = 2, RULE_noun = 3, 
 		RULE_nounClause = 4, RULE_modifierClause = 5, RULE_newAgentAdjClause = 6, 
-		RULE_sameAgentAdjClause = 7, RULE_terminator = 8, RULE_verbPhrase = 9, 
-		RULE_quantityPhrase = 10, RULE_prepPhrase = 11, RULE_prepClause = 12, 
-		RULE_contentWord = 13, RULE_expandedWord = 14, RULE_baseVerb = 15, RULE_pronoun = 16, 
-		RULE_baseNoun = 17, RULE_baseModifier = 18, RULE_connector = 19, RULE_relativeQuantity = 20, 
-		RULE_nominalQuantity = 21;
+		RULE_sameAgentAdjClause = 7, RULE_terminator = 8, RULE_verb = 9, RULE_transVerbPhrase = 10, 
+		RULE_quantity = 11, RULE_preposition = 12, RULE_prepClause = 13, RULE_contentWord = 14, 
+		RULE_expandedWord = 15, RULE_pronoun = 16, RULE_contentParticles = 17, 
+		RULE_baseVerb = 18, RULE_rawVerbs = 19, RULE_baseNoun = 20, RULE_rawNouns = 21, 
+		RULE_baseModifier = 22, RULE_rawModifiers = 23, RULE_connector = 24, RULE_relativeQuantity = 25, 
+		RULE_nominalQuantity = 26;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"sentences", "sentence", "sentenceClause", "nounPhrase", "nounClause", 
-			"modifierClause", "newAgentAdjClause", "sameAgentAdjClause", "terminator", 
-			"verbPhrase", "quantityPhrase", "prepPhrase", "prepClause", "contentWord", 
-			"expandedWord", "baseVerb", "pronoun", "baseNoun", "baseModifier", "connector", 
-			"relativeQuantity", "nominalQuantity"
+			"sentences", "sentence", "sentenceClause", "noun", "nounClause", "modifierClause", 
+			"newAgentAdjClause", "sameAgentAdjClause", "terminator", "verb", "transVerbPhrase", 
+			"quantity", "preposition", "prepClause", "contentWord", "expandedWord", 
+			"pronoun", "contentParticles", "baseVerb", "rawVerbs", "baseNoun", "rawNouns", 
+			"baseModifier", "rawModifiers", "connector", "relativeQuantity", "nominalQuantity"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, "','", null, "'.'", "'a'", "'in'", "'le'", "'men'", "'o'", 
-			"'ta'", "'te'", "'we'", "'win'", "'wo'", "'lijule'", "'pese'", "'kapaja'", 
-			"'kilima'", "'sito'", "'iman'", "'tasuwi'", "'akiki'", "'ukun'", "'aja'", 
-			"'sala'", "'talika'", "'kapan'", "'kisa'", "'mu'", "'mata'", "'mutakin'", 
-			"'mita'", "'jasa'", "'jamin'", "'apaki'", "'luwa'", "'konpa'", "'kela'", 
-			"'lika'", "'otota'", "'ka'", "'tisilin'", "'janlu'", "'jamu'", "'pututi'", 
-			"'minuli'", "'oti'", "'kota'", "'pani'", "'unitu'", "'loso'", "'kima'", 
-			"'pi'", "'anan'", "'tenkin'", "'patun'", "'sikin'", "'usen'", "'panli'", 
-			"'tunti'", "'sinsi'", "'wanku'", "'papon'", "'junja'", "'jati'", "'unsi'", 
-			"'nan'", "'ju'", "'anpipi'", "'mese'", "'ten'", "'puka'", "'kanisa'", 
+			null, null, null, "','", null, "'.'", "'a'", "'in'", "'le'", "'men'", 
+			"'o'", "'ta'", "'te'", "'we'", "'win'", "'wo'", "'lijule'", "'pese'", 
+			"'kapaja'", "'kilima'", "'sito'", "'iman'", "'tasuwi'", "'akiki'", "'ukun'", 
+			"'aja'", "'sala'", "'talika'", "'kapan'", "'kisa'", "'mu'", "'mata'", 
+			"'mutakin'", "'mita'", "'jasa'", "'jamin'", "'apaki'", "'luwa'", "'konpa'", 
+			"'kela'", "'lika'", "'otota'", "'ka'", "'tisilin'", "'janlu'", "'jamu'", 
+			"'pututi'", "'minuli'", "'oti'", "'kota'", "'pani'", "'unitu'", "'loso'", 
+			"'kima'", "'pi'", "'anan'", "'tenkin'", "'patun'", "'sikin'", "'usen'", 
+			"'panli'", "'tunti'", "'sinsi'", "'wanku'", "'papon'", "'junja'", "'jati'", 
+			"'unsi'", "'nan'", "'ju'", "'anpipi'", "'mese'", "'ten'", "'puka'", "'kanisa'", 
 			"'pulusi'", "'muwesi'", "'moto'", "'pankosi'", "'nula'", "'pela'", "'otan'", 
 			"'kujo'", "'tan'", "'tun'", "'ela'", "'kemika'", "'po'", "'mani'", "'no'", 
 			"'oke'", "'wan'", "'suwi'", "'sin'", "'tati'", "'tolu'", "'lipu'", "'osa'", 
@@ -140,47 +142,48 @@ public class KokanuParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "WS", "Comma", "Colon", "Period", "A", "In", "Le", "Men", "O", 
-			"Ta", "Te", "We", "Win", "Wo", "Lijule", "Pese", "Kapaja", "Kilima", 
-			"Sito", "Iman", "Tasuwi", "Akiki", "Ukun", "Aja", "Sala", "Talika", "Kapan", 
-			"Kisa", "Mu", "Mata", "Mutakin", "Mita", "Jasa", "Jamin", "Apaki", "Luwa", 
-			"Konpa", "Kela", "Lika", "Otota", "Ka", "Tisilin", "Janlu", "Jamu", "Pututi", 
-			"Minuli", "Oti", "Kota", "Pani", "Unitu", "Loso", "Kima", "Pi", "Anan", 
-			"Tenkin", "Patun", "Sikin", "Usen", "Panli", "Tunti", "Sinsi", "Wanku", 
-			"Papon", "Junja", "Jati", "Unsi", "Nan", "Ju", "Anpipi", "Mese", "Ten", 
-			"Puka", "Kanisa", "Pulusi", "Muwesi", "Moto", "Pankosi", "Nula", "Pela", 
-			"Otan", "Kujo", "Tan", "Tun", "Ela", "Kemika", "Po", "Mani", "No", "Oke", 
-			"Wan", "Suwi", "Sin", "Tati", "Tolu", "Lipu", "Osa", "Tomiwa", "Pesuwan", 
-			"Ken", "Tepu", "Anwije", "Lisi", "Lan", "Soto", "Eme", "Nin", "Lijo", 
-			"Toki", "An", "Ato", "Kumi", "Kapu", "Un", "Polan", "Wisan", "Mijalo", 
-			"Neso", "Kaso", "Tawe", "Konen", "Kikuwa", "Kiju", "Jone", "Akoli", "Mamaki", 
-			"Lana", "Wa", "Ja", "Wiki", "Naki", "Sone", "Katin", "Kula", "Kun", "Kusa", 
-			"Tanwa", "Tipa", "Teka", "Tile", "Tusa", "Tijante", "Nankin", "Nalan", 
-			"Niwa", "Pite", "Pasan", "Pintu", "Pula", "Mepu", "Luka", "Laki", "Lekin", 
-			"Wita", "Saminta", "Sanpanti", "Saman", "Satalan", "Sula", "Sitija", 
-			"Lima", "Jan", "Makan", "Keke", "Latito", "Ankolo", "Poloko", "Komo", 
-			"Matiko", "Mi", "Nelo", "Powele", "Peko", "Sapole", "Kate", "Sopa", "Suki", 
-			"Osole", "Umami", "Juka", "Apijo", "Niku", "Musi", "Kaki", "Akasa", "Tenti", 
-			"Kawa", "Penpe", "Kumon", "Namu", "Tuko", "Tuwi", "Olon", "Alu", "Kuto", 
-			"Kosan", "Alijun", "Tu", "Wija", "Asa", "Kijata", "Malo", "Sena", "Leseka", 
-			"Pintan", "Inkatan", "Ke", "Pen", "San", "Kuwan", "Sipa", "Sintuwan", 
-			"Iwe", "Pansin", "Si", "Joli", "Putun", "Kuwosi", "Tonsa", "Kuwanko", 
-			"Timi", "Limijen", "Tajen", "Kan", "Na", "Tunpu", "Matuwa", "Pa", "Taka", 
-			"Kali", "Tune", "Tene", "Namuna", "Nile", "Panta", "Jon", "Tonko", "Sunkan", 
-			"Onja", "Ukama", "Koton", "Mitin", "Lito", "Lamo", "Aluko", "Konpute", 
-			"Nepa", "Kuku", "Meja", "Momu", "Neje", "Pawo", "Tutu", "Ukiki", "Wonpa", 
-			"Peman", "Napa", "Nase", "Je", "Jatan", "Kisowa", "Lenka", "Pasu", "Lansa", 
-			"Menu", "Opotu", "Uta", "Maku", "Pelete", "Pitijo", "Sapi", "Ili", "Tula", 
-			"Pata", "Pumi", "Matija", "Waju", "Salila", "Sila", "Ko", "Setan", "Suwina", 
-			"Samo", "Tenja", "Ipuwe", "Muku", "Kalawa", "Konje", "Sa", "Saka", "Wala", 
-			"Asete", "Akala", "Amo", "Kanta", "Sekano", "Sijen", "Toso", "Kenelo", 
-			"Onko", "Umo", "Pikante", "Posa", "Anta", "Takuwa", "Tawapu", "Lanki", 
-			"Titi", "Tiju", "Tapala", "Talili", "Lipan", "Lunti", "Takilo", "Kalan", 
-			"Ulokan", "Etu", "Kontatu", "Nanku", "Mulu", "Watan", "Wili", "Ani", 
-			"Iputu", "Tina", "Ne", "Titan", "Pon", "Pan", "Len", "Santi", "Sankan", 
-			"One", "Tanu", "Sepo", "Teneme", "Solu", "Tope", "Tamaka", "Tuntan", 
-			"Niju", "Non", "So", "Ewin", "Enteken", "Menwa", "Sun", "Muntu", "Insu", 
-			"Onton", "Kikolo", "Lo", "Tiku", "Ikama", "Inpali", "Nenka"
+			null, "WS", "ProperNoun", "Comma", "Colon", "Period", "A", "In", "Le", 
+			"Men", "O", "Ta", "Te", "We", "Win", "Wo", "Lijule", "Pese", "Kapaja", 
+			"Kilima", "Sito", "Iman", "Tasuwi", "Akiki", "Ukun", "Aja", "Sala", "Talika", 
+			"Kapan", "Kisa", "Mu", "Mata", "Mutakin", "Mita", "Jasa", "Jamin", "Apaki", 
+			"Luwa", "Konpa", "Kela", "Lika", "Otota", "Ka", "Tisilin", "Janlu", "Jamu", 
+			"Pututi", "Minuli", "Oti", "Kota", "Pani", "Unitu", "Loso", "Kima", "Pi", 
+			"Anan", "Tenkin", "Patun", "Sikin", "Usen", "Panli", "Tunti", "Sinsi", 
+			"Wanku", "Papon", "Junja", "Jati", "Unsi", "Nan", "Ju", "Anpipi", "Mese", 
+			"Ten", "Puka", "Kanisa", "Pulusi", "Muwesi", "Moto", "Pankosi", "Nula", 
+			"Pela", "Otan", "Kujo", "Tan", "Tun", "Ela", "Kemika", "Po", "Mani", 
+			"No", "Oke", "Wan", "Suwi", "Sin", "Tati", "Tolu", "Lipu", "Osa", "Tomiwa", 
+			"Pesuwan", "Ken", "Tepu", "Anwije", "Lisi", "Lan", "Soto", "Eme", "Nin", 
+			"Lijo", "Toki", "An", "Ato", "Kumi", "Kapu", "Un", "Polan", "Wisan", 
+			"Mijalo", "Neso", "Kaso", "Tawe", "Konen", "Kikuwa", "Kiju", "Jone", 
+			"Akoli", "Mamaki", "Lana", "Wa", "Ja", "Wiki", "Naki", "Sone", "Katin", 
+			"Kula", "Kun", "Kusa", "Tanwa", "Tipa", "Teka", "Tile", "Tusa", "Tijante", 
+			"Nankin", "Nalan", "Niwa", "Pite", "Pasan", "Pintu", "Pula", "Mepu", 
+			"Luka", "Laki", "Lekin", "Wita", "Saminta", "Sanpanti", "Saman", "Satalan", 
+			"Sula", "Sitija", "Lima", "Jan", "Makan", "Keke", "Latito", "Ankolo", 
+			"Poloko", "Komo", "Matiko", "Mi", "Nelo", "Powele", "Peko", "Sapole", 
+			"Kate", "Sopa", "Suki", "Osole", "Umami", "Juka", "Apijo", "Niku", "Musi", 
+			"Kaki", "Akasa", "Tenti", "Kawa", "Penpe", "Kumon", "Namu", "Tuko", "Tuwi", 
+			"Olon", "Alu", "Kuto", "Kosan", "Alijun", "Tu", "Wija", "Asa", "Kijata", 
+			"Malo", "Sena", "Leseka", "Pintan", "Inkatan", "Ke", "Pen", "San", "Kuwan", 
+			"Sipa", "Sintuwan", "Iwe", "Pansin", "Si", "Joli", "Putun", "Kuwosi", 
+			"Tonsa", "Kuwanko", "Timi", "Limijen", "Tajen", "Kan", "Na", "Tunpu", 
+			"Matuwa", "Pa", "Taka", "Kali", "Tune", "Tene", "Namuna", "Nile", "Panta", 
+			"Jon", "Tonko", "Sunkan", "Onja", "Ukama", "Koton", "Mitin", "Lito", 
+			"Lamo", "Aluko", "Konpute", "Nepa", "Kuku", "Meja", "Momu", "Neje", "Pawo", 
+			"Tutu", "Ukiki", "Wonpa", "Peman", "Napa", "Nase", "Je", "Jatan", "Kisowa", 
+			"Lenka", "Pasu", "Lansa", "Menu", "Opotu", "Uta", "Maku", "Pelete", "Pitijo", 
+			"Sapi", "Ili", "Tula", "Pata", "Pumi", "Matija", "Waju", "Salila", "Sila", 
+			"Ko", "Setan", "Suwina", "Samo", "Tenja", "Ipuwe", "Muku", "Kalawa", 
+			"Konje", "Sa", "Saka", "Wala", "Asete", "Akala", "Amo", "Kanta", "Sekano", 
+			"Sijen", "Toso", "Kenelo", "Onko", "Umo", "Pikante", "Posa", "Anta", 
+			"Takuwa", "Tawapu", "Lanki", "Titi", "Tiju", "Tapala", "Talili", "Lipan", 
+			"Lunti", "Takilo", "Kalan", "Ulokan", "Etu", "Kontatu", "Nanku", "Mulu", 
+			"Watan", "Wili", "Ani", "Iputu", "Tina", "Ne", "Titan", "Pon", "Pan", 
+			"Len", "Santi", "Sankan", "One", "Tanu", "Sepo", "Teneme", "Solu", "Tope", 
+			"Tamaka", "Tuntan", "Niju", "Non", "So", "Ewin", "Enteken", "Menwa", 
+			"Sun", "Muntu", "Insu", "Onton", "Kikolo", "Lo", "Tiku", "Ikama", "Inpali", 
+			"Nenka"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -263,32 +266,41 @@ public class KokanuParser extends Parser {
 	public final SentencesContext sentences() throws RecognitionException {
 		SentencesContext _localctx = new SentencesContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_sentences);
+		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(44);
+			setState(54);
 			sentence();
-			setState(49);
+			setState(59);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(45);
+					setState(55);
 					match(Period);
-					setState(46);
+					setState(56);
 					sentence();
 					}
 					} 
 				}
-				setState(51);
+				setState(61);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
 			}
-			setState(52);
-			match(Period);
+			setState(63);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==Period) {
+				{
+				setState(62);
+				match(Period);
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -304,24 +316,17 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class SentenceContext extends ParserRuleContext {
-		public SentenceClauseContext sentenceClause() {
-			return getRuleContext(SentenceClauseContext.class,0);
+		public List<SentenceClauseContext> sentenceClause() {
+			return getRuleContexts(SentenceClauseContext.class);
 		}
-		public TerminalNode O() { return getToken(KokanuParser.O, 0); }
-		public ContentWordContext contentWord() {
-			return getRuleContext(ContentWordContext.class,0);
+		public SentenceClauseContext sentenceClause(int i) {
+			return getRuleContext(SentenceClauseContext.class,i);
 		}
-		public List<PrepPhraseContext> prepPhrase() {
-			return getRuleContexts(PrepPhraseContext.class);
+		public List<ConnectorContext> connector() {
+			return getRuleContexts(ConnectorContext.class);
 		}
-		public PrepPhraseContext prepPhrase(int i) {
-			return getRuleContext(PrepPhraseContext.class,i);
-		}
-		public List<ModifierClauseContext> modifierClause() {
-			return getRuleContexts(ModifierClauseContext.class);
-		}
-		public ModifierClauseContext modifierClause(int i) {
-			return getRuleContext(ModifierClauseContext.class,i);
+		public ConnectorContext connector(int i) {
+			return getRuleContext(ConnectorContext.class,i);
 		}
 		public SentenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -342,747 +347,26 @@ public class KokanuParser extends Parser {
 		enterRule(_localctx, 2, RULE_sentence);
 		int _la;
 		try {
-			int _alt;
-			setState(68);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(65);
+			sentenceClause();
+			setState(71);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case In:
-			case Le:
-			case Men:
-			case Te:
-			case Win:
-			case Lijule:
-			case Pese:
-			case Kapaja:
-			case Kilima:
-			case Sito:
-			case Iman:
-			case Tasuwi:
-			case Akiki:
-			case Ukun:
-			case Aja:
-			case Sala:
-			case Talika:
-			case Kapan:
-			case Kisa:
-			case Mata:
-			case Mutakin:
-			case Mita:
-			case Jasa:
-			case Jamin:
-			case Apaki:
-			case Luwa:
-			case Konpa:
-			case Kela:
-			case Lika:
-			case Otota:
-			case Ka:
-			case Tisilin:
-			case Janlu:
-			case Jamu:
-			case Pututi:
-			case Minuli:
-			case Oti:
-			case Kota:
-			case Pani:
-			case Unitu:
-			case Loso:
-			case Kima:
-			case Pi:
-			case Anan:
-			case Tenkin:
-			case Patun:
-			case Sikin:
-			case Usen:
-			case Panli:
-			case Tunti:
-			case Sinsi:
-			case Wanku:
-			case Papon:
-			case Junja:
-			case Jati:
-			case Unsi:
-			case Nan:
-			case Ju:
-			case Anpipi:
-			case Mese:
-			case Ten:
-			case Puka:
-			case Kanisa:
-			case Pulusi:
-			case Muwesi:
-			case Moto:
-			case Pankosi:
-			case Nula:
-			case Pela:
-			case Otan:
-			case Kujo:
-			case Tun:
-			case Ela:
-			case Kemika:
-			case Po:
-			case Mani:
-			case Oke:
-			case Wan:
-			case Suwi:
-			case Sin:
-			case Tati:
-			case Tolu:
-			case Lipu:
-			case Osa:
-			case Tomiwa:
-			case Pesuwan:
-			case Ken:
-			case Tepu:
-			case Anwije:
-			case Lisi:
-			case Lan:
-			case Soto:
-			case Eme:
-			case Nin:
-			case Lijo:
-			case Toki:
-			case An:
-			case Ato:
-			case Kumi:
-			case Kapu:
-			case Polan:
-			case Wisan:
-			case Mijalo:
-			case Neso:
-			case Kaso:
-			case Tawe:
-			case Konen:
-			case Kikuwa:
-			case Kiju:
-			case Jone:
-			case Akoli:
-			case Mamaki:
-			case Lana:
-			case Wa:
-			case Ja:
-			case Wiki:
-			case Naki:
-			case Sone:
-			case Katin:
-			case Kula:
-			case Kun:
-			case Kusa:
-			case Tanwa:
-			case Tipa:
-			case Teka:
-			case Tile:
-			case Tusa:
-			case Tijante:
-			case Nankin:
-			case Nalan:
-			case Niwa:
-			case Pite:
-			case Pasan:
-			case Pintu:
-			case Pula:
-			case Mepu:
-			case Luka:
-			case Laki:
-			case Wita:
-			case Saminta:
-			case Sanpanti:
-			case Saman:
-			case Satalan:
-			case Sula:
-			case Sitija:
-			case Lima:
-			case Jan:
-			case Makan:
-			case Keke:
-			case Latito:
-			case Ankolo:
-			case Poloko:
-			case Komo:
-			case Matiko:
-			case Mi:
-			case Nelo:
-			case Powele:
-			case Sapole:
-			case Kate:
-			case Sopa:
-			case Suki:
-			case Osole:
-			case Umami:
-			case Juka:
-			case Apijo:
-			case Niku:
-			case Musi:
-			case Kaki:
-			case Akasa:
-			case Tenti:
-			case Kawa:
-			case Penpe:
-			case Kumon:
-			case Namu:
-			case Tuko:
-			case Tuwi:
-			case Olon:
-			case Alu:
-			case Kuto:
-			case Kosan:
-			case Alijun:
-			case Tu:
-			case Wija:
-			case Asa:
-			case Kijata:
-			case Malo:
-			case Sena:
-			case Leseka:
-			case Pintan:
-			case Inkatan:
-			case Ke:
-			case Pen:
-			case San:
-			case Kuwan:
-			case Sipa:
-			case Sintuwan:
-			case Iwe:
-			case Pansin:
-			case Si:
-			case Joli:
-			case Putun:
-			case Kuwosi:
-			case Tonsa:
-			case Kuwanko:
-			case Timi:
-			case Limijen:
-			case Tajen:
-			case Kan:
-			case Na:
-			case Tunpu:
-			case Matuwa:
-			case Pa:
-			case Taka:
-			case Kali:
-			case Tune:
-			case Tene:
-			case Namuna:
-			case Nile:
-			case Panta:
-			case Jon:
-			case Tonko:
-			case Sunkan:
-			case Onja:
-			case Ukama:
-			case Koton:
-			case Mitin:
-			case Lito:
-			case Lamo:
-			case Aluko:
-			case Konpute:
-			case Nepa:
-			case Kuku:
-			case Meja:
-			case Momu:
-			case Neje:
-			case Pawo:
-			case Tutu:
-			case Ukiki:
-			case Wonpa:
-			case Peman:
-			case Napa:
-			case Nase:
-			case Jatan:
-			case Kisowa:
-			case Lenka:
-			case Pasu:
-			case Lansa:
-			case Menu:
-			case Opotu:
-			case Uta:
-			case Maku:
-			case Pelete:
-			case Pitijo:
-			case Sapi:
-			case Tula:
-			case Pata:
-			case Pumi:
-			case Matija:
-			case Waju:
-			case Salila:
-			case Sila:
-			case Ko:
-			case Setan:
-			case Suwina:
-			case Samo:
-			case Tenja:
-			case Ipuwe:
-			case Muku:
-			case Kalawa:
-			case Konje:
-			case Sa:
-			case Saka:
-			case Wala:
-			case Asete:
-			case Akala:
-			case Amo:
-			case Kanta:
-			case Sekano:
-			case Sijen:
-			case Toso:
-			case Kenelo:
-			case Onko:
-			case Umo:
-			case Pikante:
-			case Posa:
-			case Anta:
-			case Takuwa:
-			case Tawapu:
-			case Lanki:
-			case Titi:
-			case Tiju:
-			case Tapala:
-			case Talili:
-			case Lipan:
-			case Lunti:
-			case Takilo:
-			case Kalan:
-			case Ulokan:
-			case Etu:
-			case Kontatu:
-			case Nanku:
-			case Mulu:
-			case Watan:
-			case Wili:
-			case Ani:
-			case Iputu:
-			case Tina:
-			case Ne:
-			case Titan:
-			case Pon:
-			case Len:
-			case Santi:
-			case Sankan:
-			case One:
-			case Tanu:
-			case Sepo:
-			case Teneme:
-			case Solu:
-			case Tope:
-			case Tamaka:
-			case Tuntan:
-			case Niju:
-			case Non:
-			case So:
-			case Ewin:
-			case Enteken:
-			case Menwa:
-			case Sun:
-			case Muntu:
-			case Insu:
-			case Onton:
-			case Kikolo:
-			case Lo:
-			case Tiku:
-			case Ikama:
-			case Inpali:
-			case Nenka:
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			while (_la==Tan || _la==Un || _la==Lekin || _la==Ili) {
 				{
-				setState(54);
+				{
+				setState(66);
+				connector();
+				setState(67);
 				sentenceClause();
 				}
-				break;
-			case O:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(55);
-				match(O);
-				setState(56);
-				contentWord();
-				setState(65);
+				}
+				setState(73);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536875712L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -562949970460673L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -1L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32769L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 68719476479L) != 0)) {
-					{
-					setState(63);
-					_errHandler.sync(this);
-					switch (_input.LA(1)) {
-					case In:
-					case Men:
-					case Win:
-					case Po:
-					case An:
-					case Wija:
-					case Ke:
-					case Kan:
-					case So:
-					case Sun:
-					case Nenka:
-						{
-						setState(57);
-						prepPhrase();
-						}
-						break;
-					case Ta:
-					case Te:
-					case Wo:
-					case Lijule:
-					case Pese:
-					case Kapaja:
-					case Kilima:
-					case Sito:
-					case Iman:
-					case Tasuwi:
-					case Akiki:
-					case Ukun:
-					case Aja:
-					case Sala:
-					case Talika:
-					case Kapan:
-					case Kisa:
-					case Mata:
-					case Mutakin:
-					case Mita:
-					case Jasa:
-					case Jamin:
-					case Apaki:
-					case Luwa:
-					case Konpa:
-					case Kela:
-					case Lika:
-					case Otota:
-					case Ka:
-					case Tisilin:
-					case Janlu:
-					case Jamu:
-					case Pututi:
-					case Minuli:
-					case Oti:
-					case Kota:
-					case Pani:
-					case Unitu:
-					case Loso:
-					case Kima:
-					case Pi:
-					case Anan:
-					case Tenkin:
-					case Patun:
-					case Sikin:
-					case Usen:
-					case Panli:
-					case Tunti:
-					case Sinsi:
-					case Wanku:
-					case Papon:
-					case Junja:
-					case Jati:
-					case Unsi:
-					case Nan:
-					case Ju:
-					case Anpipi:
-					case Mese:
-					case Ten:
-					case Puka:
-					case Kanisa:
-					case Pulusi:
-					case Muwesi:
-					case Moto:
-					case Pankosi:
-					case Nula:
-					case Pela:
-					case Otan:
-					case Kujo:
-					case Tun:
-					case Ela:
-					case Kemika:
-					case Mani:
-					case Oke:
-					case Wan:
-					case Suwi:
-					case Sin:
-					case Tati:
-					case Tolu:
-					case Lipu:
-					case Osa:
-					case Tomiwa:
-					case Pesuwan:
-					case Ken:
-					case Tepu:
-					case Anwije:
-					case Lisi:
-					case Lan:
-					case Soto:
-					case Eme:
-					case Nin:
-					case Lijo:
-					case Toki:
-					case Ato:
-					case Kumi:
-					case Kapu:
-					case Polan:
-					case Wisan:
-					case Mijalo:
-					case Neso:
-					case Kaso:
-					case Tawe:
-					case Konen:
-					case Kikuwa:
-					case Kiju:
-					case Jone:
-					case Akoli:
-					case Mamaki:
-					case Lana:
-					case Wa:
-					case Ja:
-					case Wiki:
-					case Naki:
-					case Sone:
-					case Katin:
-					case Kula:
-					case Kun:
-					case Kusa:
-					case Tanwa:
-					case Tipa:
-					case Teka:
-					case Tile:
-					case Tusa:
-					case Tijante:
-					case Nankin:
-					case Nalan:
-					case Niwa:
-					case Pite:
-					case Pasan:
-					case Pintu:
-					case Pula:
-					case Mepu:
-					case Luka:
-					case Laki:
-					case Wita:
-					case Saminta:
-					case Sanpanti:
-					case Saman:
-					case Satalan:
-					case Sula:
-					case Sitija:
-					case Lima:
-					case Jan:
-					case Makan:
-					case Keke:
-					case Latito:
-					case Ankolo:
-					case Poloko:
-					case Komo:
-					case Matiko:
-					case Mi:
-					case Nelo:
-					case Powele:
-					case Sapole:
-					case Kate:
-					case Sopa:
-					case Suki:
-					case Osole:
-					case Umami:
-					case Juka:
-					case Apijo:
-					case Niku:
-					case Musi:
-					case Kaki:
-					case Akasa:
-					case Tenti:
-					case Kawa:
-					case Penpe:
-					case Kumon:
-					case Namu:
-					case Tuko:
-					case Tuwi:
-					case Olon:
-					case Alu:
-					case Kuto:
-					case Kosan:
-					case Alijun:
-					case Tu:
-					case Asa:
-					case Kijata:
-					case Malo:
-					case Sena:
-					case Leseka:
-					case Pintan:
-					case Inkatan:
-					case Pen:
-					case San:
-					case Kuwan:
-					case Sipa:
-					case Sintuwan:
-					case Iwe:
-					case Pansin:
-					case Si:
-					case Joli:
-					case Putun:
-					case Kuwosi:
-					case Tonsa:
-					case Kuwanko:
-					case Timi:
-					case Limijen:
-					case Tajen:
-					case Na:
-					case Tunpu:
-					case Matuwa:
-					case Pa:
-					case Taka:
-					case Kali:
-					case Tune:
-					case Tene:
-					case Namuna:
-					case Nile:
-					case Panta:
-					case Jon:
-					case Tonko:
-					case Sunkan:
-					case Onja:
-					case Ukama:
-					case Koton:
-					case Mitin:
-					case Lito:
-					case Lamo:
-					case Aluko:
-					case Konpute:
-					case Nepa:
-					case Kuku:
-					case Meja:
-					case Momu:
-					case Neje:
-					case Pawo:
-					case Tutu:
-					case Ukiki:
-					case Wonpa:
-					case Peman:
-					case Napa:
-					case Nase:
-					case Je:
-					case Jatan:
-					case Kisowa:
-					case Lenka:
-					case Pasu:
-					case Lansa:
-					case Menu:
-					case Opotu:
-					case Uta:
-					case Maku:
-					case Pelete:
-					case Pitijo:
-					case Sapi:
-					case Tula:
-					case Pata:
-					case Pumi:
-					case Matija:
-					case Waju:
-					case Salila:
-					case Sila:
-					case Ko:
-					case Setan:
-					case Suwina:
-					case Samo:
-					case Tenja:
-					case Ipuwe:
-					case Muku:
-					case Kalawa:
-					case Konje:
-					case Sa:
-					case Saka:
-					case Wala:
-					case Asete:
-					case Akala:
-					case Amo:
-					case Kanta:
-					case Sekano:
-					case Sijen:
-					case Toso:
-					case Kenelo:
-					case Onko:
-					case Umo:
-					case Pikante:
-					case Posa:
-					case Anta:
-					case Takuwa:
-					case Tawapu:
-					case Lanki:
-					case Titi:
-					case Tiju:
-					case Tapala:
-					case Talili:
-					case Lipan:
-					case Lunti:
-					case Takilo:
-					case Kalan:
-					case Ulokan:
-					case Etu:
-					case Kontatu:
-					case Nanku:
-					case Mulu:
-					case Watan:
-					case Wili:
-					case Ani:
-					case Iputu:
-					case Tina:
-					case Ne:
-					case Titan:
-					case Pon:
-					case Len:
-					case Santi:
-					case Sankan:
-					case One:
-					case Tanu:
-					case Sepo:
-					case Teneme:
-					case Solu:
-					case Tope:
-					case Tamaka:
-					case Tuntan:
-					case Niju:
-					case Non:
-					case Ewin:
-					case Enteken:
-					case Menwa:
-					case Muntu:
-					case Insu:
-					case Onton:
-					case Kikolo:
-					case Lo:
-					case Tiku:
-					case Ikama:
-					case Inpali:
-						{
-						setState(59); 
-						_errHandler.sync(this);
-						_alt = 1;
-						do {
-							switch (_alt) {
-							case 1:
-								{
-								{
-								setState(58);
-								modifierClause();
-								}
-								}
-								break;
-							default:
-								throw new NoViableAltException(this);
-							}
-							setState(61); 
-							_errHandler.sync(this);
-							_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
-						} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
-						}
-						break;
-					default:
-						throw new NoViableAltException(this);
-					}
-					}
-					setState(67);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -1098,33 +382,59 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class SentenceClauseContext extends ParserRuleContext {
-		public List<PrepPhraseContext> prepPhrase() {
-			return getRuleContexts(PrepPhraseContext.class);
+		public List<PrepositionContext> preposition() {
+			return getRuleContexts(PrepositionContext.class);
 		}
-		public PrepPhraseContext prepPhrase(int i) {
-			return getRuleContext(PrepPhraseContext.class,i);
+		public PrepositionContext preposition(int i) {
+			return getRuleContext(PrepositionContext.class,i);
 		}
-		public List<NounPhraseContext> nounPhrase() {
-			return getRuleContexts(NounPhraseContext.class);
+		public List<NounContext> noun() {
+			return getRuleContexts(NounContext.class);
 		}
-		public NounPhraseContext nounPhrase(int i) {
-			return getRuleContext(NounPhraseContext.class,i);
+		public NounContext noun(int i) {
+			return getRuleContext(NounContext.class,i);
 		}
-		public List<TerminalNode> Le() { return getTokens(KokanuParser.Le); }
-		public TerminalNode Le(int i) {
-			return getToken(KokanuParser.Le, i);
+		public List<TransVerbPhraseContext> transVerbPhrase() {
+			return getRuleContexts(TransVerbPhraseContext.class);
 		}
-		public List<VerbPhraseContext> verbPhrase() {
-			return getRuleContexts(VerbPhraseContext.class);
+		public TransVerbPhraseContext transVerbPhrase(int i) {
+			return getRuleContext(TransVerbPhraseContext.class,i);
 		}
-		public VerbPhraseContext verbPhrase(int i) {
-			return getRuleContext(VerbPhraseContext.class,i);
+		public List<VerbContext> verb() {
+			return getRuleContexts(VerbContext.class);
+		}
+		public VerbContext verb(int i) {
+			return getRuleContext(VerbContext.class,i);
 		}
 		public List<ConnectorContext> connector() {
 			return getRuleContexts(ConnectorContext.class);
 		}
 		public ConnectorContext connector(int i) {
 			return getRuleContext(ConnectorContext.class,i);
+		}
+		public List<TerminalNode> Le() { return getTokens(KokanuParser.Le); }
+		public TerminalNode Le(int i) {
+			return getToken(KokanuParser.Le, i);
+		}
+		public List<TerminalNode> O() { return getTokens(KokanuParser.O); }
+		public TerminalNode O(int i) {
+			return getToken(KokanuParser.O, i);
+		}
+		public List<TerminalNode> No() { return getTokens(KokanuParser.No); }
+		public TerminalNode No(int i) {
+			return getToken(KokanuParser.No, i);
+		}
+		public List<NewAgentAdjClauseContext> newAgentAdjClause() {
+			return getRuleContexts(NewAgentAdjClauseContext.class);
+		}
+		public NewAgentAdjClauseContext newAgentAdjClause(int i) {
+			return getRuleContext(NewAgentAdjClauseContext.class,i);
+		}
+		public List<TerminatorContext> terminator() {
+			return getRuleContexts(TerminatorContext.class);
+		}
+		public TerminatorContext terminator(int i) {
+			return getRuleContext(TerminatorContext.class,i);
 		}
 		public SentenceClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1148,87 +458,167 @@ public class KokanuParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(71);
+			setState(75);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				{
-				setState(70);
-				prepPhrase();
+				setState(74);
+				preposition();
 				}
 				break;
 			}
-			setState(84);
+			setState(88);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536901632L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -598134346743809L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -2147500097L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32773L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 34288434943L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -51196L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -1196268693487617L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -35184405643265L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -4295000193L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -65545L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 68576869887L) != 0)) {
 				{
 				{
-				setState(73);
-				nounPhrase();
-				setState(79);
+				setState(77);
+				noun();
+				setState(83);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==Tan || _la==Un || _la==Lekin || _la==Ili) {
 					{
 					{
-					setState(74);
+					setState(78);
 					connector();
-					setState(75);
-					nounPhrase();
+					setState(79);
+					noun();
 					}
 					}
-					setState(81);
+					setState(85);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 				}
-				setState(86);
+				setState(90);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(88);
+			setState(92);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 17024L) != 0) || _la==Po || _la==An || ((((_la - 199)) & ~0x3f) == 0 && ((1L << (_la - 199)) & 33554689L) != 0) || ((((_la - 343)) & ~0x3f) == 0 && ((1L << (_la - 343)) & 8209L) != 0)) {
 				{
-				setState(87);
-				prepPhrase();
+				setState(91);
+				preposition();
 				}
 			}
 
-			setState(92); 
+			setState(109); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
 				switch (_alt) {
 				case 1:
 					{
-					{
-					setState(90);
-					match(Le);
-					setState(91);
-					verbPhrase();
+					setState(109);
+					_errHandler.sync(this);
+					switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
+					case 1:
+						{
+						setState(94);
+						_la = _input.LA(1);
+						if ( !(_la==Le || _la==O) ) {
+						_errHandler.recoverInline(this);
+						}
+						else {
+							if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+							_errHandler.reportMatch(this);
+							consume();
+						}
+						setState(96);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==No) {
+							{
+							setState(95);
+							match(No);
+							}
+						}
+
+						setState(98);
+						transVerbPhrase();
+						setState(102);
+						_errHandler.sync(this);
+						switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
+						case 1:
+							{
+							setState(99);
+							newAgentAdjClause();
+							setState(100);
+							terminator();
+							}
+							break;
+						}
+						}
+						break;
+					case 2:
+						{
+						setState(104);
+						_la = _input.LA(1);
+						if ( !(_la==Le || _la==O) ) {
+						_errHandler.recoverInline(this);
+						}
+						else {
+							if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+							_errHandler.reportMatch(this);
+							consume();
+						}
+						setState(106);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==No) {
+							{
+							setState(105);
+							match(No);
+							}
+						}
+
+						setState(108);
+						verb();
+						}
+						break;
 					}
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(94); 
+				setState(111); 
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,9,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
-			setState(97);
+			setState(114);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
 			case 1:
 				{
-				setState(96);
-				prepPhrase();
+				setState(113);
+				preposition();
 				}
 				break;
+			}
+			setState(121);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(116);
+					connector();
+					setState(117);
+					preposition();
+					}
+					} 
+				}
+				setState(123);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
 			}
 			}
 		}
@@ -1244,7 +634,7 @@ public class KokanuParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class NounPhraseContext extends ParserRuleContext {
+	public static class NounContext extends ParserRuleContext {
 		public NounClauseContext nounClause() {
 			return getRuleContext(NounClauseContext.class,0);
 		}
@@ -1254,8 +644,8 @@ public class KokanuParser extends Parser {
 		public ExpandedWordContext expandedWord() {
 			return getRuleContext(ExpandedWordContext.class,0);
 		}
-		public QuantityPhraseContext quantityPhrase() {
-			return getRuleContext(QuantityPhraseContext.class,0);
+		public QuantityContext quantity() {
+			return getRuleContext(QuantityContext.class,0);
 		}
 		public List<ModifierClauseContext> modifierClause() {
 			return getRuleContexts(ModifierClauseContext.class);
@@ -1263,94 +653,94 @@ public class KokanuParser extends Parser {
 		public ModifierClauseContext modifierClause(int i) {
 			return getRuleContext(ModifierClauseContext.class,i);
 		}
-		public NounPhraseContext(ParserRuleContext parent, int invokingState) {
+		public NounContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_nounPhrase; }
+		@Override public int getRuleIndex() { return RULE_noun; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterNounPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterNoun(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitNounPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitNoun(this);
 		}
 	}
 
-	public final NounPhraseContext nounPhrase() throws RecognitionException {
-		NounPhraseContext _localctx = new NounPhraseContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_nounPhrase);
+	public final NounContext noun() throws RecognitionException {
+		NounContext _localctx = new NounContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_noun);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(120);
+			setState(145);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,18,_ctx) ) {
 			case 1:
 				{
-				setState(100);
+				setState(125);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & 4398080073761L) != 0) || _la==Lima || _la==San || ((((_la - 264)) & ~0x3f) == 0 && ((1L << (_la - 264)) & 310765979393130497L) != 0) || _la==Niju) {
+				if (((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & 4398080073761L) != 0) || _la==Lima || _la==San || ((((_la - 265)) & ~0x3f) == 0 && ((1L << (_la - 265)) & 310765979393130497L) != 0) || _la==Niju) {
 					{
-					setState(99);
-					quantityPhrase();
+					setState(124);
+					quantity();
 					}
 				}
 
-				setState(102);
+				setState(127);
 				nounClause();
-				setState(103);
+				setState(128);
 				terminator();
-				setState(107);
+				setState(132);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(104);
+						setState(129);
 						modifierClause();
 						}
 						} 
 					}
-					setState(109);
+					setState(134);
 					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
+					_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 				}
 				}
 				break;
 			case 2:
 				{
-				setState(111);
+				setState(136);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,16,_ctx) ) {
 				case 1:
 					{
-					setState(110);
-					quantityPhrase();
+					setState(135);
+					quantity();
 					}
 					break;
 				}
-				setState(113);
+				setState(138);
 				expandedWord();
-				setState(117);
+				setState(142);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(114);
+						setState(139);
 						modifierClause();
 						}
 						} 
 					}
-					setState(119);
+					setState(144);
 					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+					_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
 				}
 				}
 				break;
@@ -1370,21 +760,11 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class NounClauseContext extends ParserRuleContext {
-		public TerminalNode Te() { return getToken(KokanuParser.Te, 0); }
-		public ContentWordContext contentWord() {
-			return getRuleContext(ContentWordContext.class,0);
+		public SameAgentAdjClauseContext sameAgentAdjClause() {
+			return getRuleContext(SameAgentAdjClauseContext.class,0);
 		}
-		public List<ModifierClauseContext> modifierClause() {
-			return getRuleContexts(ModifierClauseContext.class);
-		}
-		public ModifierClauseContext modifierClause(int i) {
-			return getRuleContext(ModifierClauseContext.class,i);
-		}
-		public List<PrepPhraseContext> prepPhrase() {
-			return getRuleContexts(PrepPhraseContext.class);
-		}
-		public PrepPhraseContext prepPhrase(int i) {
-			return getRuleContext(PrepPhraseContext.class,i);
+		public NewAgentAdjClauseContext newAgentAdjClause() {
+			return getRuleContext(NewAgentAdjClauseContext.class,0);
 		}
 		public NounClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1403,42 +783,26 @@ public class KokanuParser extends Parser {
 	public final NounClauseContext nounClause() throws RecognitionException {
 		NounClauseContext _localctx = new NounClauseContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_nounClause);
-		int _la;
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(122);
-			match(Te);
-			setState(123);
-			contentWord();
-			setState(127);
+			setState(149);
 			_errHandler.sync(this);
-			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536884224L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -598134346743809L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -2147500097L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32769L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 34288434943L) != 0)) {
+			switch (_input.LA(1)) {
+			case Te:
+				enterOuterAlt(_localctx, 1);
 				{
+				setState(147);
+				sameAgentAdjClause();
+				}
+				break;
+			case Ta:
+				enterOuterAlt(_localctx, 2);
 				{
-				setState(124);
-				modifierClause();
+				setState(148);
+				newAgentAdjClause();
 				}
-				}
-				setState(129);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-			}
-			setState(133);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) {
-				{
-				{
-				setState(130);
-				prepPhrase();
-				}
-				}
-				setState(135);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-			}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1471,6 +835,7 @@ public class KokanuParser extends Parser {
 			return getRuleContext(ModifierClauseContext.class,i);
 		}
 		public TerminalNode Wo() { return getToken(KokanuParser.Wo, 0); }
+		public TerminalNode Comma() { return getToken(KokanuParser.Comma, 0); }
 		public ModifierClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1490,17 +855,19 @@ public class KokanuParser extends Parser {
 		enterRule(_localctx, 10, RULE_modifierClause);
 		try {
 			int _alt;
-			setState(165);
+			setState(183);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case Je:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(136);
+				setState(151);
 				match(Je);
-				setState(146);
+				setState(161);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
+				case ProperNoun:
+				case We:
 				case Lijule:
 				case Pese:
 				case Kapaja:
@@ -1515,6 +882,7 @@ public class KokanuParser extends Parser {
 				case Talika:
 				case Kapan:
 				case Kisa:
+				case Mu:
 				case Mata:
 				case Mutakin:
 				case Mita:
@@ -1826,35 +1194,35 @@ public class KokanuParser extends Parser {
 				case Ikama:
 				case Inpali:
 					{
-					setState(137);
+					setState(152);
 					expandedWord();
-					setState(141);
+					setState(156);
 					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
+					_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
 					while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 						if ( _alt==1 ) {
 							{
 							{
-							setState(138);
+							setState(153);
 							modifierClause();
 							}
 							} 
 						}
-						setState(143);
+						setState(158);
 						_errHandler.sync(this);
-						_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
+						_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
 					}
 					}
 					break;
 				case Te:
 					{
-					setState(144);
+					setState(159);
 					sameAgentAdjClause();
 					}
 					break;
 				case Ta:
 					{
-					setState(145);
+					setState(160);
 					newAgentAdjClause();
 					}
 					break;
@@ -1866,11 +1234,13 @@ public class KokanuParser extends Parser {
 			case Wo:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(148);
+				setState(163);
 				match(Wo);
-				setState(158);
+				setState(173);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
+				case ProperNoun:
+				case We:
 				case Lijule:
 				case Pese:
 				case Kapaja:
@@ -1885,6 +1255,7 @@ public class KokanuParser extends Parser {
 				case Talika:
 				case Kapan:
 				case Kisa:
+				case Mu:
 				case Mata:
 				case Mutakin:
 				case Mita:
@@ -2196,35 +1567,35 @@ public class KokanuParser extends Parser {
 				case Ikama:
 				case Inpali:
 					{
-					setState(149);
+					setState(164);
 					expandedWord();
-					setState(153);
+					setState(168);
 					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
+					_alt = getInterpreter().adaptivePredict(_input,22,_ctx);
 					while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 						if ( _alt==1 ) {
 							{
 							{
-							setState(150);
+							setState(165);
 							modifierClause();
 							}
 							} 
 						}
-						setState(155);
+						setState(170);
 						_errHandler.sync(this);
-						_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
+						_alt = getInterpreter().adaptivePredict(_input,22,_ctx);
 					}
 					}
 					break;
 				case Te:
 					{
-					setState(156);
+					setState(171);
 					sameAgentAdjClause();
 					}
 					break;
 				case Ta:
 					{
-					setState(157);
+					setState(172);
 					newAgentAdjClause();
 					}
 					break;
@@ -2233,8 +1604,10 @@ public class KokanuParser extends Parser {
 				}
 				}
 				break;
+			case ProperNoun:
 			case Ta:
 			case Te:
+			case We:
 			case Lijule:
 			case Pese:
 			case Kapaja:
@@ -2249,6 +1622,7 @@ public class KokanuParser extends Parser {
 			case Talika:
 			case Kapan:
 			case Kisa:
+			case Mu:
 			case Mata:
 			case Mutakin:
 			case Mita:
@@ -2561,9 +1935,11 @@ public class KokanuParser extends Parser {
 			case Inpali:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(163);
+				setState(181);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
+				case ProperNoun:
+				case We:
 				case Lijule:
 				case Pese:
 				case Kapaja:
@@ -2578,6 +1954,7 @@ public class KokanuParser extends Parser {
 				case Talika:
 				case Kapan:
 				case Kisa:
+				case Mu:
 				case Mata:
 				case Mutakin:
 				case Mita:
@@ -2889,19 +2266,29 @@ public class KokanuParser extends Parser {
 				case Ikama:
 				case Inpali:
 					{
-					setState(160);
+					setState(175);
 					expandedWord();
 					}
 					break;
 				case Te:
 					{
-					setState(161);
+					setState(176);
 					sameAgentAdjClause();
+					setState(178);
+					_errHandler.sync(this);
+					switch ( getInterpreter().adaptivePredict(_input,24,_ctx) ) {
+					case 1:
+						{
+						setState(177);
+						match(Comma);
+						}
+						break;
+					}
 					}
 					break;
 				case Ta:
 					{
-					setState(162);
+					setState(180);
 					newAgentAdjClause();
 					}
 					break;
@@ -2951,9 +2338,9 @@ public class KokanuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(167);
+			setState(185);
 			match(Ta);
-			setState(168);
+			setState(186);
 			sentenceClause();
 			}
 		}
@@ -2971,14 +2358,18 @@ public class KokanuParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class SameAgentAdjClauseContext extends ParserRuleContext {
 		public TerminalNode Te() { return getToken(KokanuParser.Te, 0); }
-		public VerbPhraseContext verbPhrase() {
-			return getRuleContext(VerbPhraseContext.class,0);
+		public TransVerbPhraseContext transVerbPhrase() {
+			return getRuleContext(TransVerbPhraseContext.class,0);
 		}
-		public List<PrepPhraseContext> prepPhrase() {
-			return getRuleContexts(PrepPhraseContext.class);
+		public TerminalNode We() { return getToken(KokanuParser.We, 0); }
+		public NewAgentAdjClauseContext newAgentAdjClause() {
+			return getRuleContext(NewAgentAdjClauseContext.class,0);
 		}
-		public PrepPhraseContext prepPhrase(int i) {
-			return getRuleContext(PrepPhraseContext.class,i);
+		public PrepositionContext preposition() {
+			return getRuleContext(PrepositionContext.class,0);
+		}
+		public VerbContext verb() {
+			return getRuleContext(VerbContext.class,0);
 		}
 		public SameAgentAdjClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2998,29 +2389,77 @@ public class KokanuParser extends Parser {
 		SameAgentAdjClauseContext _localctx = new SameAgentAdjClauseContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_sameAgentAdjClause);
 		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(170);
-			match(Te);
-			setState(171);
-			verbPhrase();
-			setState(175);
+			setState(207);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,24,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					{
-					{
-					setState(172);
-					prepPhrase();
-					}
-					} 
-				}
-				setState(177);
+			switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(188);
+				match(Te);
+				setState(190);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,24,_ctx);
-			}
+				switch ( getInterpreter().adaptivePredict(_input,27,_ctx) ) {
+				case 1:
+					{
+					setState(189);
+					match(We);
+					}
+					break;
+				}
+				setState(192);
+				transVerbPhrase();
+				setState(194);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
+				case 1:
+					{
+					setState(193);
+					newAgentAdjClause();
+					}
+					break;
+				}
+				setState(197);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,29,_ctx) ) {
+				case 1:
+					{
+					setState(196);
+					preposition();
+					}
+					break;
+				}
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(199);
+				match(Te);
+				setState(201);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,30,_ctx) ) {
+				case 1:
+					{
+					setState(200);
+					match(We);
+					}
+					break;
+				}
+				setState(203);
+				verb();
+				setState(205);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
+				case 1:
+					{
+					setState(204);
+					preposition();
+					}
+					break;
+				}
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -3060,9 +2499,9 @@ public class KokanuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(178);
+			setState(209);
 			_la = _input.LA(1);
-			if ( !(((((_la - -1)) & ~0x3f) == 0 && ((1L << (_la - -1)) & 41L) != 0)) ) {
+			if ( !(((((_la - -1)) & ~0x3f) == 0 && ((1L << (_la - -1)) & 81L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -3084,9 +2523,9 @@ public class KokanuParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class VerbPhraseContext extends ParserRuleContext {
-		public ContentWordContext contentWord() {
-			return getRuleContext(ContentWordContext.class,0);
+	public static class VerbContext extends ParserRuleContext {
+		public BaseModifierContext baseModifier() {
+			return getRuleContext(BaseModifierContext.class,0);
 		}
 		public List<ModifierClauseContext> modifierClause() {
 			return getRuleContexts(ModifierClauseContext.class);
@@ -3094,44 +2533,139 @@ public class KokanuParser extends Parser {
 		public ModifierClauseContext modifierClause(int i) {
 			return getRuleContext(ModifierClauseContext.class,i);
 		}
-		public VerbPhraseContext(ParserRuleContext parent, int invokingState) {
+		public BaseNounContext baseNoun() {
+			return getRuleContext(BaseNounContext.class,0);
+		}
+		public VerbContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_verbPhrase; }
+		@Override public int getRuleIndex() { return RULE_verb; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterVerbPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterVerb(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitVerbPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitVerb(this);
 		}
 	}
 
-	public final VerbPhraseContext verbPhrase() throws RecognitionException {
-		VerbPhraseContext _localctx = new VerbPhraseContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_verbPhrase);
+	public final VerbContext verb() throws RecognitionException {
+		VerbContext _localctx = new VerbContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_verb);
+		try {
+			int _alt;
+			setState(225);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,35,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(211);
+				baseModifier();
+				setState(215);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+					if ( _alt==1 ) {
+						{
+						{
+						setState(212);
+						modifierClause();
+						}
+						} 
+					}
+					setState(217);
+					_errHandler.sync(this);
+					_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+				}
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(218);
+				baseNoun();
+				setState(222);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+					if ( _alt==1 ) {
+						{
+						{
+						setState(219);
+						modifierClause();
+						}
+						} 
+					}
+					setState(224);
+					_errHandler.sync(this);
+					_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+				}
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TransVerbPhraseContext extends ParserRuleContext {
+		public BaseVerbContext baseVerb() {
+			return getRuleContext(BaseVerbContext.class,0);
+		}
+		public List<ModifierClauseContext> modifierClause() {
+			return getRuleContexts(ModifierClauseContext.class);
+		}
+		public ModifierClauseContext modifierClause(int i) {
+			return getRuleContext(ModifierClauseContext.class,i);
+		}
+		public TransVerbPhraseContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_transVerbPhrase; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterTransVerbPhrase(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitTransVerbPhrase(this);
+		}
+	}
+
+	public final TransVerbPhraseContext transVerbPhrase() throws RecognitionException {
+		TransVerbPhraseContext _localctx = new TransVerbPhraseContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_transVerbPhrase);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(180);
-			contentWord();
-			setState(184);
+			setState(227);
+			baseVerb();
+			setState(231);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,25,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(181);
+					setState(228);
 					modifierClause();
 					}
 					} 
 				}
-				setState(186);
+				setState(233);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,25,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
 			}
 			}
 		}
@@ -3147,7 +2681,7 @@ public class KokanuParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class QuantityPhraseContext extends ParserRuleContext {
+	public static class QuantityContext extends ParserRuleContext {
 		public RelativeQuantityContext relativeQuantity() {
 			return getRuleContext(RelativeQuantityContext.class,0);
 		}
@@ -3157,39 +2691,39 @@ public class KokanuParser extends Parser {
 		public NominalQuantityContext nominalQuantity(int i) {
 			return getRuleContext(NominalQuantityContext.class,i);
 		}
-		public QuantityPhraseContext(ParserRuleContext parent, int invokingState) {
+		public QuantityContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_quantityPhrase; }
+		@Override public int getRuleIndex() { return RULE_quantity; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterQuantityPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterQuantity(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitQuantityPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitQuantity(this);
 		}
 	}
 
-	public final QuantityPhraseContext quantityPhrase() throws RecognitionException {
-		QuantityPhraseContext _localctx = new QuantityPhraseContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_quantityPhrase);
+	public final QuantityContext quantity() throws RecognitionException {
+		QuantityContext _localctx = new QuantityContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_quantity);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(188);
+			setState(235);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==Jati || _la==Mese || _la==Menu || _la==Ani || _la==Niju) {
 				{
-				setState(187);
+				setState(234);
 				relativeQuantity();
 				}
 			}
 
-			setState(191); 
+			setState(238); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -3197,7 +2731,7 @@ public class KokanuParser extends Parser {
 				case 1:
 					{
 					{
-					setState(190);
+					setState(237);
 					nominalQuantity();
 					}
 					}
@@ -3205,9 +2739,9 @@ public class KokanuParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(193); 
+				setState(240); 
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,27,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,38,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -3223,7 +2757,7 @@ public class KokanuParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class PrepPhraseContext extends ParserRuleContext {
+	public static class PrepositionContext extends ParserRuleContext {
 		public List<PrepClauseContext> prepClause() {
 			return getRuleContexts(PrepClauseContext.class);
 		}
@@ -3234,55 +2768,55 @@ public class KokanuParser extends Parser {
 		public TerminalNode Comma(int i) {
 			return getToken(KokanuParser.Comma, i);
 		}
-		public PrepPhraseContext(ParserRuleContext parent, int invokingState) {
+		public PrepositionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_prepPhrase; }
+		@Override public int getRuleIndex() { return RULE_preposition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterPrepPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterPreposition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitPrepPhrase(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitPreposition(this);
 		}
 	}
 
-	public final PrepPhraseContext prepPhrase() throws RecognitionException {
-		PrepPhraseContext _localctx = new PrepPhraseContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_prepPhrase);
+	public final PrepositionContext preposition() throws RecognitionException {
+		PrepositionContext _localctx = new PrepositionContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_preposition);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(195);
+			setState(242);
 			prepClause();
-			setState(202);
+			setState(249);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(197);
+					setState(244);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					if (_la==Comma) {
 						{
-						setState(196);
+						setState(243);
 						match(Comma);
 						}
 					}
 
-					setState(199);
+					setState(246);
 					prepClause();
 					}
 					} 
 				}
-				setState(204);
+				setState(251);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			}
 			}
 		}
@@ -3299,11 +2833,11 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PrepClauseContext extends ParserRuleContext {
-		public List<NounPhraseContext> nounPhrase() {
-			return getRuleContexts(NounPhraseContext.class);
+		public List<NounContext> noun() {
+			return getRuleContexts(NounContext.class);
 		}
-		public NounPhraseContext nounPhrase(int i) {
-			return getRuleContext(NounPhraseContext.class,i);
+		public NounContext noun(int i) {
+			return getRuleContext(NounContext.class,i);
 		}
 		public TerminalNode In() { return getToken(KokanuParser.In, 0); }
 		public TerminalNode Men() { return getToken(KokanuParser.Men, 0); }
@@ -3316,6 +2850,7 @@ public class KokanuParser extends Parser {
 		public TerminalNode So() { return getToken(KokanuParser.So, 0); }
 		public TerminalNode Sun() { return getToken(KokanuParser.Sun, 0); }
 		public TerminalNode Nenka() { return getToken(KokanuParser.Nenka, 0); }
+		public TerminalNode No() { return getToken(KokanuParser.No, 0); }
 		public List<ConnectorContext> connector() {
 			return getRuleContexts(ConnectorContext.class);
 		}
@@ -3338,15 +2873,15 @@ public class KokanuParser extends Parser {
 
 	public final PrepClauseContext prepClause() throws RecognitionException {
 		PrepClauseContext _localctx = new PrepClauseContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_prepClause);
+		enterRule(_localctx, 26, RULE_prepClause);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(205);
+			setState(252);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 17024L) != 0) || _la==Po || _la==An || ((((_la - 199)) & ~0x3f) == 0 && ((1L << (_la - 199)) & 33554689L) != 0) || ((((_la - 343)) & ~0x3f) == 0 && ((1L << (_la - 343)) & 8209L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -3354,25 +2889,35 @@ public class KokanuParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(206);
-			nounPhrase();
-			setState(212);
+			setState(254);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,30,_ctx);
+			_la = _input.LA(1);
+			if (_la==No) {
+				{
+				setState(253);
+				match(No);
+				}
+			}
+
+			setState(256);
+			noun();
+			setState(262);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(207);
+					setState(257);
 					connector();
-					setState(208);
-					nounPhrase();
+					setState(258);
+					noun();
 					}
 					} 
 				}
-				setState(214);
+				setState(264);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,30,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
 			}
 			}
 		}
@@ -3414,330 +2959,32 @@ public class KokanuParser extends Parser {
 
 	public final ContentWordContext contentWord() throws RecognitionException {
 		ContentWordContext _localctx = new ContentWordContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_contentWord);
+		enterRule(_localctx, 28, RULE_contentWord);
 		try {
-			setState(218);
+			setState(268);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case Kapaja:
-			case Sito:
-			case Sala:
-			case Talika:
-			case Mata:
-			case Mita:
-			case Jasa:
-			case Jamin:
-			case Apaki:
-			case Luwa:
-			case Otota:
-			case Oti:
-			case Pani:
-			case Sikin:
-			case Sinsi:
-			case Anpipi:
-			case Ten:
-			case Pulusi:
-			case Muwesi:
-			case Moto:
-			case Kemika:
-			case Mani:
-			case Sin:
-			case Tolu:
-			case Lipu:
-			case Osa:
-			case Ken:
-			case Lan:
-			case Soto:
-			case Nin:
-			case Toki:
-			case Kumi:
-			case Polan:
-			case Mijalo:
-			case Tawe:
-			case Kiju:
-			case Jone:
-			case Akoli:
-			case Lana:
-			case Wa:
-			case Tanwa:
-			case Tipa:
-			case Pite:
-			case Pintu:
-			case Laki:
-			case Jan:
-			case Keke:
-			case Latito:
-			case Ankolo:
-			case Poloko:
-			case Komo:
-			case Powele:
-			case Sopa:
-			case Niku:
-			case Musi:
-			case Kaki:
-			case Akasa:
-			case Kumon:
-			case Namu:
-			case Tuwi:
-			case Alijun:
-			case Malo:
-			case Leseka:
-			case Pintan:
-			case Kuwan:
-			case Sintuwan:
-			case Pansin:
-			case Kuwosi:
-			case Limijen:
-			case Matuwa:
-			case Kali:
-			case Namuna:
-			case Onja:
-			case Ukama:
-			case Koton:
-			case Mitin:
-			case Konpute:
-			case Kuku:
-			case Meja:
-			case Momu:
-			case Neje:
-			case Pawo:
-			case Ukiki:
-			case Lenka:
-			case Pelete:
-			case Pitijo:
-			case Pumi:
-			case Matija:
-			case Waju:
-			case Salila:
-			case Sila:
-			case Ko:
-			case Suwina:
-			case Ipuwe:
-			case Muku:
-			case Kalawa:
-			case Wala:
-			case Asete:
-			case Kenelo:
-			case Onko:
-			case Umo:
-			case Lanki:
-			case Titi:
-			case Tapala:
-			case Talili:
-			case Takilo:
-			case Ulokan:
-			case Watan:
-			case Titan:
-			case Tamaka:
-			case Non:
-			case Ewin:
-			case Enteken:
-			case Menwa:
-			case Insu:
-			case Ikama:
-			case Inpali:
+			switch ( getInterpreter().adaptivePredict(_input,43,_ctx) ) {
+			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(215);
+				setState(265);
 				baseNoun();
 				}
 				break;
-			case Pese:
-			case Kilima:
-			case Iman:
-			case Tasuwi:
-			case Ukun:
-			case Kisa:
-			case Kela:
-			case Lika:
-			case Tisilin:
-			case Kota:
-			case Pi:
-			case Anan:
-			case Tenkin:
-			case Papon:
-			case Junja:
-			case Nan:
-			case Ju:
-			case Kanisa:
-			case Pela:
-			case Tun:
-			case Oke:
-			case Pesuwan:
-			case Ato:
-			case Wisan:
-			case Kun:
-			case Teka:
-			case Tijante:
-			case Niwa:
-			case Sitija:
-			case Makan:
-			case Sapole:
-			case Suki:
-			case Apijo:
-			case Alu:
-			case Kosan:
-			case Inkatan:
-			case Pen:
-			case Iwe:
-			case Putun:
-			case Tajen:
-			case Pa:
-			case Tene:
-			case Jon:
-			case Peman:
-			case Jatan:
-			case Lansa:
-			case Sapi:
-			case Pata:
-			case Akala:
-			case Amo:
-			case Kanta:
-			case Posa:
-			case Anta:
-			case Takuwa:
-			case Tawapu:
-			case Kalan:
-			case Kontatu:
-			case Pon:
-			case Teneme:
-			case Solu:
-			case Onton:
+			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(216);
+				setState(266);
 				baseVerb();
 				}
 				break;
-			case Lijule:
-			case Akiki:
-			case Aja:
-			case Kapan:
-			case Mutakin:
-			case Konpa:
-			case Janlu:
-			case Jamu:
-			case Pututi:
-			case Minuli:
-			case Unitu:
-			case Loso:
-			case Kima:
-			case Patun:
-			case Panli:
-			case Tunti:
-			case Wanku:
-			case Unsi:
-			case Puka:
-			case Pankosi:
-			case Otan:
-			case Kujo:
-			case Ela:
-			case Suwi:
-			case Tati:
-			case Tomiwa:
-			case Tepu:
-			case Anwije:
-			case Lisi:
-			case Eme:
-			case Kapu:
-			case Neso:
-			case Kaso:
-			case Konen:
-			case Kikuwa:
-			case Mamaki:
-			case Wiki:
-			case Naki:
-			case Sone:
-			case Katin:
-			case Kula:
-			case Kusa:
-			case Tile:
-			case Tusa:
-			case Nankin:
-			case Nalan:
-			case Pasan:
-			case Pula:
-			case Mepu:
-			case Luka:
-			case Wita:
-			case Saminta:
-			case Sanpanti:
-			case Saman:
-			case Satalan:
-			case Sula:
-			case Matiko:
-			case Nelo:
-			case Kate:
-			case Osole:
-			case Umami:
-			case Juka:
-			case Tenti:
-			case Kawa:
-			case Penpe:
-			case Tuko:
-			case Olon:
-			case Kuto:
-			case Asa:
-			case Kijata:
-			case Sena:
-			case Sipa:
-			case Si:
-			case Joli:
-			case Tonsa:
-			case Kuwanko:
-			case Timi:
-			case Tunpu:
-			case Taka:
-			case Tune:
-			case Nile:
-			case Panta:
-			case Tonko:
-			case Sunkan:
-			case Lito:
-			case Lamo:
-			case Aluko:
-			case Nepa:
-			case Tutu:
-			case Wonpa:
-			case Napa:
-			case Nase:
-			case Kisowa:
-			case Pasu:
-			case Opotu:
-			case Uta:
-			case Maku:
-			case Tula:
-			case Samo:
-			case Tenja:
-			case Konje:
-			case Sekano:
-			case Pikante:
-			case Lipan:
-			case Lunti:
-			case Mulu:
-			case Wili:
-			case Iputu:
-			case Tina:
-			case Len:
-			case Santi:
-			case Sankan:
-			case One:
-			case Tanu:
-			case Sepo:
-			case Tope:
-			case Tuntan:
-			case Muntu:
-			case Kikolo:
-			case Lo:
-			case Tiku:
+			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(217);
+				setState(267);
 				baseModifier();
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3765,6 +3012,7 @@ public class KokanuParser extends Parser {
 		public ContentWordContext contentWord() {
 			return getRuleContext(ContentWordContext.class,0);
 		}
+		public TerminalNode ProperNoun() { return getToken(KokanuParser.ProperNoun, 0); }
 		public ExpandedWordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -3781,9 +3029,11 @@ public class KokanuParser extends Parser {
 
 	public final ExpandedWordContext expandedWord() throws RecognitionException {
 		ExpandedWordContext _localctx = new ExpandedWordContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_expandedWord);
+		enterRule(_localctx, 30, RULE_expandedWord);
 		try {
-			setState(224);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(275);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case Ka:
@@ -3794,9 +3044,8 @@ public class KokanuParser extends Parser {
 			case Na:
 			case Sa:
 			case Ne:
-				enterOuterAlt(_localctx, 1);
 				{
-				setState(220);
+				setState(270);
 				pronoun();
 				}
 				break;
@@ -3805,9 +3054,8 @@ public class KokanuParser extends Parser {
 			case Menu:
 			case Ani:
 			case Niju:
-				enterOuterAlt(_localctx, 2);
 				{
-				setState(221);
+				setState(271);
 				relativeQuantity();
 				}
 				break;
@@ -3823,12 +3071,12 @@ public class KokanuParser extends Parser {
 			case Tiju:
 			case Etu:
 			case Nanku:
-				enterOuterAlt(_localctx, 3);
 				{
-				setState(222);
+				setState(272);
 				nominalQuantity();
 				}
 				break;
+			case We:
 			case Lijule:
 			case Pese:
 			case Kapaja:
@@ -3843,6 +3091,7 @@ public class KokanuParser extends Parser {
 			case Talika:
 			case Kapan:
 			case Kisa:
+			case Mu:
 			case Mata:
 			case Mutakin:
 			case Mita:
@@ -4128,10 +3377,189 @@ public class KokanuParser extends Parser {
 			case Tiku:
 			case Ikama:
 			case Inpali:
-				enterOuterAlt(_localctx, 4);
 				{
-				setState(223);
+				setState(273);
 				contentWord();
+				}
+				break;
+			case ProperNoun:
+				{
+				setState(274);
+				match(ProperNoun);
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PronounContext extends ParserRuleContext {
+		public TerminalNode Ja() { return getToken(KokanuParser.Ja, 0); }
+		public TerminalNode Ka() { return getToken(KokanuParser.Ka, 0); }
+		public TerminalNode Mi() { return getToken(KokanuParser.Mi, 0); }
+		public TerminalNode Na() { return getToken(KokanuParser.Na, 0); }
+		public TerminalNode Ne() { return getToken(KokanuParser.Ne, 0); }
+		public TerminalNode Sa() { return getToken(KokanuParser.Sa, 0); }
+		public TerminalNode Tu() { return getToken(KokanuParser.Tu, 0); }
+		public TerminalNode Usen() { return getToken(KokanuParser.Usen, 0); }
+		public PronounContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pronoun; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterPronoun(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitPronoun(this);
+		}
+	}
+
+	public final PronounContext pronoun() throws RecognitionException {
+		PronounContext _localctx = new PronounContext(_ctx, getState());
+		enterRule(_localctx, 32, RULE_pronoun);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(277);
+			_la = _input.LA(1);
+			if ( !(_la==Ka || _la==Usen || _la==Ja || _la==Mi || _la==Tu || _la==Na || _la==Sa || _la==Ne) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ContentParticlesContext extends ParserRuleContext {
+		public TerminalNode We() { return getToken(KokanuParser.We, 0); }
+		public List<TerminalNode> No() { return getTokens(KokanuParser.No); }
+		public TerminalNode No(int i) {
+			return getToken(KokanuParser.No, i);
+		}
+		public TerminalNode Mu() { return getToken(KokanuParser.Mu, 0); }
+		public ContentParticlesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_contentParticles; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterContentParticles(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitContentParticles(this);
+		}
+	}
+
+	public final ContentParticlesContext contentParticles() throws RecognitionException {
+		ContentParticlesContext _localctx = new ContentParticlesContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_contentParticles);
+		int _la;
+		try {
+			setState(299);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case We:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(279);
+				match(We);
+				setState(281);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==No) {
+					{
+					setState(280);
+					match(No);
+					}
+				}
+
+				setState(287);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Mu) {
+					{
+					setState(283);
+					match(Mu);
+					setState(285);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					if (_la==No) {
+						{
+						setState(284);
+						match(No);
+						}
+					}
+
+					}
+				}
+
+				}
+				break;
+			case Mu:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(289);
+				match(Mu);
+				setState(291);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==No) {
+					{
+					setState(290);
+					match(No);
+					}
+				}
+
+				setState(297);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==We) {
+					{
+					setState(293);
+					match(We);
+					setState(295);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					if (_la==No) {
+						{
+						setState(294);
+						match(No);
+						}
+					}
+
+					}
+				}
+
 				}
 				break;
 			default:
@@ -4151,6 +3579,60 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class BaseVerbContext extends ParserRuleContext {
+		public RawVerbsContext rawVerbs() {
+			return getRuleContext(RawVerbsContext.class,0);
+		}
+		public ContentParticlesContext contentParticles() {
+			return getRuleContext(ContentParticlesContext.class,0);
+		}
+		public BaseVerbContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_baseVerb; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseVerb(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseVerb(this);
+		}
+	}
+
+	public final BaseVerbContext baseVerb() throws RecognitionException {
+		BaseVerbContext _localctx = new BaseVerbContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_baseVerb);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(302);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==We || _la==Mu) {
+				{
+				setState(301);
+				contentParticles();
+				}
+			}
+
+			setState(304);
+			rawVerbs();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RawVerbsContext extends ParserRuleContext {
 		public TerminalNode Pese() { return getToken(KokanuParser.Pese, 0); }
 		public TerminalNode Kilima() { return getToken(KokanuParser.Kilima, 0); }
 		public TerminalNode Iman() { return getToken(KokanuParser.Iman, 0); }
@@ -4212,84 +3694,30 @@ public class KokanuParser extends Parser {
 		public TerminalNode Teneme() { return getToken(KokanuParser.Teneme, 0); }
 		public TerminalNode Solu() { return getToken(KokanuParser.Solu, 0); }
 		public TerminalNode Onton() { return getToken(KokanuParser.Onton, 0); }
-		public BaseVerbContext(ParserRuleContext parent, int invokingState) {
+		public RawVerbsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_baseVerb; }
+		@Override public int getRuleIndex() { return RULE_rawVerbs; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseVerb(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterRawVerbs(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseVerb(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitRawVerbs(this);
 		}
 	}
 
-	public final BaseVerbContext baseVerb() throws RecognitionException {
-		BaseVerbContext _localctx = new BaseVerbContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_baseVerb);
+	public final RawVerbsContext rawVerbs() throws RecognitionException {
+		RawVerbsContext _localctx = new RawVerbsContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_rawVerbs);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(226);
+			setState(306);
 			_la = _input.LA(1);
-			if ( !(((((_la - 16)) & ~0x3f) == 0 && ((1L << (_la - 16)) & -9072078270425460555L) != 0) || ((((_la - 83)) & ~0x3f) == 0 && ((1L << (_la - 83)) & 2632353986627272769L) != 0) || ((((_la - 159)) & ~0x3f) == 0 && ((1L << (_la - 159)) & -9069897719901700087L) != 0) || ((((_la - 227)) & ~0x3f) == 0 && ((1L << (_la - 227)) & 79238120079633L) != 0) || ((((_la - 292)) & ~0x3f) == 0 && ((1L << (_la - 292)) & 144141610752424967L) != 0)) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	@SuppressWarnings("CheckReturnValue")
-	public static class PronounContext extends ParserRuleContext {
-		public TerminalNode Ja() { return getToken(KokanuParser.Ja, 0); }
-		public TerminalNode Ka() { return getToken(KokanuParser.Ka, 0); }
-		public TerminalNode Mi() { return getToken(KokanuParser.Mi, 0); }
-		public TerminalNode Na() { return getToken(KokanuParser.Na, 0); }
-		public TerminalNode Ne() { return getToken(KokanuParser.Ne, 0); }
-		public TerminalNode Sa() { return getToken(KokanuParser.Sa, 0); }
-		public TerminalNode Tu() { return getToken(KokanuParser.Tu, 0); }
-		public TerminalNode Usen() { return getToken(KokanuParser.Usen, 0); }
-		public PronounContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_pronoun; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterPronoun(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitPronoun(this);
-		}
-	}
-
-	public final PronounContext pronoun() throws RecognitionException {
-		PronounContext _localctx = new PronounContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_pronoun);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(228);
-			_la = _input.LA(1);
-			if ( !(_la==Ka || _la==Usen || _la==Ja || _la==Mi || _la==Tu || _la==Na || _la==Sa || _la==Ne) ) {
+			if ( !(((((_la - 17)) & ~0x3f) == 0 && ((1L << (_la - 17)) & -9072078270425460555L) != 0) || ((((_la - 84)) & ~0x3f) == 0 && ((1L << (_la - 84)) & 2632353986627272769L) != 0) || ((((_la - 160)) & ~0x3f) == 0 && ((1L << (_la - 160)) & -9069897719901700087L) != 0) || ((((_la - 228)) & ~0x3f) == 0 && ((1L << (_la - 228)) & 79238120079633L) != 0) || ((((_la - 293)) & ~0x3f) == 0 && ((1L << (_la - 293)) & 144141610752424967L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4312,6 +3740,60 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class BaseNounContext extends ParserRuleContext {
+		public RawNounsContext rawNouns() {
+			return getRuleContext(RawNounsContext.class,0);
+		}
+		public ContentParticlesContext contentParticles() {
+			return getRuleContext(ContentParticlesContext.class,0);
+		}
+		public BaseNounContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_baseNoun; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseNoun(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseNoun(this);
+		}
+	}
+
+	public final BaseNounContext baseNoun() throws RecognitionException {
+		BaseNounContext _localctx = new BaseNounContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_baseNoun);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(309);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==We || _la==Mu) {
+				{
+				setState(308);
+				contentParticles();
+				}
+			}
+
+			setState(311);
+			rawNouns();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RawNounsContext extends ParserRuleContext {
 		public TerminalNode Kapaja() { return getToken(KokanuParser.Kapaja, 0); }
 		public TerminalNode Sito() { return getToken(KokanuParser.Sito, 0); }
 		public TerminalNode Sala() { return getToken(KokanuParser.Sala, 0); }
@@ -4429,30 +3911,30 @@ public class KokanuParser extends Parser {
 		public TerminalNode Insu() { return getToken(KokanuParser.Insu, 0); }
 		public TerminalNode Ikama() { return getToken(KokanuParser.Ikama, 0); }
 		public TerminalNode Inpali() { return getToken(KokanuParser.Inpali, 0); }
-		public BaseNounContext(ParserRuleContext parent, int invokingState) {
+		public RawNounsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_baseNoun; }
+		@Override public int getRuleIndex() { return RULE_rawNouns; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseNoun(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterRawNouns(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseNoun(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitRawNouns(this);
 		}
 	}
 
-	public final BaseNounContext baseNoun() throws RecognitionException {
-		BaseNounContext _localctx = new BaseNounContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_baseNoun);
+	public final RawNounsContext rawNouns() throws RecognitionException {
+		RawNounsContext _localctx = new RawNounsContext(_ctx, getState());
+		enterRule(_localctx, 42, RULE_rawNouns);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(230);
+			setState(313);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 2450663118562000896L) != 0) || ((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 496702918876266725L) != 0) || ((((_la - 136)) & ~0x3f) == 0 && ((1L << (_la - 136)) & 1202989454399146499L) != 0) || ((((_la - 201)) & ~0x3f) == 0 && ((1L << (_la - 201)) & 1159626191524664589L) != 0) || ((((_la - 268)) & ~0x3f) == 0 && ((1L << (_la - 268)) & 292917326872260547L) != 0) || ((((_la - 338)) & ~0x3f) == 0 && ((1L << (_la - 338)) & 99561L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 4901326237124001792L) != 0) || ((((_la - 70)) & ~0x3f) == 0 && ((1L << (_la - 70)) & 496702918876266725L) != 0) || ((((_la - 137)) & ~0x3f) == 0 && ((1L << (_la - 137)) & 1202989454399146499L) != 0) || ((((_la - 202)) & ~0x3f) == 0 && ((1L << (_la - 202)) & 1159626191524664589L) != 0) || ((((_la - 269)) & ~0x3f) == 0 && ((1L << (_la - 269)) & 292917326872260547L) != 0) || ((((_la - 339)) & ~0x3f) == 0 && ((1L << (_la - 339)) & 99561L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4475,6 +3957,60 @@ public class KokanuParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class BaseModifierContext extends ParserRuleContext {
+		public RawModifiersContext rawModifiers() {
+			return getRuleContext(RawModifiersContext.class,0);
+		}
+		public ContentParticlesContext contentParticles() {
+			return getRuleContext(ContentParticlesContext.class,0);
+		}
+		public BaseModifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_baseModifier; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseModifier(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseModifier(this);
+		}
+	}
+
+	public final BaseModifierContext baseModifier() throws RecognitionException {
+		BaseModifierContext _localctx = new BaseModifierContext(_ctx, getState());
+		enterRule(_localctx, 44, RULE_baseModifier);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(316);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==We || _la==Mu) {
+				{
+				setState(315);
+				contentParticles();
+				}
+			}
+
+			setState(318);
+			rawModifiers();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RawModifiersContext extends ParserRuleContext {
 		public TerminalNode Lijule() { return getToken(KokanuParser.Lijule, 0); }
 		public TerminalNode Akiki() { return getToken(KokanuParser.Akiki, 0); }
 		public TerminalNode Aja() { return getToken(KokanuParser.Aja, 0); }
@@ -4596,30 +4132,30 @@ public class KokanuParser extends Parser {
 		public TerminalNode Kikolo() { return getToken(KokanuParser.Kikolo, 0); }
 		public TerminalNode Lo() { return getToken(KokanuParser.Lo, 0); }
 		public TerminalNode Tiku() { return getToken(KokanuParser.Tiku, 0); }
-		public BaseModifierContext(ParserRuleContext parent, int invokingState) {
+		public RawModifiersContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_baseModifier; }
+		@Override public int getRuleIndex() { return RULE_rawModifiers; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterBaseModifier(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).enterRawModifiers(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitBaseModifier(this);
+			if ( listener instanceof KokanuParserListener ) ((KokanuParserListener)listener).exitRawModifiers(this);
 		}
 	}
 
-	public final BaseModifierContext baseModifier() throws RecognitionException {
-		BaseModifierContext _localctx = new BaseModifierContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_baseModifier);
+	public final RawModifiersContext rawModifiers() throws RecognitionException {
+		RawModifiersContext _localctx = new RawModifiersContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_rawModifiers);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(232);
+			setState(320);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 6421139249860476928L) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & -8586041648507205567L) != 0) || ((((_la - 130)) & ~0x3f) == 0 && ((1L << (_la - 130)) & 6017813231691445807L) != 0) || ((((_la - 194)) & ~0x3f) == 0 && ((1L << (_la - 194)) & -3164045281630027423L) != 0) || ((((_la - 260)) & ~0x3f) == 0 && ((1L << (_la - 260)) & -6334310642366803739L) != 0) || ((((_la - 324)) & ~0x3f) == 0 && ((1L << (_la - 324)) & 478193633L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & -5604465573988597760L) != 0) || ((((_la - 67)) & ~0x3f) == 0 && ((1L << (_la - 67)) & -8586041648507205567L) != 0) || ((((_la - 131)) & ~0x3f) == 0 && ((1L << (_la - 131)) & 6017813231691445807L) != 0) || ((((_la - 195)) & ~0x3f) == 0 && ((1L << (_la - 195)) & -3164045281630027423L) != 0) || ((((_la - 261)) & ~0x3f) == 0 && ((1L << (_la - 261)) & -6334310642366803739L) != 0) || ((((_la - 325)) & ~0x3f) == 0 && ((1L << (_la - 325)) & 478193633L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4662,12 +4198,12 @@ public class KokanuParser extends Parser {
 
 	public final ConnectorContext connector() throws RecognitionException {
 		ConnectorContext _localctx = new ConnectorContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_connector);
+		enterRule(_localctx, 48, RULE_connector);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(234);
+			setState(322);
 			_la = _input.LA(1);
 			if ( !(_la==Tan || _la==Un || _la==Lekin || _la==Ili) ) {
 			_errHandler.recoverInline(this);
@@ -4713,12 +4249,12 @@ public class KokanuParser extends Parser {
 
 	public final RelativeQuantityContext relativeQuantity() throws RecognitionException {
 		RelativeQuantityContext _localctx = new RelativeQuantityContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_relativeQuantity);
+		enterRule(_localctx, 50, RULE_relativeQuantity);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(236);
+			setState(324);
 			_la = _input.LA(1);
 			if ( !(_la==Jati || _la==Mese || _la==Menu || _la==Ani || _la==Niju) ) {
 			_errHandler.recoverInline(this);
@@ -4771,14 +4307,14 @@ public class KokanuParser extends Parser {
 
 	public final NominalQuantityContext nominalQuantity() throws RecognitionException {
 		NominalQuantityContext _localctx = new NominalQuantityContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_nominalQuantity);
+		enterRule(_localctx, 52, RULE_nominalQuantity);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(238);
+			setState(326);
 			_la = _input.LA(1);
-			if ( !(((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 536875009L) != 0) || _la==Lima || _la==San || ((((_la - 280)) & ~0x3f) == 0 && ((1L << (_la - 280)) & 343866016257L) != 0)) ) {
+			if ( !(((((_la - 79)) & ~0x3f) == 0 && ((1L << (_la - 79)) & 536875009L) != 0) || _la==Lima || _la==San || ((((_la - 281)) & ~0x3f) == 0 && ((1L << (_la - 281)) & 343866016257L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4800,189 +4336,258 @@ public class KokanuParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0163\u00f1\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0004\u0001\u0164\u0149\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
 		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
 		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
 		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
 		"\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007"+
 		"\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007"+
 		"\u0012\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007"+
-		"\u0015\u0001\u0000\u0001\u0000\u0001\u0000\u0005\u00000\b\u0000\n\u0000"+
-		"\f\u00003\t\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001"+
-		"\u0001\u0001\u0001\u0001\u0001\u0004\u0001<\b\u0001\u000b\u0001\f\u0001"+
-		"=\u0005\u0001@\b\u0001\n\u0001\f\u0001C\t\u0001\u0003\u0001E\b\u0001\u0001"+
-		"\u0002\u0003\u0002H\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001"+
-		"\u0002\u0005\u0002N\b\u0002\n\u0002\f\u0002Q\t\u0002\u0005\u0002S\b\u0002"+
-		"\n\u0002\f\u0002V\t\u0002\u0001\u0002\u0003\u0002Y\b\u0002\u0001\u0002"+
-		"\u0001\u0002\u0004\u0002]\b\u0002\u000b\u0002\f\u0002^\u0001\u0002\u0003"+
-		"\u0002b\b\u0002\u0001\u0003\u0003\u0003e\b\u0003\u0001\u0003\u0001\u0003"+
-		"\u0001\u0003\u0005\u0003j\b\u0003\n\u0003\f\u0003m\t\u0003\u0001\u0003"+
-		"\u0003\u0003p\b\u0003\u0001\u0003\u0001\u0003\u0005\u0003t\b\u0003\n\u0003"+
-		"\f\u0003w\t\u0003\u0003\u0003y\b\u0003\u0001\u0004\u0001\u0004\u0001\u0004"+
-		"\u0005\u0004~\b\u0004\n\u0004\f\u0004\u0081\t\u0004\u0001\u0004\u0005"+
-		"\u0004\u0084\b\u0004\n\u0004\f\u0004\u0087\t\u0004\u0001\u0005\u0001\u0005"+
-		"\u0001\u0005\u0005\u0005\u008c\b\u0005\n\u0005\f\u0005\u008f\t\u0005\u0001"+
-		"\u0005\u0001\u0005\u0003\u0005\u0093\b\u0005\u0001\u0005\u0001\u0005\u0001"+
-		"\u0005\u0005\u0005\u0098\b\u0005\n\u0005\f\u0005\u009b\t\u0005\u0001\u0005"+
-		"\u0001\u0005\u0003\u0005\u009f\b\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
-		"\u0003\u0005\u00a4\b\u0005\u0003\u0005\u00a6\b\u0005\u0001\u0006\u0001"+
-		"\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0005\u0007\u00ae"+
-		"\b\u0007\n\u0007\f\u0007\u00b1\t\u0007\u0001\b\u0001\b\u0001\t\u0001\t"+
-		"\u0005\t\u00b7\b\t\n\t\f\t\u00ba\t\t\u0001\n\u0003\n\u00bd\b\n\u0001\n"+
-		"\u0004\n\u00c0\b\n\u000b\n\f\n\u00c1\u0001\u000b\u0001\u000b\u0003\u000b"+
-		"\u00c6\b\u000b\u0001\u000b\u0005\u000b\u00c9\b\u000b\n\u000b\f\u000b\u00cc"+
-		"\t\u000b\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0005\f\u00d3\b\f\n\f"+
-		"\f\f\u00d6\t\f\u0001\r\u0001\r\u0001\r\u0003\r\u00db\b\r\u0001\u000e\u0001"+
-		"\u000e\u0001\u000e\u0001\u000e\u0003\u000e\u00e1\b\u000e\u0001\u000f\u0001"+
-		"\u000f\u0001\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0001\u0012\u0001"+
-		"\u0012\u0001\u0013\u0001\u0013\u0001\u0014\u0001\u0014\u0001\u0015\u0001"+
-		"\u0015\u0001\u0015\u0000\u0000\u0016\u0000\u0002\u0004\u0006\b\n\f\u000e"+
-		"\u0010\u0012\u0014\u0016\u0018\u001a\u001c\u001e \"$&(*\u0000\t\u0002"+
-		"\u0001\u0002\u0002\u0004\u0004\u000b\u0000\u0006\u0006\b\b\r\rVVmm\u00c6"+
-		"\u00c6\u00ce\u00ce\u00df\u00df\u0156\u0156\u015a\u015a\u0163\u01631\u0000"+
-		"\u0010\u0010\u0012\u0012\u0014\u0015\u0017\u0017\u001c\u001c&\'**0057"+
-		"?@CDIIOOSSYYbbnnss\u0086\u0086\u008a\u008a\u008d\u008d\u0090\u0090\u009f"+
-		"\u009f\u00a2\u00a2\u00ad\u00ad\u00b0\u00b0\u00b4\u00b4\u00c1\u00c1\u00c3"+
-		"\u00c3\u00cd\u00cd\u00cf\u00cf\u00d4\u00d4\u00d8\u00d8\u00de\u00de\u00e3"+
-		"\u00e3\u00e7\u00e7\u00eb\u00eb\u00ff\u00ff\u0103\u0103\u0107\u0107\u010e"+
-		"\u010e\u0111\u0111\u0124\u0126\u012e\u0131\u013a\u013a\u013d\u013d\u0147"+
-		"\u0147\u014f\u0150\u015d\u015d\b\u0000))::\u0080\u0080\u00a9\u00a9\u00c5"+
-		"\u00c5\u00e0\u00e0\u0120\u0120\u0145\u0145G\u0000\u0011\u0011\u0013\u0013"+
-		"\u0019\u001a\u001e\u001e $((//1199==EEGGJLUUWW\\\\^`ccghjjlloorrttwwz"+
-		"|~\u007f\u0088\u0089\u0091\u0091\u0093\u0093\u0097\u0097\u00a1\u00a1\u00a3"+
-		"\u00a7\u00ab\u00ab\u00af\u00af\u00b5\u00b8\u00bc\u00bd\u00bf\u00bf\u00c4"+
-		"\u00c4\u00c9\u00c9\u00cb\u00cc\u00d1\u00d1\u00d3\u00d3\u00d5\u00d5\u00d9"+
-		"\u00d9\u00dd\u00dd\u00e2\u00e2\u00e5\u00e5\u00e8\u00e8\u00ee\u00f1\u00f5"+
-		"\u00f5\u00f7\u00fb\u00fd\u00fd\u0105\u0105\u010c\u010d\u0112\u0117\u0119"+
-		"\u0119\u011c\u011e\u0122\u0123\u012a\u012c\u0132\u0133\u0135\u0136\u0139"+
-		"\u0139\u013b\u013b\u0140\u0140\u0146\u0146\u0152\u0152\u0155\u0155\u0157"+
-		"\u0159\u015c\u015c\u0161\u0162H\u0000\u000f\u000f\u0016\u0016\u0018\u0018"+
-		"\u001b\u001b\u001f\u001f%%+.2488;<>>BBHHMMPQTT[[]]aadfiippuvxy}}\u0081"+
-		"\u0085\u0087\u0087\u008b\u008c\u008e\u008f\u0092\u0092\u0094\u0096\u0099"+
-		"\u009e\u00a8\u00a8\u00aa\u00aa\u00ae\u00ae\u00b1\u00b3\u00b9\u00bb\u00be"+
-		"\u00be\u00c0\u00c0\u00c2\u00c2\u00c7\u00c8\u00ca\u00ca\u00d2\u00d2\u00d6"+
-		"\u00d7\u00da\u00dc\u00e1\u00e1\u00e4\u00e4\u00e6\u00e6\u00e9\u00ea\u00ec"+
-		"\u00ed\u00f2\u00f4\u00f6\u00f6\u00fc\u00fc\u00fe\u00fe\u0100\u0101\u0104"+
-		"\u0104\u0106\u0106\u0109\u010b\u0110\u0110\u011a\u011b\u011f\u011f\u0127"+
-		"\u0127\u012d\u012d\u0137\u0138\u013f\u013f\u0141\u0141\u0143\u0144\u0149"+
-		"\u014e\u0151\u0151\u0153\u0153\u015b\u015b\u015e\u0160\u0004\u0000RRq"+
-		"q\u0098\u0098\u010f\u010f\u0005\u0000AAFF\u0108\u0108\u0142\u0142\u0154"+
-		"\u0154\u000b\u0000NNZZkk\u00a0\u00a0\u00d0\u00d0\u0118\u0118\u0121\u0121"+
-		"\u0128\u0129\u0134\u0134\u013c\u013c\u013e\u013e\u0102\u0000,\u0001\u0000"+
-		"\u0000\u0000\u0002D\u0001\u0000\u0000\u0000\u0004G\u0001\u0000\u0000\u0000"+
-		"\u0006x\u0001\u0000\u0000\u0000\bz\u0001\u0000\u0000\u0000\n\u00a5\u0001"+
-		"\u0000\u0000\u0000\f\u00a7\u0001\u0000\u0000\u0000\u000e\u00aa\u0001\u0000"+
-		"\u0000\u0000\u0010\u00b2\u0001\u0000\u0000\u0000\u0012\u00b4\u0001\u0000"+
-		"\u0000\u0000\u0014\u00bc\u0001\u0000\u0000\u0000\u0016\u00c3\u0001\u0000"+
-		"\u0000\u0000\u0018\u00cd\u0001\u0000\u0000\u0000\u001a\u00da\u0001\u0000"+
-		"\u0000\u0000\u001c\u00e0\u0001\u0000\u0000\u0000\u001e\u00e2\u0001\u0000"+
-		"\u0000\u0000 \u00e4\u0001\u0000\u0000\u0000\"\u00e6\u0001\u0000\u0000"+
-		"\u0000$\u00e8\u0001\u0000\u0000\u0000&\u00ea\u0001\u0000\u0000\u0000("+
-		"\u00ec\u0001\u0000\u0000\u0000*\u00ee\u0001\u0000\u0000\u0000,1\u0003"+
-		"\u0002\u0001\u0000-.\u0005\u0004\u0000\u0000.0\u0003\u0002\u0001\u0000"+
-		"/-\u0001\u0000\u0000\u000003\u0001\u0000\u0000\u00001/\u0001\u0000\u0000"+
-		"\u000012\u0001\u0000\u0000\u000024\u0001\u0000\u0000\u000031\u0001\u0000"+
-		"\u0000\u000045\u0005\u0004\u0000\u00005\u0001\u0001\u0000\u0000\u0000"+
-		"6E\u0003\u0004\u0002\u000078\u0005\t\u0000\u00008A\u0003\u001a\r\u0000"+
-		"9@\u0003\u0016\u000b\u0000:<\u0003\n\u0005\u0000;:\u0001\u0000\u0000\u0000"+
-		"<=\u0001\u0000\u0000\u0000=;\u0001\u0000\u0000\u0000=>\u0001\u0000\u0000"+
-		"\u0000>@\u0001\u0000\u0000\u0000?9\u0001\u0000\u0000\u0000?;\u0001\u0000"+
-		"\u0000\u0000@C\u0001\u0000\u0000\u0000A?\u0001\u0000\u0000\u0000AB\u0001"+
-		"\u0000\u0000\u0000BE\u0001\u0000\u0000\u0000CA\u0001\u0000\u0000\u0000"+
-		"D6\u0001\u0000\u0000\u0000D7\u0001\u0000\u0000\u0000E\u0003\u0001\u0000"+
-		"\u0000\u0000FH\u0003\u0016\u000b\u0000GF\u0001\u0000\u0000\u0000GH\u0001"+
-		"\u0000\u0000\u0000HT\u0001\u0000\u0000\u0000IO\u0003\u0006\u0003\u0000"+
-		"JK\u0003&\u0013\u0000KL\u0003\u0006\u0003\u0000LN\u0001\u0000\u0000\u0000"+
-		"MJ\u0001\u0000\u0000\u0000NQ\u0001\u0000\u0000\u0000OM\u0001\u0000\u0000"+
-		"\u0000OP\u0001\u0000\u0000\u0000PS\u0001\u0000\u0000\u0000QO\u0001\u0000"+
-		"\u0000\u0000RI\u0001\u0000\u0000\u0000SV\u0001\u0000\u0000\u0000TR\u0001"+
-		"\u0000\u0000\u0000TU\u0001\u0000\u0000\u0000UX\u0001\u0000\u0000\u0000"+
-		"VT\u0001\u0000\u0000\u0000WY\u0003\u0016\u000b\u0000XW\u0001\u0000\u0000"+
-		"\u0000XY\u0001\u0000\u0000\u0000Y\\\u0001\u0000\u0000\u0000Z[\u0005\u0007"+
-		"\u0000\u0000[]\u0003\u0012\t\u0000\\Z\u0001\u0000\u0000\u0000]^\u0001"+
-		"\u0000\u0000\u0000^\\\u0001\u0000\u0000\u0000^_\u0001\u0000\u0000\u0000"+
-		"_a\u0001\u0000\u0000\u0000`b\u0003\u0016\u000b\u0000a`\u0001\u0000\u0000"+
-		"\u0000ab\u0001\u0000\u0000\u0000b\u0005\u0001\u0000\u0000\u0000ce\u0003"+
-		"\u0014\n\u0000dc\u0001\u0000\u0000\u0000de\u0001\u0000\u0000\u0000ef\u0001"+
-		"\u0000\u0000\u0000fg\u0003\b\u0004\u0000gk\u0003\u0010\b\u0000hj\u0003"+
-		"\n\u0005\u0000ih\u0001\u0000\u0000\u0000jm\u0001\u0000\u0000\u0000ki\u0001"+
-		"\u0000\u0000\u0000kl\u0001\u0000\u0000\u0000ly\u0001\u0000\u0000\u0000"+
-		"mk\u0001\u0000\u0000\u0000np\u0003\u0014\n\u0000on\u0001\u0000\u0000\u0000"+
-		"op\u0001\u0000\u0000\u0000pq\u0001\u0000\u0000\u0000qu\u0003\u001c\u000e"+
-		"\u0000rt\u0003\n\u0005\u0000sr\u0001\u0000\u0000\u0000tw\u0001\u0000\u0000"+
-		"\u0000us\u0001\u0000\u0000\u0000uv\u0001\u0000\u0000\u0000vy\u0001\u0000"+
-		"\u0000\u0000wu\u0001\u0000\u0000\u0000xd\u0001\u0000\u0000\u0000xo\u0001"+
-		"\u0000\u0000\u0000y\u0007\u0001\u0000\u0000\u0000z{\u0005\u000b\u0000"+
-		"\u0000{\u007f\u0003\u001a\r\u0000|~\u0003\n\u0005\u0000}|\u0001\u0000"+
-		"\u0000\u0000~\u0081\u0001\u0000\u0000\u0000\u007f}\u0001\u0000\u0000\u0000"+
-		"\u007f\u0080\u0001\u0000\u0000\u0000\u0080\u0085\u0001\u0000\u0000\u0000"+
-		"\u0081\u007f\u0001\u0000\u0000\u0000\u0082\u0084\u0003\u0016\u000b\u0000"+
-		"\u0083\u0082\u0001\u0000\u0000\u0000\u0084\u0087\u0001\u0000\u0000\u0000"+
-		"\u0085\u0083\u0001\u0000\u0000\u0000\u0085\u0086\u0001\u0000\u0000\u0000"+
-		"\u0086\t\u0001\u0000\u0000\u0000\u0087\u0085\u0001\u0000\u0000\u0000\u0088"+
-		"\u0092\u0005\u0102\u0000\u0000\u0089\u008d\u0003\u001c\u000e\u0000\u008a"+
-		"\u008c\u0003\n\u0005\u0000\u008b\u008a\u0001\u0000\u0000\u0000\u008c\u008f"+
-		"\u0001\u0000\u0000\u0000\u008d\u008b\u0001\u0000\u0000\u0000\u008d\u008e"+
-		"\u0001\u0000\u0000\u0000\u008e\u0093\u0001\u0000\u0000\u0000\u008f\u008d"+
-		"\u0001\u0000\u0000\u0000\u0090\u0093\u0003\u000e\u0007\u0000\u0091\u0093"+
-		"\u0003\f\u0006\u0000\u0092\u0089\u0001\u0000\u0000\u0000\u0092\u0090\u0001"+
-		"\u0000\u0000\u0000\u0092\u0091\u0001\u0000\u0000\u0000\u0093\u00a6\u0001"+
-		"\u0000\u0000\u0000\u0094\u009e\u0005\u000e\u0000\u0000\u0095\u0099\u0003"+
-		"\u001c\u000e\u0000\u0096\u0098\u0003\n\u0005\u0000\u0097\u0096\u0001\u0000"+
-		"\u0000\u0000\u0098\u009b\u0001\u0000\u0000\u0000\u0099\u0097\u0001\u0000"+
-		"\u0000\u0000\u0099\u009a\u0001\u0000\u0000\u0000\u009a\u009f\u0001\u0000"+
-		"\u0000\u0000\u009b\u0099\u0001\u0000\u0000\u0000\u009c\u009f\u0003\u000e"+
-		"\u0007\u0000\u009d\u009f\u0003\f\u0006\u0000\u009e\u0095\u0001\u0000\u0000"+
-		"\u0000\u009e\u009c\u0001\u0000\u0000\u0000\u009e\u009d\u0001\u0000\u0000"+
-		"\u0000\u009f\u00a6\u0001\u0000\u0000\u0000\u00a0\u00a4\u0003\u001c\u000e"+
-		"\u0000\u00a1\u00a4\u0003\u000e\u0007\u0000\u00a2\u00a4\u0003\f\u0006\u0000"+
-		"\u00a3\u00a0\u0001\u0000\u0000\u0000\u00a3\u00a1\u0001\u0000\u0000\u0000"+
-		"\u00a3\u00a2\u0001\u0000\u0000\u0000\u00a4\u00a6\u0001\u0000\u0000\u0000"+
-		"\u00a5\u0088\u0001\u0000\u0000\u0000\u00a5\u0094\u0001\u0000\u0000\u0000"+
-		"\u00a5\u00a3\u0001\u0000\u0000\u0000\u00a6\u000b\u0001\u0000\u0000\u0000"+
-		"\u00a7\u00a8\u0005\n\u0000\u0000\u00a8\u00a9\u0003\u0004\u0002\u0000\u00a9"+
-		"\r\u0001\u0000\u0000\u0000\u00aa\u00ab\u0005\u000b\u0000\u0000\u00ab\u00af"+
-		"\u0003\u0012\t\u0000\u00ac\u00ae\u0003\u0016\u000b\u0000\u00ad\u00ac\u0001"+
-		"\u0000\u0000\u0000\u00ae\u00b1\u0001\u0000\u0000\u0000\u00af\u00ad\u0001"+
-		"\u0000\u0000\u0000\u00af\u00b0\u0001\u0000\u0000\u0000\u00b0\u000f\u0001"+
-		"\u0000\u0000\u0000\u00b1\u00af\u0001\u0000\u0000\u0000\u00b2\u00b3\u0007"+
-		"\u0000\u0000\u0000\u00b3\u0011\u0001\u0000\u0000\u0000\u00b4\u00b8\u0003"+
-		"\u001a\r\u0000\u00b5\u00b7\u0003\n\u0005\u0000\u00b6\u00b5\u0001\u0000"+
-		"\u0000\u0000\u00b7\u00ba\u0001\u0000\u0000\u0000\u00b8\u00b6\u0001\u0000"+
-		"\u0000\u0000\u00b8\u00b9\u0001\u0000\u0000\u0000\u00b9\u0013\u0001\u0000"+
-		"\u0000\u0000\u00ba\u00b8\u0001\u0000\u0000\u0000\u00bb\u00bd\u0003(\u0014"+
-		"\u0000\u00bc\u00bb\u0001\u0000\u0000\u0000\u00bc\u00bd\u0001\u0000\u0000"+
-		"\u0000\u00bd\u00bf\u0001\u0000\u0000\u0000\u00be\u00c0\u0003*\u0015\u0000"+
-		"\u00bf\u00be\u0001\u0000\u0000\u0000\u00c0\u00c1\u0001\u0000\u0000\u0000"+
-		"\u00c1\u00bf\u0001\u0000\u0000\u0000\u00c1\u00c2\u0001\u0000\u0000\u0000"+
-		"\u00c2\u0015\u0001\u0000\u0000\u0000\u00c3\u00ca\u0003\u0018\f\u0000\u00c4"+
-		"\u00c6\u0005\u0002\u0000\u0000\u00c5\u00c4\u0001\u0000\u0000\u0000\u00c5"+
-		"\u00c6\u0001\u0000\u0000\u0000\u00c6\u00c7\u0001\u0000\u0000\u0000\u00c7"+
-		"\u00c9\u0003\u0018\f\u0000\u00c8\u00c5\u0001\u0000\u0000\u0000\u00c9\u00cc"+
-		"\u0001\u0000\u0000\u0000\u00ca\u00c8\u0001\u0000\u0000\u0000\u00ca\u00cb"+
-		"\u0001\u0000\u0000\u0000\u00cb\u0017\u0001\u0000\u0000\u0000\u00cc\u00ca"+
-		"\u0001\u0000\u0000\u0000\u00cd\u00ce\u0007\u0001\u0000\u0000\u00ce\u00d4"+
-		"\u0003\u0006\u0003\u0000\u00cf\u00d0\u0003&\u0013\u0000\u00d0\u00d1\u0003"+
-		"\u0006\u0003\u0000\u00d1\u00d3\u0001\u0000\u0000\u0000\u00d2\u00cf\u0001"+
-		"\u0000\u0000\u0000\u00d3\u00d6\u0001\u0000\u0000\u0000\u00d4\u00d2\u0001"+
-		"\u0000\u0000\u0000\u00d4\u00d5\u0001\u0000\u0000\u0000\u00d5\u0019\u0001"+
-		"\u0000\u0000\u0000\u00d6\u00d4\u0001\u0000\u0000\u0000\u00d7\u00db\u0003"+
-		"\"\u0011\u0000\u00d8\u00db\u0003\u001e\u000f\u0000\u00d9\u00db\u0003$"+
-		"\u0012\u0000\u00da\u00d7\u0001\u0000\u0000\u0000\u00da\u00d8\u0001\u0000"+
-		"\u0000\u0000\u00da\u00d9\u0001\u0000\u0000\u0000\u00db\u001b\u0001\u0000"+
-		"\u0000\u0000\u00dc\u00e1\u0003 \u0010\u0000\u00dd\u00e1\u0003(\u0014\u0000"+
-		"\u00de\u00e1\u0003*\u0015\u0000\u00df\u00e1\u0003\u001a\r\u0000\u00e0"+
-		"\u00dc\u0001\u0000\u0000\u0000\u00e0\u00dd\u0001\u0000\u0000\u0000\u00e0"+
-		"\u00de\u0001\u0000\u0000\u0000\u00e0\u00df\u0001\u0000\u0000\u0000\u00e1"+
-		"\u001d\u0001\u0000\u0000\u0000\u00e2\u00e3\u0007\u0002\u0000\u0000\u00e3"+
-		"\u001f\u0001\u0000\u0000\u0000\u00e4\u00e5\u0007\u0003\u0000\u0000\u00e5"+
-		"!\u0001\u0000\u0000\u0000\u00e6\u00e7\u0007\u0004\u0000\u0000\u00e7#\u0001"+
-		"\u0000\u0000\u0000\u00e8\u00e9\u0007\u0005\u0000\u0000\u00e9%\u0001\u0000"+
-		"\u0000\u0000\u00ea\u00eb\u0007\u0006\u0000\u0000\u00eb\'\u0001\u0000\u0000"+
-		"\u0000\u00ec\u00ed\u0007\u0007\u0000\u0000\u00ed)\u0001\u0000\u0000\u0000"+
-		"\u00ee\u00ef\u0007\b\u0000\u0000\u00ef+\u0001\u0000\u0000\u0000!1=?AD"+
-		"GOTX^adkoux\u007f\u0085\u008d\u0092\u0099\u009e\u00a3\u00a5\u00af\u00b8"+
-		"\u00bc\u00c1\u00c5\u00ca\u00d4\u00da\u00e0";
+		"\u0015\u0002\u0016\u0007\u0016\u0002\u0017\u0007\u0017\u0002\u0018\u0007"+
+		"\u0018\u0002\u0019\u0007\u0019\u0002\u001a\u0007\u001a\u0001\u0000\u0001"+
+		"\u0000\u0001\u0000\u0005\u0000:\b\u0000\n\u0000\f\u0000=\t\u0000\u0001"+
+		"\u0000\u0003\u0000@\b\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0005\u0001F\b\u0001\n\u0001\f\u0001I\t\u0001\u0001\u0002\u0003"+
+		"\u0002L\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0005"+
+		"\u0002R\b\u0002\n\u0002\f\u0002U\t\u0002\u0005\u0002W\b\u0002\n\u0002"+
+		"\f\u0002Z\t\u0002\u0001\u0002\u0003\u0002]\b\u0002\u0001\u0002\u0001\u0002"+
+		"\u0003\u0002a\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
+		"\u0003\u0002g\b\u0002\u0001\u0002\u0001\u0002\u0003\u0002k\b\u0002\u0001"+
+		"\u0002\u0004\u0002n\b\u0002\u000b\u0002\f\u0002o\u0001\u0002\u0003\u0002"+
+		"s\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0005\u0002x\b\u0002\n\u0002"+
+		"\f\u0002{\t\u0002\u0001\u0003\u0003\u0003~\b\u0003\u0001\u0003\u0001\u0003"+
+		"\u0001\u0003\u0005\u0003\u0083\b\u0003\n\u0003\f\u0003\u0086\t\u0003\u0001"+
+		"\u0003\u0003\u0003\u0089\b\u0003\u0001\u0003\u0001\u0003\u0005\u0003\u008d"+
+		"\b\u0003\n\u0003\f\u0003\u0090\t\u0003\u0003\u0003\u0092\b\u0003\u0001"+
+		"\u0004\u0001\u0004\u0003\u0004\u0096\b\u0004\u0001\u0005\u0001\u0005\u0001"+
+		"\u0005\u0005\u0005\u009b\b\u0005\n\u0005\f\u0005\u009e\t\u0005\u0001\u0005"+
+		"\u0001\u0005\u0003\u0005\u00a2\b\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
+		"\u0005\u0005\u00a7\b\u0005\n\u0005\f\u0005\u00aa\t\u0005\u0001\u0005\u0001"+
+		"\u0005\u0003\u0005\u00ae\b\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0003"+
+		"\u0005\u00b3\b\u0005\u0001\u0005\u0003\u0005\u00b6\b\u0005\u0003\u0005"+
+		"\u00b8\b\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0007\u0001\u0007"+
+		"\u0003\u0007\u00bf\b\u0007\u0001\u0007\u0001\u0007\u0003\u0007\u00c3\b"+
+		"\u0007\u0001\u0007\u0003\u0007\u00c6\b\u0007\u0001\u0007\u0001\u0007\u0003"+
+		"\u0007\u00ca\b\u0007\u0001\u0007\u0001\u0007\u0003\u0007\u00ce\b\u0007"+
+		"\u0003\u0007\u00d0\b\u0007\u0001\b\u0001\b\u0001\t\u0001\t\u0005\t\u00d6"+
+		"\b\t\n\t\f\t\u00d9\t\t\u0001\t\u0001\t\u0005\t\u00dd\b\t\n\t\f\t\u00e0"+
+		"\t\t\u0003\t\u00e2\b\t\u0001\n\u0001\n\u0005\n\u00e6\b\n\n\n\f\n\u00e9"+
+		"\t\n\u0001\u000b\u0003\u000b\u00ec\b\u000b\u0001\u000b\u0004\u000b\u00ef"+
+		"\b\u000b\u000b\u000b\f\u000b\u00f0\u0001\f\u0001\f\u0003\f\u00f5\b\f\u0001"+
+		"\f\u0005\f\u00f8\b\f\n\f\f\f\u00fb\t\f\u0001\r\u0001\r\u0003\r\u00ff\b"+
+		"\r\u0001\r\u0001\r\u0001\r\u0001\r\u0005\r\u0105\b\r\n\r\f\r\u0108\t\r"+
+		"\u0001\u000e\u0001\u000e\u0001\u000e\u0003\u000e\u010d\b\u000e\u0001\u000f"+
+		"\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0003\u000f\u0114\b\u000f"+
+		"\u0001\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0003\u0011\u011a\b\u0011"+
+		"\u0001\u0011\u0001\u0011\u0003\u0011\u011e\b\u0011\u0003\u0011\u0120\b"+
+		"\u0011\u0001\u0011\u0001\u0011\u0003\u0011\u0124\b\u0011\u0001\u0011\u0001"+
+		"\u0011\u0003\u0011\u0128\b\u0011\u0003\u0011\u012a\b\u0011\u0003\u0011"+
+		"\u012c\b\u0011\u0001\u0012\u0003\u0012\u012f\b\u0012\u0001\u0012\u0001"+
+		"\u0012\u0001\u0013\u0001\u0013\u0001\u0014\u0003\u0014\u0136\b\u0014\u0001"+
+		"\u0014\u0001\u0014\u0001\u0015\u0001\u0015\u0001\u0016\u0003\u0016\u013d"+
+		"\b\u0016\u0001\u0016\u0001\u0016\u0001\u0017\u0001\u0017\u0001\u0018\u0001"+
+		"\u0018\u0001\u0019\u0001\u0019\u0001\u001a\u0001\u001a\u0001\u001a\u0000"+
+		"\u0000\u001b\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016"+
+		"\u0018\u001a\u001c\u001e \"$&(*,.024\u0000\n\u0002\u0000\b\b\n\n\u0002"+
+		"\u0001\u0003\u0003\u0005\u0005\u000b\u0000\u0007\u0007\t\t\u000e\u000e"+
+		"WWnn\u00c7\u00c7\u00cf\u00cf\u00e0\u00e0\u0157\u0157\u015b\u015b\u0164"+
+		"\u0164\b\u0000**;;\u0081\u0081\u00aa\u00aa\u00c6\u00c6\u00e1\u00e1\u0121"+
+		"\u0121\u0146\u01461\u0000\u0011\u0011\u0013\u0013\u0015\u0016\u0018\u0018"+
+		"\u001d\u001d\'(++1168@ADEJJPPTTZZccoott\u0087\u0087\u008b\u008b\u008e"+
+		"\u008e\u0091\u0091\u00a0\u00a0\u00a3\u00a3\u00ae\u00ae\u00b1\u00b1\u00b5"+
+		"\u00b5\u00c2\u00c2\u00c4\u00c4\u00ce\u00ce\u00d0\u00d0\u00d5\u00d5\u00d9"+
+		"\u00d9\u00df\u00df\u00e4\u00e4\u00e8\u00e8\u00ec\u00ec\u0100\u0100\u0104"+
+		"\u0104\u0108\u0108\u010f\u010f\u0112\u0112\u0125\u0127\u012f\u0132\u013b"+
+		"\u013b\u013e\u013e\u0148\u0148\u0150\u0151\u015e\u015eG\u0000\u0012\u0012"+
+		"\u0014\u0014\u001a\u001b\u001f\u001f!%))0022::>>FFHHKMVVXX]]_addhikkm"+
+		"mppssuuxx{}\u007f\u0080\u0089\u008a\u0092\u0092\u0094\u0094\u0098\u0098"+
+		"\u00a2\u00a2\u00a4\u00a8\u00ac\u00ac\u00b0\u00b0\u00b6\u00b9\u00bd\u00be"+
+		"\u00c0\u00c0\u00c5\u00c5\u00ca\u00ca\u00cc\u00cd\u00d2\u00d2\u00d4\u00d4"+
+		"\u00d6\u00d6\u00da\u00da\u00de\u00de\u00e3\u00e3\u00e6\u00e6\u00e9\u00e9"+
+		"\u00ef\u00f2\u00f6\u00f6\u00f8\u00fc\u00fe\u00fe\u0106\u0106\u010d\u010e"+
+		"\u0113\u0118\u011a\u011a\u011d\u011f\u0123\u0124\u012b\u012d\u0133\u0134"+
+		"\u0136\u0137\u013a\u013a\u013c\u013c\u0141\u0141\u0147\u0147\u0153\u0153"+
+		"\u0156\u0156\u0158\u015a\u015d\u015d\u0162\u0163H\u0000\u0010\u0010\u0017"+
+		"\u0017\u0019\u0019\u001c\u001c  &&,/3599<=??CCIINNQRUU\\\\^^bbegjjqqv"+
+		"wyz~~\u0082\u0086\u0088\u0088\u008c\u008d\u008f\u0090\u0093\u0093\u0095"+
+		"\u0097\u009a\u009f\u00a9\u00a9\u00ab\u00ab\u00af\u00af\u00b2\u00b4\u00ba"+
+		"\u00bc\u00bf\u00bf\u00c1\u00c1\u00c3\u00c3\u00c8\u00c9\u00cb\u00cb\u00d3"+
+		"\u00d3\u00d7\u00d8\u00db\u00dd\u00e2\u00e2\u00e5\u00e5\u00e7\u00e7\u00ea"+
+		"\u00eb\u00ed\u00ee\u00f3\u00f5\u00f7\u00f7\u00fd\u00fd\u00ff\u00ff\u0101"+
+		"\u0102\u0105\u0105\u0107\u0107\u010a\u010c\u0111\u0111\u011b\u011c\u0120"+
+		"\u0120\u0128\u0128\u012e\u012e\u0138\u0139\u0140\u0140\u0142\u0142\u0144"+
+		"\u0145\u014a\u014f\u0152\u0152\u0154\u0154\u015c\u015c\u015f\u0161\u0004"+
+		"\u0000SSrr\u0099\u0099\u0110\u0110\u0005\u0000BBGG\u0109\u0109\u0143\u0143"+
+		"\u0155\u0155\u000b\u0000OO[[ll\u00a1\u00a1\u00d1\u00d1\u0119\u0119\u0122"+
+		"\u0122\u0129\u012a\u0135\u0135\u013d\u013d\u013f\u013f\u016c\u00006\u0001"+
+		"\u0000\u0000\u0000\u0002A\u0001\u0000\u0000\u0000\u0004K\u0001\u0000\u0000"+
+		"\u0000\u0006\u0091\u0001\u0000\u0000\u0000\b\u0095\u0001\u0000\u0000\u0000"+
+		"\n\u00b7\u0001\u0000\u0000\u0000\f\u00b9\u0001\u0000\u0000\u0000\u000e"+
+		"\u00cf\u0001\u0000\u0000\u0000\u0010\u00d1\u0001\u0000\u0000\u0000\u0012"+
+		"\u00e1\u0001\u0000\u0000\u0000\u0014\u00e3\u0001\u0000\u0000\u0000\u0016"+
+		"\u00eb\u0001\u0000\u0000\u0000\u0018\u00f2\u0001\u0000\u0000\u0000\u001a"+
+		"\u00fc\u0001\u0000\u0000\u0000\u001c\u010c\u0001\u0000\u0000\u0000\u001e"+
+		"\u0113\u0001\u0000\u0000\u0000 \u0115\u0001\u0000\u0000\u0000\"\u012b"+
+		"\u0001\u0000\u0000\u0000$\u012e\u0001\u0000\u0000\u0000&\u0132\u0001\u0000"+
+		"\u0000\u0000(\u0135\u0001\u0000\u0000\u0000*\u0139\u0001\u0000\u0000\u0000"+
+		",\u013c\u0001\u0000\u0000\u0000.\u0140\u0001\u0000\u0000\u00000\u0142"+
+		"\u0001\u0000\u0000\u00002\u0144\u0001\u0000\u0000\u00004\u0146\u0001\u0000"+
+		"\u0000\u00006;\u0003\u0002\u0001\u000078\u0005\u0005\u0000\u00008:\u0003"+
+		"\u0002\u0001\u000097\u0001\u0000\u0000\u0000:=\u0001\u0000\u0000\u0000"+
+		";9\u0001\u0000\u0000\u0000;<\u0001\u0000\u0000\u0000<?\u0001\u0000\u0000"+
+		"\u0000=;\u0001\u0000\u0000\u0000>@\u0005\u0005\u0000\u0000?>\u0001\u0000"+
+		"\u0000\u0000?@\u0001\u0000\u0000\u0000@\u0001\u0001\u0000\u0000\u0000"+
+		"AG\u0003\u0004\u0002\u0000BC\u00030\u0018\u0000CD\u0003\u0004\u0002\u0000"+
+		"DF\u0001\u0000\u0000\u0000EB\u0001\u0000\u0000\u0000FI\u0001\u0000\u0000"+
+		"\u0000GE\u0001\u0000\u0000\u0000GH\u0001\u0000\u0000\u0000H\u0003\u0001"+
+		"\u0000\u0000\u0000IG\u0001\u0000\u0000\u0000JL\u0003\u0018\f\u0000KJ\u0001"+
+		"\u0000\u0000\u0000KL\u0001\u0000\u0000\u0000LX\u0001\u0000\u0000\u0000"+
+		"MS\u0003\u0006\u0003\u0000NO\u00030\u0018\u0000OP\u0003\u0006\u0003\u0000"+
+		"PR\u0001\u0000\u0000\u0000QN\u0001\u0000\u0000\u0000RU\u0001\u0000\u0000"+
+		"\u0000SQ\u0001\u0000\u0000\u0000ST\u0001\u0000\u0000\u0000TW\u0001\u0000"+
+		"\u0000\u0000US\u0001\u0000\u0000\u0000VM\u0001\u0000\u0000\u0000WZ\u0001"+
+		"\u0000\u0000\u0000XV\u0001\u0000\u0000\u0000XY\u0001\u0000\u0000\u0000"+
+		"Y\\\u0001\u0000\u0000\u0000ZX\u0001\u0000\u0000\u0000[]\u0003\u0018\f"+
+		"\u0000\\[\u0001\u0000\u0000\u0000\\]\u0001\u0000\u0000\u0000]m\u0001\u0000"+
+		"\u0000\u0000^`\u0007\u0000\u0000\u0000_a\u0005Y\u0000\u0000`_\u0001\u0000"+
+		"\u0000\u0000`a\u0001\u0000\u0000\u0000ab\u0001\u0000\u0000\u0000bf\u0003"+
+		"\u0014\n\u0000cd\u0003\f\u0006\u0000de\u0003\u0010\b\u0000eg\u0001\u0000"+
+		"\u0000\u0000fc\u0001\u0000\u0000\u0000fg\u0001\u0000\u0000\u0000gn\u0001"+
+		"\u0000\u0000\u0000hj\u0007\u0000\u0000\u0000ik\u0005Y\u0000\u0000ji\u0001"+
+		"\u0000\u0000\u0000jk\u0001\u0000\u0000\u0000kl\u0001\u0000\u0000\u0000"+
+		"ln\u0003\u0012\t\u0000m^\u0001\u0000\u0000\u0000mh\u0001\u0000\u0000\u0000"+
+		"no\u0001\u0000\u0000\u0000om\u0001\u0000\u0000\u0000op\u0001\u0000\u0000"+
+		"\u0000pr\u0001\u0000\u0000\u0000qs\u0003\u0018\f\u0000rq\u0001\u0000\u0000"+
+		"\u0000rs\u0001\u0000\u0000\u0000sy\u0001\u0000\u0000\u0000tu\u00030\u0018"+
+		"\u0000uv\u0003\u0018\f\u0000vx\u0001\u0000\u0000\u0000wt\u0001\u0000\u0000"+
+		"\u0000x{\u0001\u0000\u0000\u0000yw\u0001\u0000\u0000\u0000yz\u0001\u0000"+
+		"\u0000\u0000z\u0005\u0001\u0000\u0000\u0000{y\u0001\u0000\u0000\u0000"+
+		"|~\u0003\u0016\u000b\u0000}|\u0001\u0000\u0000\u0000}~\u0001\u0000\u0000"+
+		"\u0000~\u007f\u0001\u0000\u0000\u0000\u007f\u0080\u0003\b\u0004\u0000"+
+		"\u0080\u0084\u0003\u0010\b\u0000\u0081\u0083\u0003\n\u0005\u0000\u0082"+
+		"\u0081\u0001\u0000\u0000\u0000\u0083\u0086\u0001\u0000\u0000\u0000\u0084"+
+		"\u0082\u0001\u0000\u0000\u0000\u0084\u0085\u0001\u0000\u0000\u0000\u0085"+
+		"\u0092\u0001\u0000\u0000\u0000\u0086\u0084\u0001\u0000\u0000\u0000\u0087"+
+		"\u0089\u0003\u0016\u000b\u0000\u0088\u0087\u0001\u0000\u0000\u0000\u0088"+
+		"\u0089\u0001\u0000\u0000\u0000\u0089\u008a\u0001\u0000\u0000\u0000\u008a"+
+		"\u008e\u0003\u001e\u000f\u0000\u008b\u008d\u0003\n\u0005\u0000\u008c\u008b"+
+		"\u0001\u0000\u0000\u0000\u008d\u0090\u0001\u0000\u0000\u0000\u008e\u008c"+
+		"\u0001\u0000\u0000\u0000\u008e\u008f\u0001\u0000\u0000\u0000\u008f\u0092"+
+		"\u0001\u0000\u0000\u0000\u0090\u008e\u0001\u0000\u0000\u0000\u0091}\u0001"+
+		"\u0000\u0000\u0000\u0091\u0088\u0001\u0000\u0000\u0000\u0092\u0007\u0001"+
+		"\u0000\u0000\u0000\u0093\u0096\u0003\u000e\u0007\u0000\u0094\u0096\u0003"+
+		"\f\u0006\u0000\u0095\u0093\u0001\u0000\u0000\u0000\u0095\u0094\u0001\u0000"+
+		"\u0000\u0000\u0096\t\u0001\u0000\u0000\u0000\u0097\u00a1\u0005\u0103\u0000"+
+		"\u0000\u0098\u009c\u0003\u001e\u000f\u0000\u0099\u009b\u0003\n\u0005\u0000"+
+		"\u009a\u0099\u0001\u0000\u0000\u0000\u009b\u009e\u0001\u0000\u0000\u0000"+
+		"\u009c\u009a\u0001\u0000\u0000\u0000\u009c\u009d\u0001\u0000\u0000\u0000"+
+		"\u009d\u00a2\u0001\u0000\u0000\u0000\u009e\u009c\u0001\u0000\u0000\u0000"+
+		"\u009f\u00a2\u0003\u000e\u0007\u0000\u00a0\u00a2\u0003\f\u0006\u0000\u00a1"+
+		"\u0098\u0001\u0000\u0000\u0000\u00a1\u009f\u0001\u0000\u0000\u0000\u00a1"+
+		"\u00a0\u0001\u0000\u0000\u0000\u00a2\u00b8\u0001\u0000\u0000\u0000\u00a3"+
+		"\u00ad\u0005\u000f\u0000\u0000\u00a4\u00a8\u0003\u001e\u000f\u0000\u00a5"+
+		"\u00a7\u0003\n\u0005\u0000\u00a6\u00a5\u0001\u0000\u0000\u0000\u00a7\u00aa"+
+		"\u0001\u0000\u0000\u0000\u00a8\u00a6\u0001\u0000\u0000\u0000\u00a8\u00a9"+
+		"\u0001\u0000\u0000\u0000\u00a9\u00ae\u0001\u0000\u0000\u0000\u00aa\u00a8"+
+		"\u0001\u0000\u0000\u0000\u00ab\u00ae\u0003\u000e\u0007\u0000\u00ac\u00ae"+
+		"\u0003\f\u0006\u0000\u00ad\u00a4\u0001\u0000\u0000\u0000\u00ad\u00ab\u0001"+
+		"\u0000\u0000\u0000\u00ad\u00ac\u0001\u0000\u0000\u0000\u00ae\u00b8\u0001"+
+		"\u0000\u0000\u0000\u00af\u00b6\u0003\u001e\u000f\u0000\u00b0\u00b2\u0003"+
+		"\u000e\u0007\u0000\u00b1\u00b3\u0005\u0003\u0000\u0000\u00b2\u00b1\u0001"+
+		"\u0000\u0000\u0000\u00b2\u00b3\u0001\u0000\u0000\u0000\u00b3\u00b6\u0001"+
+		"\u0000\u0000\u0000\u00b4\u00b6\u0003\f\u0006\u0000\u00b5\u00af\u0001\u0000"+
+		"\u0000\u0000\u00b5\u00b0\u0001\u0000\u0000\u0000\u00b5\u00b4\u0001\u0000"+
+		"\u0000\u0000\u00b6\u00b8\u0001\u0000\u0000\u0000\u00b7\u0097\u0001\u0000"+
+		"\u0000\u0000\u00b7\u00a3\u0001\u0000\u0000\u0000\u00b7\u00b5\u0001\u0000"+
+		"\u0000\u0000\u00b8\u000b\u0001\u0000\u0000\u0000\u00b9\u00ba\u0005\u000b"+
+		"\u0000\u0000\u00ba\u00bb\u0003\u0004\u0002\u0000\u00bb\r\u0001\u0000\u0000"+
+		"\u0000\u00bc\u00be\u0005\f\u0000\u0000\u00bd\u00bf\u0005\r\u0000\u0000"+
+		"\u00be\u00bd\u0001\u0000\u0000\u0000\u00be\u00bf\u0001\u0000\u0000\u0000"+
+		"\u00bf\u00c0\u0001\u0000\u0000\u0000\u00c0\u00c2\u0003\u0014\n\u0000\u00c1"+
+		"\u00c3\u0003\f\u0006\u0000\u00c2\u00c1\u0001\u0000\u0000\u0000\u00c2\u00c3"+
+		"\u0001\u0000\u0000\u0000\u00c3\u00c5\u0001\u0000\u0000\u0000\u00c4\u00c6"+
+		"\u0003\u0018\f\u0000\u00c5\u00c4\u0001\u0000\u0000\u0000\u00c5\u00c6\u0001"+
+		"\u0000\u0000\u0000\u00c6\u00d0\u0001\u0000\u0000\u0000\u00c7\u00c9\u0005"+
+		"\f\u0000\u0000\u00c8\u00ca\u0005\r\u0000\u0000\u00c9\u00c8\u0001\u0000"+
+		"\u0000\u0000\u00c9\u00ca\u0001\u0000\u0000\u0000\u00ca\u00cb\u0001\u0000"+
+		"\u0000\u0000\u00cb\u00cd\u0003\u0012\t\u0000\u00cc\u00ce\u0003\u0018\f"+
+		"\u0000\u00cd\u00cc\u0001\u0000\u0000\u0000\u00cd\u00ce\u0001\u0000\u0000"+
+		"\u0000\u00ce\u00d0\u0001\u0000\u0000\u0000\u00cf\u00bc\u0001\u0000\u0000"+
+		"\u0000\u00cf\u00c7\u0001\u0000\u0000\u0000\u00d0\u000f\u0001\u0000\u0000"+
+		"\u0000\u00d1\u00d2\u0007\u0001\u0000\u0000\u00d2\u0011\u0001\u0000\u0000"+
+		"\u0000\u00d3\u00d7\u0003,\u0016\u0000\u00d4\u00d6\u0003\n\u0005\u0000"+
+		"\u00d5\u00d4\u0001\u0000\u0000\u0000\u00d6\u00d9\u0001\u0000\u0000\u0000"+
+		"\u00d7\u00d5\u0001\u0000\u0000\u0000\u00d7\u00d8\u0001\u0000\u0000\u0000"+
+		"\u00d8\u00e2\u0001\u0000\u0000\u0000\u00d9\u00d7\u0001\u0000\u0000\u0000"+
+		"\u00da\u00de\u0003(\u0014\u0000\u00db\u00dd\u0003\n\u0005\u0000\u00dc"+
+		"\u00db\u0001\u0000\u0000\u0000\u00dd\u00e0\u0001\u0000\u0000\u0000\u00de"+
+		"\u00dc\u0001\u0000\u0000\u0000\u00de\u00df\u0001\u0000\u0000\u0000\u00df"+
+		"\u00e2\u0001\u0000\u0000\u0000\u00e0\u00de\u0001\u0000\u0000\u0000\u00e1"+
+		"\u00d3\u0001\u0000\u0000\u0000\u00e1\u00da\u0001\u0000\u0000\u0000\u00e2"+
+		"\u0013\u0001\u0000\u0000\u0000\u00e3\u00e7\u0003$\u0012\u0000\u00e4\u00e6"+
+		"\u0003\n\u0005\u0000\u00e5\u00e4\u0001\u0000\u0000\u0000\u00e6\u00e9\u0001"+
+		"\u0000\u0000\u0000\u00e7\u00e5\u0001\u0000\u0000\u0000\u00e7\u00e8\u0001"+
+		"\u0000\u0000\u0000\u00e8\u0015\u0001\u0000\u0000\u0000\u00e9\u00e7\u0001"+
+		"\u0000\u0000\u0000\u00ea\u00ec\u00032\u0019\u0000\u00eb\u00ea\u0001\u0000"+
+		"\u0000\u0000\u00eb\u00ec\u0001\u0000\u0000\u0000\u00ec\u00ee\u0001\u0000"+
+		"\u0000\u0000\u00ed\u00ef\u00034\u001a\u0000\u00ee\u00ed\u0001\u0000\u0000"+
+		"\u0000\u00ef\u00f0\u0001\u0000\u0000\u0000\u00f0\u00ee\u0001\u0000\u0000"+
+		"\u0000\u00f0\u00f1\u0001\u0000\u0000\u0000\u00f1\u0017\u0001\u0000\u0000"+
+		"\u0000\u00f2\u00f9\u0003\u001a\r\u0000\u00f3\u00f5\u0005\u0003\u0000\u0000"+
+		"\u00f4\u00f3\u0001\u0000\u0000\u0000\u00f4\u00f5\u0001\u0000\u0000\u0000"+
+		"\u00f5\u00f6\u0001\u0000\u0000\u0000\u00f6\u00f8\u0003\u001a\r\u0000\u00f7"+
+		"\u00f4\u0001\u0000\u0000\u0000\u00f8\u00fb\u0001\u0000\u0000\u0000\u00f9"+
+		"\u00f7\u0001\u0000\u0000\u0000\u00f9\u00fa\u0001\u0000\u0000\u0000\u00fa"+
+		"\u0019\u0001\u0000\u0000\u0000\u00fb\u00f9\u0001\u0000\u0000\u0000\u00fc"+
+		"\u00fe\u0007\u0002\u0000\u0000\u00fd\u00ff\u0005Y\u0000\u0000\u00fe\u00fd"+
+		"\u0001\u0000\u0000\u0000\u00fe\u00ff\u0001\u0000\u0000\u0000\u00ff\u0100"+
+		"\u0001\u0000\u0000\u0000\u0100\u0106\u0003\u0006\u0003\u0000\u0101\u0102"+
+		"\u00030\u0018\u0000\u0102\u0103\u0003\u0006\u0003\u0000\u0103\u0105\u0001"+
+		"\u0000\u0000\u0000\u0104\u0101\u0001\u0000\u0000\u0000\u0105\u0108\u0001"+
+		"\u0000\u0000\u0000\u0106\u0104\u0001\u0000\u0000\u0000\u0106\u0107\u0001"+
+		"\u0000\u0000\u0000\u0107\u001b\u0001\u0000\u0000\u0000\u0108\u0106\u0001"+
+		"\u0000\u0000\u0000\u0109\u010d\u0003(\u0014\u0000\u010a\u010d\u0003$\u0012"+
+		"\u0000\u010b\u010d\u0003,\u0016\u0000\u010c\u0109\u0001\u0000\u0000\u0000"+
+		"\u010c\u010a\u0001\u0000\u0000\u0000\u010c\u010b\u0001\u0000\u0000\u0000"+
+		"\u010d\u001d\u0001\u0000\u0000\u0000\u010e\u0114\u0003 \u0010\u0000\u010f"+
+		"\u0114\u00032\u0019\u0000\u0110\u0114\u00034\u001a\u0000\u0111\u0114\u0003"+
+		"\u001c\u000e\u0000\u0112\u0114\u0005\u0002\u0000\u0000\u0113\u010e\u0001"+
+		"\u0000\u0000\u0000\u0113\u010f\u0001\u0000\u0000\u0000\u0113\u0110\u0001"+
+		"\u0000\u0000\u0000\u0113\u0111\u0001\u0000\u0000\u0000\u0113\u0112\u0001"+
+		"\u0000\u0000\u0000\u0114\u001f\u0001\u0000\u0000\u0000\u0115\u0116\u0007"+
+		"\u0003\u0000\u0000\u0116!\u0001\u0000\u0000\u0000\u0117\u0119\u0005\r"+
+		"\u0000\u0000\u0118\u011a\u0005Y\u0000\u0000\u0119\u0118\u0001\u0000\u0000"+
+		"\u0000\u0119\u011a\u0001\u0000\u0000\u0000\u011a\u011f\u0001\u0000\u0000"+
+		"\u0000\u011b\u011d\u0005\u001e\u0000\u0000\u011c\u011e\u0005Y\u0000\u0000"+
+		"\u011d\u011c\u0001\u0000\u0000\u0000\u011d\u011e\u0001\u0000\u0000\u0000"+
+		"\u011e\u0120\u0001\u0000\u0000\u0000\u011f\u011b\u0001\u0000\u0000\u0000"+
+		"\u011f\u0120\u0001\u0000\u0000\u0000\u0120\u012c\u0001\u0000\u0000\u0000"+
+		"\u0121\u0123\u0005\u001e\u0000\u0000\u0122\u0124\u0005Y\u0000\u0000\u0123"+
+		"\u0122\u0001\u0000\u0000\u0000\u0123\u0124\u0001\u0000\u0000\u0000\u0124"+
+		"\u0129\u0001\u0000\u0000\u0000\u0125\u0127\u0005\r\u0000\u0000\u0126\u0128"+
+		"\u0005Y\u0000\u0000\u0127\u0126\u0001\u0000\u0000\u0000\u0127\u0128\u0001"+
+		"\u0000\u0000\u0000\u0128\u012a\u0001\u0000\u0000\u0000\u0129\u0125\u0001"+
+		"\u0000\u0000\u0000\u0129\u012a\u0001\u0000\u0000\u0000\u012a\u012c\u0001"+
+		"\u0000\u0000\u0000\u012b\u0117\u0001\u0000\u0000\u0000\u012b\u0121\u0001"+
+		"\u0000\u0000\u0000\u012c#\u0001\u0000\u0000\u0000\u012d\u012f\u0003\""+
+		"\u0011\u0000\u012e\u012d\u0001\u0000\u0000\u0000\u012e\u012f\u0001\u0000"+
+		"\u0000\u0000\u012f\u0130\u0001\u0000\u0000\u0000\u0130\u0131\u0003&\u0013"+
+		"\u0000\u0131%\u0001\u0000\u0000\u0000\u0132\u0133\u0007\u0004\u0000\u0000"+
+		"\u0133\'\u0001\u0000\u0000\u0000\u0134\u0136\u0003\"\u0011\u0000\u0135"+
+		"\u0134\u0001\u0000\u0000\u0000\u0135\u0136\u0001\u0000\u0000\u0000\u0136"+
+		"\u0137\u0001\u0000\u0000\u0000\u0137\u0138\u0003*\u0015\u0000\u0138)\u0001"+
+		"\u0000\u0000\u0000\u0139\u013a\u0007\u0005\u0000\u0000\u013a+\u0001\u0000"+
+		"\u0000\u0000\u013b\u013d\u0003\"\u0011\u0000\u013c\u013b\u0001\u0000\u0000"+
+		"\u0000\u013c\u013d\u0001\u0000\u0000\u0000\u013d\u013e\u0001\u0000\u0000"+
+		"\u0000\u013e\u013f\u0003.\u0017\u0000\u013f-\u0001\u0000\u0000\u0000\u0140"+
+		"\u0141\u0007\u0006\u0000\u0000\u0141/\u0001\u0000\u0000\u0000\u0142\u0143"+
+		"\u0007\u0007\u0000\u0000\u01431\u0001\u0000\u0000\u0000\u0144\u0145\u0007"+
+		"\b\u0000\u0000\u01453\u0001\u0000\u0000\u0000\u0146\u0147\u0007\t\u0000"+
+		"\u0000\u01475\u0001\u0000\u0000\u00007;?GKSX\\`fjmory}\u0084\u0088\u008e"+
+		"\u0091\u0095\u009c\u00a1\u00a8\u00ad\u00b2\u00b5\u00b7\u00be\u00c2\u00c5"+
+		"\u00c9\u00cd\u00cf\u00d7\u00de\u00e1\u00e7\u00eb\u00f0\u00f4\u00f9\u00fe"+
+		"\u0106\u010c\u0113\u0119\u011d\u011f\u0123\u0127\u0129\u012b\u012e\u0135"+
+		"\u013c";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

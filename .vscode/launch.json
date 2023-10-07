@@ -7,10 +7,12 @@
             "request": "launch",
             "input": "example.txt",
             "grammar": "grammar/KokanuParser.g4",
+            // "grammar": ["grammar/KokanuLexer.g4", "grammar/KokanuParser.g4"],
             // "actionFile": "grammars/exampleActions.js",
             "startRule": "sentences",
             "printParseTree": true,
-            "visualParseTree": true
+            "visualParseTree": true,
+
         }
     ]
 }
