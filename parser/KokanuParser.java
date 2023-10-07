@@ -1,4 +1,4 @@
-// Generated from /home/jake/Code/antlr-kokanu/grammar/KokanuParser.g4 by ANTLR 4.9.2
+// Generated from /home/jake/Code/antlr-kokanu/grammar/KokanuParser.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class KokanuParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -234,6 +234,7 @@ public class KokanuParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class SentencesContext extends ParserRuleContext {
 		public List<SentenceContext> sentence() {
 			return getRuleContexts(SentenceContext.class);
@@ -301,6 +302,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class SentenceContext extends ParserRuleContext {
 		public SentenceClauseContext sentenceClause() {
 			return getRuleContext(SentenceClauseContext.class,0);
@@ -697,7 +699,7 @@ public class KokanuParser extends Parser {
 				setState(65);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << In) | (1L << Men) | (1L << Ta) | (1L << Te) | (1L << Win) | (1L << Wo) | (1L << Lijule) | (1L << Pese) | (1L << Kapaja) | (1L << Kilima) | (1L << Sito) | (1L << Iman) | (1L << Tasuwi) | (1L << Akiki) | (1L << Ukun) | (1L << Aja) | (1L << Sala) | (1L << Talika) | (1L << Kapan) | (1L << Kisa) | (1L << Mata) | (1L << Mutakin) | (1L << Mita) | (1L << Jasa) | (1L << Jamin) | (1L << Apaki) | (1L << Luwa) | (1L << Konpa) | (1L << Kela) | (1L << Lika) | (1L << Otota) | (1L << Ka) | (1L << Tisilin) | (1L << Janlu) | (1L << Jamu) | (1L << Pututi) | (1L << Minuli) | (1L << Oti) | (1L << Kota) | (1L << Pani) | (1L << Unitu) | (1L << Loso) | (1L << Kima) | (1L << Pi) | (1L << Anan) | (1L << Tenkin) | (1L << Patun) | (1L << Sikin) | (1L << Usen) | (1L << Panli) | (1L << Tunti) | (1L << Sinsi) | (1L << Wanku) | (1L << Papon))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (Junja - 64)) | (1L << (Jati - 64)) | (1L << (Unsi - 64)) | (1L << (Nan - 64)) | (1L << (Ju - 64)) | (1L << (Anpipi - 64)) | (1L << (Mese - 64)) | (1L << (Ten - 64)) | (1L << (Puka - 64)) | (1L << (Kanisa - 64)) | (1L << (Pulusi - 64)) | (1L << (Muwesi - 64)) | (1L << (Moto - 64)) | (1L << (Pankosi - 64)) | (1L << (Nula - 64)) | (1L << (Pela - 64)) | (1L << (Otan - 64)) | (1L << (Kujo - 64)) | (1L << (Tun - 64)) | (1L << (Ela - 64)) | (1L << (Kemika - 64)) | (1L << (Po - 64)) | (1L << (Mani - 64)) | (1L << (Oke - 64)) | (1L << (Wan - 64)) | (1L << (Suwi - 64)) | (1L << (Sin - 64)) | (1L << (Tati - 64)) | (1L << (Tolu - 64)) | (1L << (Lipu - 64)) | (1L << (Osa - 64)) | (1L << (Tomiwa - 64)) | (1L << (Pesuwan - 64)) | (1L << (Ken - 64)) | (1L << (Tepu - 64)) | (1L << (Anwije - 64)) | (1L << (Lisi - 64)) | (1L << (Lan - 64)) | (1L << (Soto - 64)) | (1L << (Eme - 64)) | (1L << (Nin - 64)) | (1L << (Lijo - 64)) | (1L << (Toki - 64)) | (1L << (An - 64)) | (1L << (Ato - 64)) | (1L << (Kumi - 64)) | (1L << (Kapu - 64)) | (1L << (Polan - 64)) | (1L << (Wisan - 64)) | (1L << (Mijalo - 64)) | (1L << (Neso - 64)) | (1L << (Kaso - 64)) | (1L << (Tawe - 64)) | (1L << (Konen - 64)) | (1L << (Kikuwa - 64)) | (1L << (Kiju - 64)) | (1L << (Jone - 64)) | (1L << (Akoli - 64)) | (1L << (Mamaki - 64)) | (1L << (Lana - 64)) | (1L << (Wa - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (Ja - 128)) | (1L << (Wiki - 128)) | (1L << (Naki - 128)) | (1L << (Sone - 128)) | (1L << (Katin - 128)) | (1L << (Kula - 128)) | (1L << (Kun - 128)) | (1L << (Kusa - 128)) | (1L << (Tanwa - 128)) | (1L << (Tipa - 128)) | (1L << (Teka - 128)) | (1L << (Tile - 128)) | (1L << (Tusa - 128)) | (1L << (Tijante - 128)) | (1L << (Nankin - 128)) | (1L << (Nalan - 128)) | (1L << (Niwa - 128)) | (1L << (Pite - 128)) | (1L << (Pasan - 128)) | (1L << (Pintu - 128)) | (1L << (Pula - 128)) | (1L << (Mepu - 128)) | (1L << (Luka - 128)) | (1L << (Laki - 128)) | (1L << (Wita - 128)) | (1L << (Saminta - 128)) | (1L << (Sanpanti - 128)) | (1L << (Saman - 128)) | (1L << (Satalan - 128)) | (1L << (Sula - 128)) | (1L << (Sitija - 128)) | (1L << (Lima - 128)) | (1L << (Jan - 128)) | (1L << (Makan - 128)) | (1L << (Keke - 128)) | (1L << (Latito - 128)) | (1L << (Ankolo - 128)) | (1L << (Poloko - 128)) | (1L << (Komo - 128)) | (1L << (Matiko - 128)) | (1L << (Mi - 128)) | (1L << (Nelo - 128)) | (1L << (Powele - 128)) | (1L << (Sapole - 128)) | (1L << (Kate - 128)) | (1L << (Sopa - 128)) | (1L << (Suki - 128)) | (1L << (Osole - 128)) | (1L << (Umami - 128)) | (1L << (Juka - 128)) | (1L << (Apijo - 128)) | (1L << (Niku - 128)) | (1L << (Musi - 128)) | (1L << (Kaki - 128)) | (1L << (Akasa - 128)) | (1L << (Tenti - 128)) | (1L << (Kawa - 128)) | (1L << (Penpe - 128)) | (1L << (Kumon - 128)) | (1L << (Namu - 128)) | (1L << (Tuko - 128)) | (1L << (Tuwi - 128)))) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & ((1L << (Olon - 192)) | (1L << (Alu - 192)) | (1L << (Kuto - 192)) | (1L << (Kosan - 192)) | (1L << (Alijun - 192)) | (1L << (Tu - 192)) | (1L << (Wija - 192)) | (1L << (Asa - 192)) | (1L << (Kijata - 192)) | (1L << (Malo - 192)) | (1L << (Sena - 192)) | (1L << (Leseka - 192)) | (1L << (Pintan - 192)) | (1L << (Inkatan - 192)) | (1L << (Ke - 192)) | (1L << (Pen - 192)) | (1L << (San - 192)) | (1L << (Kuwan - 192)) | (1L << (Sipa - 192)) | (1L << (Sintuwan - 192)) | (1L << (Iwe - 192)) | (1L << (Pansin - 192)) | (1L << (Si - 192)) | (1L << (Joli - 192)) | (1L << (Putun - 192)) | (1L << (Kuwosi - 192)) | (1L << (Tonsa - 192)) | (1L << (Kuwanko - 192)) | (1L << (Timi - 192)) | (1L << (Limijen - 192)) | (1L << (Tajen - 192)) | (1L << (Kan - 192)) | (1L << (Na - 192)) | (1L << (Tunpu - 192)) | (1L << (Matuwa - 192)) | (1L << (Pa - 192)) | (1L << (Taka - 192)) | (1L << (Kali - 192)) | (1L << (Tune - 192)) | (1L << (Tene - 192)) | (1L << (Namuna - 192)) | (1L << (Nile - 192)) | (1L << (Panta - 192)) | (1L << (Jon - 192)) | (1L << (Tonko - 192)) | (1L << (Sunkan - 192)) | (1L << (Onja - 192)) | (1L << (Ukama - 192)) | (1L << (Koton - 192)) | (1L << (Mitin - 192)) | (1L << (Lito - 192)) | (1L << (Lamo - 192)) | (1L << (Aluko - 192)) | (1L << (Konpute - 192)) | (1L << (Nepa - 192)) | (1L << (Kuku - 192)) | (1L << (Meja - 192)) | (1L << (Momu - 192)) | (1L << (Neje - 192)) | (1L << (Pawo - 192)) | (1L << (Tutu - 192)) | (1L << (Ukiki - 192)) | (1L << (Wonpa - 192)) | (1L << (Peman - 192)))) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & ((1L << (Napa - 256)) | (1L << (Nase - 256)) | (1L << (Je - 256)) | (1L << (Jatan - 256)) | (1L << (Kisowa - 256)) | (1L << (Lenka - 256)) | (1L << (Pasu - 256)) | (1L << (Lansa - 256)) | (1L << (Menu - 256)) | (1L << (Opotu - 256)) | (1L << (Uta - 256)) | (1L << (Maku - 256)) | (1L << (Pelete - 256)) | (1L << (Pitijo - 256)) | (1L << (Sapi - 256)) | (1L << (Tula - 256)) | (1L << (Pata - 256)) | (1L << (Pumi - 256)) | (1L << (Matija - 256)) | (1L << (Waju - 256)) | (1L << (Salila - 256)) | (1L << (Sila - 256)) | (1L << (Ko - 256)) | (1L << (Setan - 256)) | (1L << (Suwina - 256)) | (1L << (Samo - 256)) | (1L << (Tenja - 256)) | (1L << (Ipuwe - 256)) | (1L << (Muku - 256)) | (1L << (Kalawa - 256)) | (1L << (Konje - 256)) | (1L << (Sa - 256)) | (1L << (Saka - 256)) | (1L << (Wala - 256)) | (1L << (Asete - 256)) | (1L << (Akala - 256)) | (1L << (Amo - 256)) | (1L << (Kanta - 256)) | (1L << (Sekano - 256)) | (1L << (Sijen - 256)) | (1L << (Toso - 256)) | (1L << (Kenelo - 256)) | (1L << (Onko - 256)) | (1L << (Umo - 256)) | (1L << (Pikante - 256)) | (1L << (Posa - 256)) | (1L << (Anta - 256)) | (1L << (Takuwa - 256)) | (1L << (Tawapu - 256)) | (1L << (Lanki - 256)) | (1L << (Titi - 256)) | (1L << (Tiju - 256)) | (1L << (Tapala - 256)) | (1L << (Talili - 256)) | (1L << (Lipan - 256)) | (1L << (Lunti - 256)) | (1L << (Takilo - 256)) | (1L << (Kalan - 256)) | (1L << (Ulokan - 256)) | (1L << (Etu - 256)) | (1L << (Kontatu - 256)) | (1L << (Nanku - 256)) | (1L << (Mulu - 256)))) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & ((1L << (Watan - 320)) | (1L << (Wili - 320)) | (1L << (Ani - 320)) | (1L << (Iputu - 320)) | (1L << (Tina - 320)) | (1L << (Ne - 320)) | (1L << (Titan - 320)) | (1L << (Pon - 320)) | (1L << (Len - 320)) | (1L << (Santi - 320)) | (1L << (Sankan - 320)) | (1L << (One - 320)) | (1L << (Tanu - 320)) | (1L << (Sepo - 320)) | (1L << (Teneme - 320)) | (1L << (Solu - 320)) | (1L << (Tope - 320)) | (1L << (Tamaka - 320)) | (1L << (Tuntan - 320)) | (1L << (Niju - 320)) | (1L << (Non - 320)) | (1L << (So - 320)) | (1L << (Ewin - 320)) | (1L << (Enteken - 320)) | (1L << (Menwa - 320)) | (1L << (Sun - 320)) | (1L << (Muntu - 320)) | (1L << (Insu - 320)) | (1L << (Onton - 320)) | (1L << (Kikolo - 320)) | (1L << (Lo - 320)) | (1L << (Tiku - 320)) | (1L << (Ikama - 320)) | (1L << (Inpali - 320)) | (1L << (Nenka - 320)))) != 0)) {
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536875712L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -562949970460673L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -1L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32769L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 68719476479L) != 0)) {
 					{
 					setState(63);
 					_errHandler.sync(this);
@@ -1094,6 +1096,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class SentenceClauseContext extends ParserRuleContext {
 		public List<PrepPhraseContext> prepPhrase() {
 			return getRuleContexts(PrepPhraseContext.class);
@@ -1158,7 +1161,7 @@ public class KokanuParser extends Parser {
 			setState(84);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Te) | (1L << Lijule) | (1L << Pese) | (1L << Kapaja) | (1L << Kilima) | (1L << Sito) | (1L << Iman) | (1L << Tasuwi) | (1L << Akiki) | (1L << Ukun) | (1L << Aja) | (1L << Sala) | (1L << Talika) | (1L << Kapan) | (1L << Kisa) | (1L << Mata) | (1L << Mutakin) | (1L << Mita) | (1L << Jasa) | (1L << Jamin) | (1L << Apaki) | (1L << Luwa) | (1L << Konpa) | (1L << Kela) | (1L << Lika) | (1L << Otota) | (1L << Ka) | (1L << Tisilin) | (1L << Janlu) | (1L << Jamu) | (1L << Pututi) | (1L << Minuli) | (1L << Oti) | (1L << Kota) | (1L << Pani) | (1L << Unitu) | (1L << Loso) | (1L << Kima) | (1L << Pi) | (1L << Anan) | (1L << Tenkin) | (1L << Patun) | (1L << Sikin) | (1L << Usen) | (1L << Panli) | (1L << Tunti) | (1L << Sinsi) | (1L << Wanku) | (1L << Papon))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (Junja - 64)) | (1L << (Jati - 64)) | (1L << (Unsi - 64)) | (1L << (Nan - 64)) | (1L << (Ju - 64)) | (1L << (Anpipi - 64)) | (1L << (Mese - 64)) | (1L << (Ten - 64)) | (1L << (Puka - 64)) | (1L << (Kanisa - 64)) | (1L << (Pulusi - 64)) | (1L << (Muwesi - 64)) | (1L << (Moto - 64)) | (1L << (Pankosi - 64)) | (1L << (Nula - 64)) | (1L << (Pela - 64)) | (1L << (Otan - 64)) | (1L << (Kujo - 64)) | (1L << (Tun - 64)) | (1L << (Ela - 64)) | (1L << (Kemika - 64)) | (1L << (Mani - 64)) | (1L << (Oke - 64)) | (1L << (Wan - 64)) | (1L << (Suwi - 64)) | (1L << (Sin - 64)) | (1L << (Tati - 64)) | (1L << (Tolu - 64)) | (1L << (Lipu - 64)) | (1L << (Osa - 64)) | (1L << (Tomiwa - 64)) | (1L << (Pesuwan - 64)) | (1L << (Ken - 64)) | (1L << (Tepu - 64)) | (1L << (Anwije - 64)) | (1L << (Lisi - 64)) | (1L << (Lan - 64)) | (1L << (Soto - 64)) | (1L << (Eme - 64)) | (1L << (Nin - 64)) | (1L << (Lijo - 64)) | (1L << (Toki - 64)) | (1L << (Ato - 64)) | (1L << (Kumi - 64)) | (1L << (Kapu - 64)) | (1L << (Polan - 64)) | (1L << (Wisan - 64)) | (1L << (Mijalo - 64)) | (1L << (Neso - 64)) | (1L << (Kaso - 64)) | (1L << (Tawe - 64)) | (1L << (Konen - 64)) | (1L << (Kikuwa - 64)) | (1L << (Kiju - 64)) | (1L << (Jone - 64)) | (1L << (Akoli - 64)) | (1L << (Mamaki - 64)) | (1L << (Lana - 64)) | (1L << (Wa - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (Ja - 128)) | (1L << (Wiki - 128)) | (1L << (Naki - 128)) | (1L << (Sone - 128)) | (1L << (Katin - 128)) | (1L << (Kula - 128)) | (1L << (Kun - 128)) | (1L << (Kusa - 128)) | (1L << (Tanwa - 128)) | (1L << (Tipa - 128)) | (1L << (Teka - 128)) | (1L << (Tile - 128)) | (1L << (Tusa - 128)) | (1L << (Tijante - 128)) | (1L << (Nankin - 128)) | (1L << (Nalan - 128)) | (1L << (Niwa - 128)) | (1L << (Pite - 128)) | (1L << (Pasan - 128)) | (1L << (Pintu - 128)) | (1L << (Pula - 128)) | (1L << (Mepu - 128)) | (1L << (Luka - 128)) | (1L << (Laki - 128)) | (1L << (Wita - 128)) | (1L << (Saminta - 128)) | (1L << (Sanpanti - 128)) | (1L << (Saman - 128)) | (1L << (Satalan - 128)) | (1L << (Sula - 128)) | (1L << (Sitija - 128)) | (1L << (Lima - 128)) | (1L << (Jan - 128)) | (1L << (Makan - 128)) | (1L << (Keke - 128)) | (1L << (Latito - 128)) | (1L << (Ankolo - 128)) | (1L << (Poloko - 128)) | (1L << (Komo - 128)) | (1L << (Matiko - 128)) | (1L << (Mi - 128)) | (1L << (Nelo - 128)) | (1L << (Powele - 128)) | (1L << (Sapole - 128)) | (1L << (Kate - 128)) | (1L << (Sopa - 128)) | (1L << (Suki - 128)) | (1L << (Osole - 128)) | (1L << (Umami - 128)) | (1L << (Juka - 128)) | (1L << (Apijo - 128)) | (1L << (Niku - 128)) | (1L << (Musi - 128)) | (1L << (Kaki - 128)) | (1L << (Akasa - 128)) | (1L << (Tenti - 128)) | (1L << (Kawa - 128)) | (1L << (Penpe - 128)) | (1L << (Kumon - 128)) | (1L << (Namu - 128)) | (1L << (Tuko - 128)) | (1L << (Tuwi - 128)))) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & ((1L << (Olon - 192)) | (1L << (Alu - 192)) | (1L << (Kuto - 192)) | (1L << (Kosan - 192)) | (1L << (Alijun - 192)) | (1L << (Tu - 192)) | (1L << (Asa - 192)) | (1L << (Kijata - 192)) | (1L << (Malo - 192)) | (1L << (Sena - 192)) | (1L << (Leseka - 192)) | (1L << (Pintan - 192)) | (1L << (Inkatan - 192)) | (1L << (Pen - 192)) | (1L << (San - 192)) | (1L << (Kuwan - 192)) | (1L << (Sipa - 192)) | (1L << (Sintuwan - 192)) | (1L << (Iwe - 192)) | (1L << (Pansin - 192)) | (1L << (Si - 192)) | (1L << (Joli - 192)) | (1L << (Putun - 192)) | (1L << (Kuwosi - 192)) | (1L << (Tonsa - 192)) | (1L << (Kuwanko - 192)) | (1L << (Timi - 192)) | (1L << (Limijen - 192)) | (1L << (Tajen - 192)) | (1L << (Na - 192)) | (1L << (Tunpu - 192)) | (1L << (Matuwa - 192)) | (1L << (Pa - 192)) | (1L << (Taka - 192)) | (1L << (Kali - 192)) | (1L << (Tune - 192)) | (1L << (Tene - 192)) | (1L << (Namuna - 192)) | (1L << (Nile - 192)) | (1L << (Panta - 192)) | (1L << (Jon - 192)) | (1L << (Tonko - 192)) | (1L << (Sunkan - 192)) | (1L << (Onja - 192)) | (1L << (Ukama - 192)) | (1L << (Koton - 192)) | (1L << (Mitin - 192)) | (1L << (Lito - 192)) | (1L << (Lamo - 192)) | (1L << (Aluko - 192)) | (1L << (Konpute - 192)) | (1L << (Nepa - 192)) | (1L << (Kuku - 192)) | (1L << (Meja - 192)) | (1L << (Momu - 192)) | (1L << (Neje - 192)) | (1L << (Pawo - 192)) | (1L << (Tutu - 192)) | (1L << (Ukiki - 192)) | (1L << (Wonpa - 192)) | (1L << (Peman - 192)))) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & ((1L << (Napa - 256)) | (1L << (Nase - 256)) | (1L << (Jatan - 256)) | (1L << (Kisowa - 256)) | (1L << (Lenka - 256)) | (1L << (Pasu - 256)) | (1L << (Lansa - 256)) | (1L << (Menu - 256)) | (1L << (Opotu - 256)) | (1L << (Uta - 256)) | (1L << (Maku - 256)) | (1L << (Pelete - 256)) | (1L << (Pitijo - 256)) | (1L << (Sapi - 256)) | (1L << (Tula - 256)) | (1L << (Pata - 256)) | (1L << (Pumi - 256)) | (1L << (Matija - 256)) | (1L << (Waju - 256)) | (1L << (Salila - 256)) | (1L << (Sila - 256)) | (1L << (Ko - 256)) | (1L << (Setan - 256)) | (1L << (Suwina - 256)) | (1L << (Samo - 256)) | (1L << (Tenja - 256)) | (1L << (Ipuwe - 256)) | (1L << (Muku - 256)) | (1L << (Kalawa - 256)) | (1L << (Konje - 256)) | (1L << (Sa - 256)) | (1L << (Saka - 256)) | (1L << (Wala - 256)) | (1L << (Asete - 256)) | (1L << (Akala - 256)) | (1L << (Amo - 256)) | (1L << (Kanta - 256)) | (1L << (Sekano - 256)) | (1L << (Sijen - 256)) | (1L << (Toso - 256)) | (1L << (Kenelo - 256)) | (1L << (Onko - 256)) | (1L << (Umo - 256)) | (1L << (Pikante - 256)) | (1L << (Posa - 256)) | (1L << (Anta - 256)) | (1L << (Takuwa - 256)) | (1L << (Tawapu - 256)) | (1L << (Lanki - 256)) | (1L << (Titi - 256)) | (1L << (Tiju - 256)) | (1L << (Tapala - 256)) | (1L << (Talili - 256)) | (1L << (Lipan - 256)) | (1L << (Lunti - 256)) | (1L << (Takilo - 256)) | (1L << (Kalan - 256)) | (1L << (Ulokan - 256)) | (1L << (Etu - 256)) | (1L << (Kontatu - 256)) | (1L << (Nanku - 256)) | (1L << (Mulu - 256)))) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & ((1L << (Watan - 320)) | (1L << (Wili - 320)) | (1L << (Ani - 320)) | (1L << (Iputu - 320)) | (1L << (Tina - 320)) | (1L << (Ne - 320)) | (1L << (Titan - 320)) | (1L << (Pon - 320)) | (1L << (Len - 320)) | (1L << (Santi - 320)) | (1L << (Sankan - 320)) | (1L << (One - 320)) | (1L << (Tanu - 320)) | (1L << (Sepo - 320)) | (1L << (Teneme - 320)) | (1L << (Solu - 320)) | (1L << (Tope - 320)) | (1L << (Tamaka - 320)) | (1L << (Tuntan - 320)) | (1L << (Niju - 320)) | (1L << (Non - 320)) | (1L << (Ewin - 320)) | (1L << (Enteken - 320)) | (1L << (Menwa - 320)) | (1L << (Muntu - 320)) | (1L << (Insu - 320)) | (1L << (Onton - 320)) | (1L << (Kikolo - 320)) | (1L << (Lo - 320)) | (1L << (Tiku - 320)) | (1L << (Ikama - 320)) | (1L << (Inpali - 320)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536901632L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -598134346743809L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -2147500097L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32773L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 34288434943L) != 0)) {
 				{
 				{
 				setState(73);
@@ -1188,7 +1191,7 @@ public class KokanuParser extends Parser {
 			setState(88);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << In) | (1L << Men) | (1L << Win))) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & ((1L << (Wija - 198)) | (1L << (Ke - 198)) | (1L << (Kan - 198)))) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & ((1L << (So - 342)) | (1L << (Sun - 342)) | (1L << (Nenka - 342)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) {
 				{
 				setState(87);
 				prepPhrase();
@@ -1240,6 +1243,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class NounPhraseContext extends ParserRuleContext {
 		public NounClauseContext nounClause() {
 			return getRuleContext(NounClauseContext.class,0);
@@ -1289,7 +1293,7 @@ public class KokanuParser extends Parser {
 				setState(100);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & ((1L << (Jati - 65)) | (1L << (Mese - 65)) | (1L << (Nula - 65)) | (1L << (Wan - 65)) | (1L << (Lijo - 65)))) != 0) || _la==Lima || _la==San || ((((_la - 264)) & ~0x3f) == 0 && ((1L << (_la - 264)) & ((1L << (Menu - 264)) | (1L << (Setan - 264)) | (1L << (Saka - 264)) | (1L << (Sijen - 264)) | (1L << (Toso - 264)) | (1L << (Tiju - 264)) | (1L << (Etu - 264)) | (1L << (Nanku - 264)) | (1L << (Ani - 264)))) != 0) || _la==Niju) {
+				if (((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & 4398080073761L) != 0) || _la==Lima || _la==San || ((((_la - 264)) & ~0x3f) == 0 && ((1L << (_la - 264)) & 310765979393130497L) != 0) || _la==Niju) {
 					{
 					setState(99);
 					quantityPhrase();
@@ -1364,6 +1368,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class NounClauseContext extends ParserRuleContext {
 		public TerminalNode Te() { return getToken(KokanuParser.Te, 0); }
 		public ContentWordContext contentWord() {
@@ -1409,7 +1414,7 @@ public class KokanuParser extends Parser {
 			setState(127);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Ta) | (1L << Te) | (1L << Wo) | (1L << Lijule) | (1L << Pese) | (1L << Kapaja) | (1L << Kilima) | (1L << Sito) | (1L << Iman) | (1L << Tasuwi) | (1L << Akiki) | (1L << Ukun) | (1L << Aja) | (1L << Sala) | (1L << Talika) | (1L << Kapan) | (1L << Kisa) | (1L << Mata) | (1L << Mutakin) | (1L << Mita) | (1L << Jasa) | (1L << Jamin) | (1L << Apaki) | (1L << Luwa) | (1L << Konpa) | (1L << Kela) | (1L << Lika) | (1L << Otota) | (1L << Ka) | (1L << Tisilin) | (1L << Janlu) | (1L << Jamu) | (1L << Pututi) | (1L << Minuli) | (1L << Oti) | (1L << Kota) | (1L << Pani) | (1L << Unitu) | (1L << Loso) | (1L << Kima) | (1L << Pi) | (1L << Anan) | (1L << Tenkin) | (1L << Patun) | (1L << Sikin) | (1L << Usen) | (1L << Panli) | (1L << Tunti) | (1L << Sinsi) | (1L << Wanku) | (1L << Papon))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (Junja - 64)) | (1L << (Jati - 64)) | (1L << (Unsi - 64)) | (1L << (Nan - 64)) | (1L << (Ju - 64)) | (1L << (Anpipi - 64)) | (1L << (Mese - 64)) | (1L << (Ten - 64)) | (1L << (Puka - 64)) | (1L << (Kanisa - 64)) | (1L << (Pulusi - 64)) | (1L << (Muwesi - 64)) | (1L << (Moto - 64)) | (1L << (Pankosi - 64)) | (1L << (Nula - 64)) | (1L << (Pela - 64)) | (1L << (Otan - 64)) | (1L << (Kujo - 64)) | (1L << (Tun - 64)) | (1L << (Ela - 64)) | (1L << (Kemika - 64)) | (1L << (Mani - 64)) | (1L << (Oke - 64)) | (1L << (Wan - 64)) | (1L << (Suwi - 64)) | (1L << (Sin - 64)) | (1L << (Tati - 64)) | (1L << (Tolu - 64)) | (1L << (Lipu - 64)) | (1L << (Osa - 64)) | (1L << (Tomiwa - 64)) | (1L << (Pesuwan - 64)) | (1L << (Ken - 64)) | (1L << (Tepu - 64)) | (1L << (Anwije - 64)) | (1L << (Lisi - 64)) | (1L << (Lan - 64)) | (1L << (Soto - 64)) | (1L << (Eme - 64)) | (1L << (Nin - 64)) | (1L << (Lijo - 64)) | (1L << (Toki - 64)) | (1L << (Ato - 64)) | (1L << (Kumi - 64)) | (1L << (Kapu - 64)) | (1L << (Polan - 64)) | (1L << (Wisan - 64)) | (1L << (Mijalo - 64)) | (1L << (Neso - 64)) | (1L << (Kaso - 64)) | (1L << (Tawe - 64)) | (1L << (Konen - 64)) | (1L << (Kikuwa - 64)) | (1L << (Kiju - 64)) | (1L << (Jone - 64)) | (1L << (Akoli - 64)) | (1L << (Mamaki - 64)) | (1L << (Lana - 64)) | (1L << (Wa - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (Ja - 128)) | (1L << (Wiki - 128)) | (1L << (Naki - 128)) | (1L << (Sone - 128)) | (1L << (Katin - 128)) | (1L << (Kula - 128)) | (1L << (Kun - 128)) | (1L << (Kusa - 128)) | (1L << (Tanwa - 128)) | (1L << (Tipa - 128)) | (1L << (Teka - 128)) | (1L << (Tile - 128)) | (1L << (Tusa - 128)) | (1L << (Tijante - 128)) | (1L << (Nankin - 128)) | (1L << (Nalan - 128)) | (1L << (Niwa - 128)) | (1L << (Pite - 128)) | (1L << (Pasan - 128)) | (1L << (Pintu - 128)) | (1L << (Pula - 128)) | (1L << (Mepu - 128)) | (1L << (Luka - 128)) | (1L << (Laki - 128)) | (1L << (Wita - 128)) | (1L << (Saminta - 128)) | (1L << (Sanpanti - 128)) | (1L << (Saman - 128)) | (1L << (Satalan - 128)) | (1L << (Sula - 128)) | (1L << (Sitija - 128)) | (1L << (Lima - 128)) | (1L << (Jan - 128)) | (1L << (Makan - 128)) | (1L << (Keke - 128)) | (1L << (Latito - 128)) | (1L << (Ankolo - 128)) | (1L << (Poloko - 128)) | (1L << (Komo - 128)) | (1L << (Matiko - 128)) | (1L << (Mi - 128)) | (1L << (Nelo - 128)) | (1L << (Powele - 128)) | (1L << (Sapole - 128)) | (1L << (Kate - 128)) | (1L << (Sopa - 128)) | (1L << (Suki - 128)) | (1L << (Osole - 128)) | (1L << (Umami - 128)) | (1L << (Juka - 128)) | (1L << (Apijo - 128)) | (1L << (Niku - 128)) | (1L << (Musi - 128)) | (1L << (Kaki - 128)) | (1L << (Akasa - 128)) | (1L << (Tenti - 128)) | (1L << (Kawa - 128)) | (1L << (Penpe - 128)) | (1L << (Kumon - 128)) | (1L << (Namu - 128)) | (1L << (Tuko - 128)) | (1L << (Tuwi - 128)))) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & ((1L << (Olon - 192)) | (1L << (Alu - 192)) | (1L << (Kuto - 192)) | (1L << (Kosan - 192)) | (1L << (Alijun - 192)) | (1L << (Tu - 192)) | (1L << (Asa - 192)) | (1L << (Kijata - 192)) | (1L << (Malo - 192)) | (1L << (Sena - 192)) | (1L << (Leseka - 192)) | (1L << (Pintan - 192)) | (1L << (Inkatan - 192)) | (1L << (Pen - 192)) | (1L << (San - 192)) | (1L << (Kuwan - 192)) | (1L << (Sipa - 192)) | (1L << (Sintuwan - 192)) | (1L << (Iwe - 192)) | (1L << (Pansin - 192)) | (1L << (Si - 192)) | (1L << (Joli - 192)) | (1L << (Putun - 192)) | (1L << (Kuwosi - 192)) | (1L << (Tonsa - 192)) | (1L << (Kuwanko - 192)) | (1L << (Timi - 192)) | (1L << (Limijen - 192)) | (1L << (Tajen - 192)) | (1L << (Na - 192)) | (1L << (Tunpu - 192)) | (1L << (Matuwa - 192)) | (1L << (Pa - 192)) | (1L << (Taka - 192)) | (1L << (Kali - 192)) | (1L << (Tune - 192)) | (1L << (Tene - 192)) | (1L << (Namuna - 192)) | (1L << (Nile - 192)) | (1L << (Panta - 192)) | (1L << (Jon - 192)) | (1L << (Tonko - 192)) | (1L << (Sunkan - 192)) | (1L << (Onja - 192)) | (1L << (Ukama - 192)) | (1L << (Koton - 192)) | (1L << (Mitin - 192)) | (1L << (Lito - 192)) | (1L << (Lamo - 192)) | (1L << (Aluko - 192)) | (1L << (Konpute - 192)) | (1L << (Nepa - 192)) | (1L << (Kuku - 192)) | (1L << (Meja - 192)) | (1L << (Momu - 192)) | (1L << (Neje - 192)) | (1L << (Pawo - 192)) | (1L << (Tutu - 192)) | (1L << (Ukiki - 192)) | (1L << (Wonpa - 192)) | (1L << (Peman - 192)))) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & ((1L << (Napa - 256)) | (1L << (Nase - 256)) | (1L << (Je - 256)) | (1L << (Jatan - 256)) | (1L << (Kisowa - 256)) | (1L << (Lenka - 256)) | (1L << (Pasu - 256)) | (1L << (Lansa - 256)) | (1L << (Menu - 256)) | (1L << (Opotu - 256)) | (1L << (Uta - 256)) | (1L << (Maku - 256)) | (1L << (Pelete - 256)) | (1L << (Pitijo - 256)) | (1L << (Sapi - 256)) | (1L << (Tula - 256)) | (1L << (Pata - 256)) | (1L << (Pumi - 256)) | (1L << (Matija - 256)) | (1L << (Waju - 256)) | (1L << (Salila - 256)) | (1L << (Sila - 256)) | (1L << (Ko - 256)) | (1L << (Setan - 256)) | (1L << (Suwina - 256)) | (1L << (Samo - 256)) | (1L << (Tenja - 256)) | (1L << (Ipuwe - 256)) | (1L << (Muku - 256)) | (1L << (Kalawa - 256)) | (1L << (Konje - 256)) | (1L << (Sa - 256)) | (1L << (Saka - 256)) | (1L << (Wala - 256)) | (1L << (Asete - 256)) | (1L << (Akala - 256)) | (1L << (Amo - 256)) | (1L << (Kanta - 256)) | (1L << (Sekano - 256)) | (1L << (Sijen - 256)) | (1L << (Toso - 256)) | (1L << (Kenelo - 256)) | (1L << (Onko - 256)) | (1L << (Umo - 256)) | (1L << (Pikante - 256)) | (1L << (Posa - 256)) | (1L << (Anta - 256)) | (1L << (Takuwa - 256)) | (1L << (Tawapu - 256)) | (1L << (Lanki - 256)) | (1L << (Titi - 256)) | (1L << (Tiju - 256)) | (1L << (Tapala - 256)) | (1L << (Talili - 256)) | (1L << (Lipan - 256)) | (1L << (Lunti - 256)) | (1L << (Takilo - 256)) | (1L << (Kalan - 256)) | (1L << (Ulokan - 256)) | (1L << (Etu - 256)) | (1L << (Kontatu - 256)) | (1L << (Nanku - 256)) | (1L << (Mulu - 256)))) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & ((1L << (Watan - 320)) | (1L << (Wili - 320)) | (1L << (Ani - 320)) | (1L << (Iputu - 320)) | (1L << (Tina - 320)) | (1L << (Ne - 320)) | (1L << (Titan - 320)) | (1L << (Pon - 320)) | (1L << (Len - 320)) | (1L << (Santi - 320)) | (1L << (Sankan - 320)) | (1L << (One - 320)) | (1L << (Tanu - 320)) | (1L << (Sepo - 320)) | (1L << (Teneme - 320)) | (1L << (Solu - 320)) | (1L << (Tope - 320)) | (1L << (Tamaka - 320)) | (1L << (Tuntan - 320)) | (1L << (Niju - 320)) | (1L << (Non - 320)) | (1L << (Ewin - 320)) | (1L << (Enteken - 320)) | (1L << (Menwa - 320)) | (1L << (Muntu - 320)) | (1L << (Insu - 320)) | (1L << (Onton - 320)) | (1L << (Kikolo - 320)) | (1L << (Lo - 320)) | (1L << (Tiku - 320)) | (1L << (Ikama - 320)) | (1L << (Inpali - 320)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -536884224L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & -598134346743809L) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & -17592202821633L) != 0) || ((((_la - 192)) & ~0x3f) == 0 && ((1L << (_la - 192)) & -2147500097L) != 0) || ((((_la - 256)) & ~0x3f) == 0 && ((1L << (_la - 256)) & -32769L) != 0) || ((((_la - 320)) & ~0x3f) == 0 && ((1L << (_la - 320)) & 34288434943L) != 0)) {
 				{
 				{
 				setState(124);
@@ -1423,7 +1428,7 @@ public class KokanuParser extends Parser {
 			setState(133);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << In) | (1L << Men) | (1L << Win))) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & ((1L << (Wija - 198)) | (1L << (Ke - 198)) | (1L << (Kan - 198)))) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & ((1L << (So - 342)) | (1L << (Sun - 342)) | (1L << (Nenka - 342)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) {
 				{
 				{
 				setState(130);
@@ -1447,6 +1452,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ModifierClauseContext extends ParserRuleContext {
 		public TerminalNode Je() { return getToken(KokanuParser.Je, 0); }
 		public ExpandedWordContext expandedWord() {
@@ -2919,6 +2925,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class NewAgentAdjClauseContext extends ParserRuleContext {
 		public TerminalNode Ta() { return getToken(KokanuParser.Ta, 0); }
 		public SentenceClauseContext sentenceClause() {
@@ -2961,6 +2968,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class SameAgentAdjClauseContext extends ParserRuleContext {
 		public TerminalNode Te() { return getToken(KokanuParser.Te, 0); }
 		public VerbPhraseContext verbPhrase() {
@@ -3026,6 +3034,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class TerminatorContext extends ParserRuleContext {
 		public TerminalNode Comma() { return getToken(KokanuParser.Comma, 0); }
 		public TerminalNode Period() { return getToken(KokanuParser.Period, 0); }
@@ -3053,7 +3062,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(178);
 			_la = _input.LA(1);
-			if ( !(((((_la - -1)) & ~0x3f) == 0 && ((1L << (_la - -1)) & ((1L << (EOF - -1)) | (1L << (Comma - -1)) | (1L << (Period - -1)))) != 0)) ) {
+			if ( !(((((_la - -1)) & ~0x3f) == 0 && ((1L << (_la - -1)) & 41L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -3074,6 +3083,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class VerbPhraseContext extends ParserRuleContext {
 		public ContentWordContext contentWord() {
 			return getRuleContext(ContentWordContext.class,0);
@@ -3136,6 +3146,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class QuantityPhraseContext extends ParserRuleContext {
 		public RelativeQuantityContext relativeQuantity() {
 			return getRuleContext(RelativeQuantityContext.class,0);
@@ -3211,6 +3222,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class PrepPhraseContext extends ParserRuleContext {
 		public List<PrepClauseContext> prepClause() {
 			return getRuleContexts(PrepClauseContext.class);
@@ -3285,6 +3297,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class PrepClauseContext extends ParserRuleContext {
 		public List<NounPhraseContext> nounPhrase() {
 			return getRuleContexts(NounPhraseContext.class);
@@ -3333,7 +3346,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(205);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << In) | (1L << Men) | (1L << Win))) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & ((1L << (Wija - 198)) | (1L << (Ke - 198)) | (1L << (Kan - 198)))) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & ((1L << (So - 342)) | (1L << (Sun - 342)) | (1L << (Nenka - 342)))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 8512L) != 0) || _la==Po || _la==An || ((((_la - 198)) & ~0x3f) == 0 && ((1L << (_la - 198)) & 33554689L) != 0) || ((((_la - 342)) & ~0x3f) == 0 && ((1L << (_la - 342)) & 8209L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -3374,6 +3387,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ContentWordContext extends ParserRuleContext {
 		public BaseNounContext baseNoun() {
 			return getRuleContext(BaseNounContext.class,0);
@@ -3737,6 +3751,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ExpandedWordContext extends ParserRuleContext {
 		public PronounContext pronoun() {
 			return getRuleContext(PronounContext.class,0);
@@ -4134,6 +4149,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class BaseVerbContext extends ParserRuleContext {
 		public TerminalNode Pese() { return getToken(KokanuParser.Pese, 0); }
 		public TerminalNode Kilima() { return getToken(KokanuParser.Kilima, 0); }
@@ -4219,7 +4235,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(226);
 			_la = _input.LA(1);
-			if ( !(((((_la - 16)) & ~0x3f) == 0 && ((1L << (_la - 16)) & ((1L << (Pese - 16)) | (1L << (Kilima - 16)) | (1L << (Iman - 16)) | (1L << (Tasuwi - 16)) | (1L << (Ukun - 16)) | (1L << (Kisa - 16)) | (1L << (Kela - 16)) | (1L << (Lika - 16)) | (1L << (Tisilin - 16)) | (1L << (Kota - 16)) | (1L << (Pi - 16)) | (1L << (Anan - 16)) | (1L << (Tenkin - 16)) | (1L << (Papon - 16)) | (1L << (Junja - 16)) | (1L << (Nan - 16)) | (1L << (Ju - 16)) | (1L << (Kanisa - 16)) | (1L << (Pela - 16)))) != 0) || ((((_la - 83)) & ~0x3f) == 0 && ((1L << (_la - 83)) & ((1L << (Tun - 83)) | (1L << (Oke - 83)) | (1L << (Pesuwan - 83)) | (1L << (Ato - 83)) | (1L << (Wisan - 83)) | (1L << (Kun - 83)) | (1L << (Teka - 83)) | (1L << (Tijante - 83)) | (1L << (Niwa - 83)))) != 0) || ((((_la - 159)) & ~0x3f) == 0 && ((1L << (_la - 159)) & ((1L << (Sitija - 159)) | (1L << (Makan - 159)) | (1L << (Sapole - 159)) | (1L << (Suki - 159)) | (1L << (Apijo - 159)) | (1L << (Alu - 159)) | (1L << (Kosan - 159)) | (1L << (Inkatan - 159)) | (1L << (Pen - 159)) | (1L << (Iwe - 159)) | (1L << (Putun - 159)) | (1L << (Tajen - 159)))) != 0) || ((((_la - 227)) & ~0x3f) == 0 && ((1L << (_la - 227)) & ((1L << (Pa - 227)) | (1L << (Tene - 227)) | (1L << (Jon - 227)) | (1L << (Peman - 227)) | (1L << (Jatan - 227)) | (1L << (Lansa - 227)) | (1L << (Sapi - 227)) | (1L << (Pata - 227)))) != 0) || ((((_la - 292)) & ~0x3f) == 0 && ((1L << (_la - 292)) & ((1L << (Akala - 292)) | (1L << (Amo - 292)) | (1L << (Kanta - 292)) | (1L << (Posa - 292)) | (1L << (Anta - 292)) | (1L << (Takuwa - 292)) | (1L << (Tawapu - 292)) | (1L << (Kalan - 292)) | (1L << (Kontatu - 292)) | (1L << (Pon - 292)) | (1L << (Teneme - 292)) | (1L << (Solu - 292)) | (1L << (Onton - 292)))) != 0)) ) {
+			if ( !(((((_la - 16)) & ~0x3f) == 0 && ((1L << (_la - 16)) & -9072078270425460555L) != 0) || ((((_la - 83)) & ~0x3f) == 0 && ((1L << (_la - 83)) & 2632353986627272769L) != 0) || ((((_la - 159)) & ~0x3f) == 0 && ((1L << (_la - 159)) & -9069897719901700087L) != 0) || ((((_la - 227)) & ~0x3f) == 0 && ((1L << (_la - 227)) & 79238120079633L) != 0) || ((((_la - 292)) & ~0x3f) == 0 && ((1L << (_la - 292)) & 144141610752424967L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4240,6 +4256,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class PronounContext extends ParserRuleContext {
 		public TerminalNode Ja() { return getToken(KokanuParser.Ja, 0); }
 		public TerminalNode Ka() { return getToken(KokanuParser.Ka, 0); }
@@ -4293,6 +4310,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class BaseNounContext extends ParserRuleContext {
 		public TerminalNode Kapaja() { return getToken(KokanuParser.Kapaja, 0); }
 		public TerminalNode Sito() { return getToken(KokanuParser.Sito, 0); }
@@ -4434,7 +4452,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(230);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Kapaja) | (1L << Sito) | (1L << Sala) | (1L << Talika) | (1L << Mata) | (1L << Mita) | (1L << Jasa) | (1L << Jamin) | (1L << Apaki) | (1L << Luwa) | (1L << Otota) | (1L << Oti) | (1L << Pani) | (1L << Sikin) | (1L << Sinsi))) != 0) || ((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & ((1L << (Anpipi - 69)) | (1L << (Ten - 69)) | (1L << (Pulusi - 69)) | (1L << (Muwesi - 69)) | (1L << (Moto - 69)) | (1L << (Kemika - 69)) | (1L << (Mani - 69)) | (1L << (Sin - 69)) | (1L << (Tolu - 69)) | (1L << (Lipu - 69)) | (1L << (Osa - 69)) | (1L << (Ken - 69)) | (1L << (Lan - 69)) | (1L << (Soto - 69)) | (1L << (Nin - 69)) | (1L << (Toki - 69)) | (1L << (Kumi - 69)) | (1L << (Polan - 69)) | (1L << (Mijalo - 69)) | (1L << (Tawe - 69)) | (1L << (Kiju - 69)) | (1L << (Jone - 69)) | (1L << (Akoli - 69)) | (1L << (Lana - 69)) | (1L << (Wa - 69)))) != 0) || ((((_la - 136)) & ~0x3f) == 0 && ((1L << (_la - 136)) & ((1L << (Tanwa - 136)) | (1L << (Tipa - 136)) | (1L << (Pite - 136)) | (1L << (Pintu - 136)) | (1L << (Laki - 136)) | (1L << (Jan - 136)) | (1L << (Keke - 136)) | (1L << (Latito - 136)) | (1L << (Ankolo - 136)) | (1L << (Poloko - 136)) | (1L << (Komo - 136)) | (1L << (Powele - 136)) | (1L << (Sopa - 136)) | (1L << (Niku - 136)) | (1L << (Musi - 136)) | (1L << (Kaki - 136)) | (1L << (Akasa - 136)) | (1L << (Kumon - 136)) | (1L << (Namu - 136)) | (1L << (Tuwi - 136)) | (1L << (Alijun - 136)))) != 0) || ((((_la - 201)) & ~0x3f) == 0 && ((1L << (_la - 201)) & ((1L << (Malo - 201)) | (1L << (Leseka - 201)) | (1L << (Pintan - 201)) | (1L << (Kuwan - 201)) | (1L << (Sintuwan - 201)) | (1L << (Pansin - 201)) | (1L << (Kuwosi - 201)) | (1L << (Limijen - 201)) | (1L << (Matuwa - 201)) | (1L << (Kali - 201)) | (1L << (Namuna - 201)) | (1L << (Onja - 201)) | (1L << (Ukama - 201)) | (1L << (Koton - 201)) | (1L << (Mitin - 201)) | (1L << (Konpute - 201)) | (1L << (Kuku - 201)) | (1L << (Meja - 201)) | (1L << (Momu - 201)) | (1L << (Neje - 201)) | (1L << (Pawo - 201)) | (1L << (Ukiki - 201)) | (1L << (Lenka - 201)))) != 0) || ((((_la - 268)) & ~0x3f) == 0 && ((1L << (_la - 268)) & ((1L << (Pelete - 268)) | (1L << (Pitijo - 268)) | (1L << (Pumi - 268)) | (1L << (Matija - 268)) | (1L << (Waju - 268)) | (1L << (Salila - 268)) | (1L << (Sila - 268)) | (1L << (Ko - 268)) | (1L << (Suwina - 268)) | (1L << (Ipuwe - 268)) | (1L << (Muku - 268)) | (1L << (Kalawa - 268)) | (1L << (Wala - 268)) | (1L << (Asete - 268)) | (1L << (Kenelo - 268)) | (1L << (Onko - 268)) | (1L << (Umo - 268)) | (1L << (Lanki - 268)) | (1L << (Titi - 268)) | (1L << (Tapala - 268)) | (1L << (Talili - 268)) | (1L << (Takilo - 268)) | (1L << (Ulokan - 268)) | (1L << (Watan - 268)) | (1L << (Titan - 268)))) != 0) || ((((_la - 338)) & ~0x3f) == 0 && ((1L << (_la - 338)) & ((1L << (Tamaka - 338)) | (1L << (Non - 338)) | (1L << (Ewin - 338)) | (1L << (Enteken - 338)) | (1L << (Menwa - 338)) | (1L << (Insu - 338)) | (1L << (Ikama - 338)) | (1L << (Inpali - 338)))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 2450663118562000896L) != 0) || ((((_la - 69)) & ~0x3f) == 0 && ((1L << (_la - 69)) & 496702918876266725L) != 0) || ((((_la - 136)) & ~0x3f) == 0 && ((1L << (_la - 136)) & 1202989454399146499L) != 0) || ((((_la - 201)) & ~0x3f) == 0 && ((1L << (_la - 201)) & 1159626191524664589L) != 0) || ((((_la - 268)) & ~0x3f) == 0 && ((1L << (_la - 268)) & 292917326872260547L) != 0) || ((((_la - 338)) & ~0x3f) == 0 && ((1L << (_la - 338)) & 99561L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4455,6 +4473,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class BaseModifierContext extends ParserRuleContext {
 		public TerminalNode Lijule() { return getToken(KokanuParser.Lijule, 0); }
 		public TerminalNode Akiki() { return getToken(KokanuParser.Akiki, 0); }
@@ -4600,7 +4619,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(232);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Lijule) | (1L << Akiki) | (1L << Aja) | (1L << Kapan) | (1L << Mutakin) | (1L << Konpa) | (1L << Janlu) | (1L << Jamu) | (1L << Pututi) | (1L << Minuli) | (1L << Unitu) | (1L << Loso) | (1L << Kima) | (1L << Patun) | (1L << Panli) | (1L << Tunti) | (1L << Wanku))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (Unsi - 66)) | (1L << (Puka - 66)) | (1L << (Pankosi - 66)) | (1L << (Otan - 66)) | (1L << (Kujo - 66)) | (1L << (Ela - 66)) | (1L << (Suwi - 66)) | (1L << (Tati - 66)) | (1L << (Tomiwa - 66)) | (1L << (Tepu - 66)) | (1L << (Anwije - 66)) | (1L << (Lisi - 66)) | (1L << (Eme - 66)) | (1L << (Kapu - 66)) | (1L << (Neso - 66)) | (1L << (Kaso - 66)) | (1L << (Konen - 66)) | (1L << (Kikuwa - 66)) | (1L << (Mamaki - 66)) | (1L << (Wiki - 66)))) != 0) || ((((_la - 130)) & ~0x3f) == 0 && ((1L << (_la - 130)) & ((1L << (Naki - 130)) | (1L << (Sone - 130)) | (1L << (Katin - 130)) | (1L << (Kula - 130)) | (1L << (Kusa - 130)) | (1L << (Tile - 130)) | (1L << (Tusa - 130)) | (1L << (Nankin - 130)) | (1L << (Nalan - 130)) | (1L << (Pasan - 130)) | (1L << (Pula - 130)) | (1L << (Mepu - 130)) | (1L << (Luka - 130)) | (1L << (Wita - 130)) | (1L << (Saminta - 130)) | (1L << (Sanpanti - 130)) | (1L << (Saman - 130)) | (1L << (Satalan - 130)) | (1L << (Sula - 130)) | (1L << (Matiko - 130)) | (1L << (Nelo - 130)) | (1L << (Kate - 130)) | (1L << (Osole - 130)) | (1L << (Umami - 130)) | (1L << (Juka - 130)) | (1L << (Tenti - 130)) | (1L << (Kawa - 130)) | (1L << (Penpe - 130)) | (1L << (Tuko - 130)) | (1L << (Olon - 130)))) != 0) || ((((_la - 194)) & ~0x3f) == 0 && ((1L << (_la - 194)) & ((1L << (Kuto - 194)) | (1L << (Asa - 194)) | (1L << (Kijata - 194)) | (1L << (Sena - 194)) | (1L << (Sipa - 194)) | (1L << (Si - 194)) | (1L << (Joli - 194)) | (1L << (Tonsa - 194)) | (1L << (Kuwanko - 194)) | (1L << (Timi - 194)) | (1L << (Tunpu - 194)) | (1L << (Taka - 194)) | (1L << (Tune - 194)) | (1L << (Nile - 194)) | (1L << (Panta - 194)) | (1L << (Tonko - 194)) | (1L << (Sunkan - 194)) | (1L << (Lito - 194)) | (1L << (Lamo - 194)) | (1L << (Aluko - 194)) | (1L << (Nepa - 194)) | (1L << (Tutu - 194)) | (1L << (Wonpa - 194)) | (1L << (Napa - 194)) | (1L << (Nase - 194)))) != 0) || ((((_la - 260)) & ~0x3f) == 0 && ((1L << (_la - 260)) & ((1L << (Kisowa - 260)) | (1L << (Pasu - 260)) | (1L << (Opotu - 260)) | (1L << (Uta - 260)) | (1L << (Maku - 260)) | (1L << (Tula - 260)) | (1L << (Samo - 260)) | (1L << (Tenja - 260)) | (1L << (Konje - 260)) | (1L << (Sekano - 260)) | (1L << (Pikante - 260)) | (1L << (Lipan - 260)) | (1L << (Lunti - 260)) | (1L << (Mulu - 260)) | (1L << (Wili - 260)) | (1L << (Iputu - 260)))) != 0) || ((((_la - 324)) & ~0x3f) == 0 && ((1L << (_la - 324)) & ((1L << (Tina - 324)) | (1L << (Len - 324)) | (1L << (Santi - 324)) | (1L << (Sankan - 324)) | (1L << (One - 324)) | (1L << (Tanu - 324)) | (1L << (Sepo - 324)) | (1L << (Tope - 324)) | (1L << (Tuntan - 324)) | (1L << (Muntu - 324)) | (1L << (Kikolo - 324)) | (1L << (Lo - 324)) | (1L << (Tiku - 324)))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 6421139249860476928L) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & -8586041648507205567L) != 0) || ((((_la - 130)) & ~0x3f) == 0 && ((1L << (_la - 130)) & 6017813231691445807L) != 0) || ((((_la - 194)) & ~0x3f) == 0 && ((1L << (_la - 194)) & -3164045281630027423L) != 0) || ((((_la - 260)) & ~0x3f) == 0 && ((1L << (_la - 260)) & -6334310642366803739L) != 0) || ((((_la - 324)) & ~0x3f) == 0 && ((1L << (_la - 324)) & 478193633L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4621,6 +4640,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ConnectorContext extends ParserRuleContext {
 		public TerminalNode Tan() { return getToken(KokanuParser.Tan, 0); }
 		public TerminalNode Un() { return getToken(KokanuParser.Un, 0); }
@@ -4670,6 +4690,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class RelativeQuantityContext extends ParserRuleContext {
 		public TerminalNode Jati() { return getToken(KokanuParser.Jati, 0); }
 		public TerminalNode Mese() { return getToken(KokanuParser.Mese, 0); }
@@ -4720,6 +4741,7 @@ public class KokanuParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class NominalQuantityContext extends ParserRuleContext {
 		public TerminalNode Nula() { return getToken(KokanuParser.Nula, 0); }
 		public TerminalNode Wan() { return getToken(KokanuParser.Wan, 0); }
@@ -4756,7 +4778,7 @@ public class KokanuParser extends Parser {
 			{
 			setState(238);
 			_la = _input.LA(1);
-			if ( !(((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & ((1L << (Nula - 78)) | (1L << (Wan - 78)) | (1L << (Lijo - 78)))) != 0) || _la==Lima || _la==San || ((((_la - 280)) & ~0x3f) == 0 && ((1L << (_la - 280)) & ((1L << (Setan - 280)) | (1L << (Saka - 280)) | (1L << (Sijen - 280)) | (1L << (Toso - 280)) | (1L << (Tiju - 280)) | (1L << (Etu - 280)) | (1L << (Nanku - 280)))) != 0)) ) {
+			if ( !(((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 536875009L) != 0) || _la==Lima || _la==San || ((((_la - 280)) & ~0x3f) == 0 && ((1L << (_la - 280)) & 343866016257L) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -4778,115 +4800,189 @@ public class KokanuParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0165\u00f3\4\2\t"+
-		"\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
-		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
-		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\3\2\3\2\3\2\7\2\62"+
-		"\n\2\f\2\16\2\65\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\6\3>\n\3\r\3\16\3?\7"+
-		"\3B\n\3\f\3\16\3E\13\3\5\3G\n\3\3\4\5\4J\n\4\3\4\3\4\3\4\3\4\7\4P\n\4"+
-		"\f\4\16\4S\13\4\7\4U\n\4\f\4\16\4X\13\4\3\4\5\4[\n\4\3\4\3\4\6\4_\n\4"+
-		"\r\4\16\4`\3\4\5\4d\n\4\3\5\5\5g\n\5\3\5\3\5\3\5\7\5l\n\5\f\5\16\5o\13"+
-		"\5\3\5\5\5r\n\5\3\5\3\5\7\5v\n\5\f\5\16\5y\13\5\5\5{\n\5\3\6\3\6\3\6\7"+
-		"\6\u0080\n\6\f\6\16\6\u0083\13\6\3\6\7\6\u0086\n\6\f\6\16\6\u0089\13\6"+
-		"\3\7\3\7\3\7\7\7\u008e\n\7\f\7\16\7\u0091\13\7\3\7\3\7\5\7\u0095\n\7\3"+
-		"\7\3\7\3\7\7\7\u009a\n\7\f\7\16\7\u009d\13\7\3\7\3\7\5\7\u00a1\n\7\3\7"+
-		"\3\7\3\7\5\7\u00a6\n\7\5\7\u00a8\n\7\3\b\3\b\3\b\3\t\3\t\3\t\7\t\u00b0"+
-		"\n\t\f\t\16\t\u00b3\13\t\3\n\3\n\3\13\3\13\7\13\u00b9\n\13\f\13\16\13"+
-		"\u00bc\13\13\3\f\5\f\u00bf\n\f\3\f\6\f\u00c2\n\f\r\f\16\f\u00c3\3\r\3"+
-		"\r\5\r\u00c8\n\r\3\r\7\r\u00cb\n\r\f\r\16\r\u00ce\13\r\3\16\3\16\3\16"+
-		"\3\16\3\16\7\16\u00d5\n\16\f\16\16\16\u00d8\13\16\3\17\3\17\3\17\5\17"+
-		"\u00dd\n\17\3\20\3\20\3\20\3\20\5\20\u00e3\n\20\3\21\3\21\3\22\3\22\3"+
-		"\23\3\23\3\24\3\24\3\25\3\25\3\26\3\26\3\27\3\27\3\27\2\2\30\2\4\6\b\n"+
-		"\f\16\20\22\24\26\30\32\34\36 \"$&(*,\2\13\4\3\4\4\6\6\r\2\b\b\n\n\17"+
-		"\17XXoo\u00c8\u00c8\u00d0\u00d0\u00e1\u00e1\u0158\u0158\u015c\u015c\u0165"+
-		"\u0165\63\2\22\22\24\24\26\27\31\31\36\36(),,\62\62\679ABEFKKQQUU[[dd"+
-		"ppuu\u0088\u0088\u008c\u008c\u008f\u008f\u0092\u0092\u00a1\u00a1\u00a4"+
-		"\u00a4\u00af\u00af\u00b2\u00b2\u00b6\u00b6\u00c3\u00c3\u00c5\u00c5\u00cf"+
-		"\u00cf\u00d1\u00d1\u00d6\u00d6\u00da\u00da\u00e0\u00e0\u00e5\u00e5\u00e9"+
-		"\u00e9\u00ed\u00ed\u0101\u0101\u0105\u0105\u0109\u0109\u0110\u0110\u0113"+
-		"\u0113\u0126\u0128\u0130\u0133\u013c\u013c\u013f\u013f\u0149\u0149\u0151"+
-		"\u0152\u015f\u015f\n\2++<<\u0082\u0082\u00ab\u00ab\u00c7\u00c7\u00e2\u00e2"+
-		"\u0122\u0122\u0147\u0147I\2\23\23\25\25\33\34  \"&**\61\61\63\63;;??G"+
-		"GIILNWWYY^^`beeijllnnqqttvvyy|~\u0080\u0081\u008a\u008b\u0093\u0093\u0095"+
-		"\u0095\u0099\u0099\u00a3\u00a3\u00a5\u00a9\u00ad\u00ad\u00b1\u00b1\u00b7"+
-		"\u00ba\u00be\u00bf\u00c1\u00c1\u00c6\u00c6\u00cb\u00cb\u00cd\u00ce\u00d3"+
-		"\u00d3\u00d5\u00d5\u00d7\u00d7\u00db\u00db\u00df\u00df\u00e4\u00e4\u00e7"+
-		"\u00e7\u00ea\u00ea\u00f0\u00f3\u00f7\u00f7\u00f9\u00fd\u00ff\u00ff\u0107"+
-		"\u0107\u010e\u010f\u0114\u0119\u011b\u011b\u011e\u0120\u0124\u0125\u012c"+
-		"\u012e\u0134\u0135\u0137\u0138\u013b\u013b\u013d\u013d\u0142\u0142\u0148"+
-		"\u0148\u0154\u0154\u0157\u0157\u0159\u015b\u015e\u015e\u0163\u0164J\2"+
-		"\21\21\30\30\32\32\35\35!!\'\'-\60\64\66::=>@@DDJJOORSVV]]__ccfhkkrrw"+
-		"xz{\177\177\u0083\u0087\u0089\u0089\u008d\u008e\u0090\u0091\u0094\u0094"+
-		"\u0096\u0098\u009b\u00a0\u00aa\u00aa\u00ac\u00ac\u00b0\u00b0\u00b3\u00b5"+
-		"\u00bb\u00bd\u00c0\u00c0\u00c2\u00c2\u00c4\u00c4\u00c9\u00ca\u00cc\u00cc"+
-		"\u00d4\u00d4\u00d8\u00d9\u00dc\u00de\u00e3\u00e3\u00e6\u00e6\u00e8\u00e8"+
-		"\u00eb\u00ec\u00ee\u00ef\u00f4\u00f6\u00f8\u00f8\u00fe\u00fe\u0100\u0100"+
-		"\u0102\u0103\u0106\u0106\u0108\u0108\u010b\u010d\u0112\u0112\u011c\u011d"+
-		"\u0121\u0121\u0129\u0129\u012f\u012f\u0139\u013a\u0141\u0141\u0143\u0143"+
-		"\u0145\u0146\u014b\u0150\u0153\u0153\u0155\u0155\u015d\u015d\u0160\u0162"+
-		"\6\2TTss\u009a\u009a\u0111\u0111\7\2CCHH\u010a\u010a\u0144\u0144\u0156"+
-		"\u0156\r\2PP\\\\mm\u00a2\u00a2\u00d2\u00d2\u011a\u011a\u0123\u0123\u012a"+
-		"\u012b\u0136\u0136\u013e\u013e\u0140\u0140\2\u0104\2.\3\2\2\2\4F\3\2\2"+
-		"\2\6I\3\2\2\2\bz\3\2\2\2\n|\3\2\2\2\f\u00a7\3\2\2\2\16\u00a9\3\2\2\2\20"+
-		"\u00ac\3\2\2\2\22\u00b4\3\2\2\2\24\u00b6\3\2\2\2\26\u00be\3\2\2\2\30\u00c5"+
-		"\3\2\2\2\32\u00cf\3\2\2\2\34\u00dc\3\2\2\2\36\u00e2\3\2\2\2 \u00e4\3\2"+
-		"\2\2\"\u00e6\3\2\2\2$\u00e8\3\2\2\2&\u00ea\3\2\2\2(\u00ec\3\2\2\2*\u00ee"+
-		"\3\2\2\2,\u00f0\3\2\2\2.\63\5\4\3\2/\60\7\6\2\2\60\62\5\4\3\2\61/\3\2"+
-		"\2\2\62\65\3\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\64\66\3\2\2\2\65\63\3\2"+
-		"\2\2\66\67\7\6\2\2\67\3\3\2\2\28G\5\6\4\29:\7\13\2\2:C\5\34\17\2;B\5\30"+
-		"\r\2<>\5\f\7\2=<\3\2\2\2>?\3\2\2\2?=\3\2\2\2?@\3\2\2\2@B\3\2\2\2A;\3\2"+
-		"\2\2A=\3\2\2\2BE\3\2\2\2CA\3\2\2\2CD\3\2\2\2DG\3\2\2\2EC\3\2\2\2F8\3\2"+
-		"\2\2F9\3\2\2\2G\5\3\2\2\2HJ\5\30\r\2IH\3\2\2\2IJ\3\2\2\2JV\3\2\2\2KQ\5"+
-		"\b\5\2LM\5(\25\2MN\5\b\5\2NP\3\2\2\2OL\3\2\2\2PS\3\2\2\2QO\3\2\2\2QR\3"+
-		"\2\2\2RU\3\2\2\2SQ\3\2\2\2TK\3\2\2\2UX\3\2\2\2VT\3\2\2\2VW\3\2\2\2WZ\3"+
-		"\2\2\2XV\3\2\2\2Y[\5\30\r\2ZY\3\2\2\2Z[\3\2\2\2[^\3\2\2\2\\]\7\t\2\2]"+
-		"_\5\24\13\2^\\\3\2\2\2_`\3\2\2\2`^\3\2\2\2`a\3\2\2\2ac\3\2\2\2bd\5\30"+
-		"\r\2cb\3\2\2\2cd\3\2\2\2d\7\3\2\2\2eg\5\26\f\2fe\3\2\2\2fg\3\2\2\2gh\3"+
-		"\2\2\2hi\5\n\6\2im\5\22\n\2jl\5\f\7\2kj\3\2\2\2lo\3\2\2\2mk\3\2\2\2mn"+
-		"\3\2\2\2n{\3\2\2\2om\3\2\2\2pr\5\26\f\2qp\3\2\2\2qr\3\2\2\2rs\3\2\2\2"+
-		"sw\5\36\20\2tv\5\f\7\2ut\3\2\2\2vy\3\2\2\2wu\3\2\2\2wx\3\2\2\2x{\3\2\2"+
-		"\2yw\3\2\2\2zf\3\2\2\2zq\3\2\2\2{\t\3\2\2\2|}\7\r\2\2}\u0081\5\34\17\2"+
-		"~\u0080\5\f\7\2\177~\3\2\2\2\u0080\u0083\3\2\2\2\u0081\177\3\2\2\2\u0081"+
-		"\u0082\3\2\2\2\u0082\u0087\3\2\2\2\u0083\u0081\3\2\2\2\u0084\u0086\5\30"+
-		"\r\2\u0085\u0084\3\2\2\2\u0086\u0089\3\2\2\2\u0087\u0085\3\2\2\2\u0087"+
-		"\u0088\3\2\2\2\u0088\13\3\2\2\2\u0089\u0087\3\2\2\2\u008a\u0094\7\u0104"+
-		"\2\2\u008b\u008f\5\36\20\2\u008c\u008e\5\f\7\2\u008d\u008c\3\2\2\2\u008e"+
-		"\u0091\3\2\2\2\u008f\u008d\3\2\2\2\u008f\u0090\3\2\2\2\u0090\u0095\3\2"+
-		"\2\2\u0091\u008f\3\2\2\2\u0092\u0095\5\20\t\2\u0093\u0095\5\16\b\2\u0094"+
-		"\u008b\3\2\2\2\u0094\u0092\3\2\2\2\u0094\u0093\3\2\2\2\u0095\u00a8\3\2"+
-		"\2\2\u0096\u00a0\7\20\2\2\u0097\u009b\5\36\20\2\u0098\u009a\5\f\7\2\u0099"+
-		"\u0098\3\2\2\2\u009a\u009d\3\2\2\2\u009b\u0099\3\2\2\2\u009b\u009c\3\2"+
-		"\2\2\u009c\u00a1\3\2\2\2\u009d\u009b\3\2\2\2\u009e\u00a1\5\20\t\2\u009f"+
-		"\u00a1\5\16\b\2\u00a0\u0097\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u009f\3"+
-		"\2\2\2\u00a1\u00a8\3\2\2\2\u00a2\u00a6\5\36\20\2\u00a3\u00a6\5\20\t\2"+
-		"\u00a4\u00a6\5\16\b\2\u00a5\u00a2\3\2\2\2\u00a5\u00a3\3\2\2\2\u00a5\u00a4"+
-		"\3\2\2\2\u00a6\u00a8\3\2\2\2\u00a7\u008a\3\2\2\2\u00a7\u0096\3\2\2\2\u00a7"+
-		"\u00a5\3\2\2\2\u00a8\r\3\2\2\2\u00a9\u00aa\7\f\2\2\u00aa\u00ab\5\6\4\2"+
-		"\u00ab\17\3\2\2\2\u00ac\u00ad\7\r\2\2\u00ad\u00b1\5\24\13\2\u00ae\u00b0"+
-		"\5\30\r\2\u00af\u00ae\3\2\2\2\u00b0\u00b3\3\2\2\2\u00b1\u00af\3\2\2\2"+
-		"\u00b1\u00b2\3\2\2\2\u00b2\21\3\2\2\2\u00b3\u00b1\3\2\2\2\u00b4\u00b5"+
-		"\t\2\2\2\u00b5\23\3\2\2\2\u00b6\u00ba\5\34\17\2\u00b7\u00b9\5\f\7\2\u00b8"+
-		"\u00b7\3\2\2\2\u00b9\u00bc\3\2\2\2\u00ba\u00b8\3\2\2\2\u00ba\u00bb\3\2"+
-		"\2\2\u00bb\25\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bd\u00bf\5*\26\2\u00be\u00bd"+
-		"\3\2\2\2\u00be\u00bf\3\2\2\2\u00bf\u00c1\3\2\2\2\u00c0\u00c2\5,\27\2\u00c1"+
-		"\u00c0\3\2\2\2\u00c2\u00c3\3\2\2\2\u00c3\u00c1\3\2\2\2\u00c3\u00c4\3\2"+
-		"\2\2\u00c4\27\3\2\2\2\u00c5\u00cc\5\32\16\2\u00c6\u00c8\7\4\2\2\u00c7"+
-		"\u00c6\3\2\2\2\u00c7\u00c8\3\2\2\2\u00c8\u00c9\3\2\2\2\u00c9\u00cb\5\32"+
-		"\16\2\u00ca\u00c7\3\2\2\2\u00cb\u00ce\3\2\2\2\u00cc\u00ca\3\2\2\2\u00cc"+
-		"\u00cd\3\2\2\2\u00cd\31\3\2\2\2\u00ce\u00cc\3\2\2\2\u00cf\u00d0\t\3\2"+
-		"\2\u00d0\u00d6\5\b\5\2\u00d1\u00d2\5(\25\2\u00d2\u00d3\5\b\5\2\u00d3\u00d5"+
-		"\3\2\2\2\u00d4\u00d1\3\2\2\2\u00d5\u00d8\3\2\2\2\u00d6\u00d4\3\2\2\2\u00d6"+
-		"\u00d7\3\2\2\2\u00d7\33\3\2\2\2\u00d8\u00d6\3\2\2\2\u00d9\u00dd\5$\23"+
-		"\2\u00da\u00dd\5 \21\2\u00db\u00dd\5&\24\2\u00dc\u00d9\3\2\2\2\u00dc\u00da"+
-		"\3\2\2\2\u00dc\u00db\3\2\2\2\u00dd\35\3\2\2\2\u00de\u00e3\5\"\22\2\u00df"+
-		"\u00e3\5*\26\2\u00e0\u00e3\5,\27\2\u00e1\u00e3\5\34\17\2\u00e2\u00de\3"+
-		"\2\2\2\u00e2\u00df\3\2\2\2\u00e2\u00e0\3\2\2\2\u00e2\u00e1\3\2\2\2\u00e3"+
-		"\37\3\2\2\2\u00e4\u00e5\t\4\2\2\u00e5!\3\2\2\2\u00e6\u00e7\t\5\2\2\u00e7"+
-		"#\3\2\2\2\u00e8\u00e9\t\6\2\2\u00e9%\3\2\2\2\u00ea\u00eb\t\7\2\2\u00eb"+
-		"\'\3\2\2\2\u00ec\u00ed\t\b\2\2\u00ed)\3\2\2\2\u00ee\u00ef\t\t\2\2\u00ef"+
-		"+\3\2\2\2\u00f0\u00f1\t\n\2\2\u00f1-\3\2\2\2#\63?ACFIQVZ`cfmqwz\u0081"+
-		"\u0087\u008f\u0094\u009b\u00a0\u00a5\u00a7\u00b1\u00ba\u00be\u00c3\u00c7"+
-		"\u00cc\u00d6\u00dc\u00e2";
+		"\u0004\u0001\u0163\u00f1\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
+		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
+		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
+		"\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007"+
+		"\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007"+
+		"\u0012\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007"+
+		"\u0015\u0001\u0000\u0001\u0000\u0001\u0000\u0005\u00000\b\u0000\n\u0000"+
+		"\f\u00003\t\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0001\u0001\u0001\u0001\u0004\u0001<\b\u0001\u000b\u0001\f\u0001"+
+		"=\u0005\u0001@\b\u0001\n\u0001\f\u0001C\t\u0001\u0003\u0001E\b\u0001\u0001"+
+		"\u0002\u0003\u0002H\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001"+
+		"\u0002\u0005\u0002N\b\u0002\n\u0002\f\u0002Q\t\u0002\u0005\u0002S\b\u0002"+
+		"\n\u0002\f\u0002V\t\u0002\u0001\u0002\u0003\u0002Y\b\u0002\u0001\u0002"+
+		"\u0001\u0002\u0004\u0002]\b\u0002\u000b\u0002\f\u0002^\u0001\u0002\u0003"+
+		"\u0002b\b\u0002\u0001\u0003\u0003\u0003e\b\u0003\u0001\u0003\u0001\u0003"+
+		"\u0001\u0003\u0005\u0003j\b\u0003\n\u0003\f\u0003m\t\u0003\u0001\u0003"+
+		"\u0003\u0003p\b\u0003\u0001\u0003\u0001\u0003\u0005\u0003t\b\u0003\n\u0003"+
+		"\f\u0003w\t\u0003\u0003\u0003y\b\u0003\u0001\u0004\u0001\u0004\u0001\u0004"+
+		"\u0005\u0004~\b\u0004\n\u0004\f\u0004\u0081\t\u0004\u0001\u0004\u0005"+
+		"\u0004\u0084\b\u0004\n\u0004\f\u0004\u0087\t\u0004\u0001\u0005\u0001\u0005"+
+		"\u0001\u0005\u0005\u0005\u008c\b\u0005\n\u0005\f\u0005\u008f\t\u0005\u0001"+
+		"\u0005\u0001\u0005\u0003\u0005\u0093\b\u0005\u0001\u0005\u0001\u0005\u0001"+
+		"\u0005\u0005\u0005\u0098\b\u0005\n\u0005\f\u0005\u009b\t\u0005\u0001\u0005"+
+		"\u0001\u0005\u0003\u0005\u009f\b\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
+		"\u0003\u0005\u00a4\b\u0005\u0003\u0005\u00a6\b\u0005\u0001\u0006\u0001"+
+		"\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0005\u0007\u00ae"+
+		"\b\u0007\n\u0007\f\u0007\u00b1\t\u0007\u0001\b\u0001\b\u0001\t\u0001\t"+
+		"\u0005\t\u00b7\b\t\n\t\f\t\u00ba\t\t\u0001\n\u0003\n\u00bd\b\n\u0001\n"+
+		"\u0004\n\u00c0\b\n\u000b\n\f\n\u00c1\u0001\u000b\u0001\u000b\u0003\u000b"+
+		"\u00c6\b\u000b\u0001\u000b\u0005\u000b\u00c9\b\u000b\n\u000b\f\u000b\u00cc"+
+		"\t\u000b\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0005\f\u00d3\b\f\n\f"+
+		"\f\f\u00d6\t\f\u0001\r\u0001\r\u0001\r\u0003\r\u00db\b\r\u0001\u000e\u0001"+
+		"\u000e\u0001\u000e\u0001\u000e\u0003\u000e\u00e1\b\u000e\u0001\u000f\u0001"+
+		"\u000f\u0001\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0001\u0012\u0001"+
+		"\u0012\u0001\u0013\u0001\u0013\u0001\u0014\u0001\u0014\u0001\u0015\u0001"+
+		"\u0015\u0001\u0015\u0000\u0000\u0016\u0000\u0002\u0004\u0006\b\n\f\u000e"+
+		"\u0010\u0012\u0014\u0016\u0018\u001a\u001c\u001e \"$&(*\u0000\t\u0002"+
+		"\u0001\u0002\u0002\u0004\u0004\u000b\u0000\u0006\u0006\b\b\r\rVVmm\u00c6"+
+		"\u00c6\u00ce\u00ce\u00df\u00df\u0156\u0156\u015a\u015a\u0163\u01631\u0000"+
+		"\u0010\u0010\u0012\u0012\u0014\u0015\u0017\u0017\u001c\u001c&\'**0057"+
+		"?@CDIIOOSSYYbbnnss\u0086\u0086\u008a\u008a\u008d\u008d\u0090\u0090\u009f"+
+		"\u009f\u00a2\u00a2\u00ad\u00ad\u00b0\u00b0\u00b4\u00b4\u00c1\u00c1\u00c3"+
+		"\u00c3\u00cd\u00cd\u00cf\u00cf\u00d4\u00d4\u00d8\u00d8\u00de\u00de\u00e3"+
+		"\u00e3\u00e7\u00e7\u00eb\u00eb\u00ff\u00ff\u0103\u0103\u0107\u0107\u010e"+
+		"\u010e\u0111\u0111\u0124\u0126\u012e\u0131\u013a\u013a\u013d\u013d\u0147"+
+		"\u0147\u014f\u0150\u015d\u015d\b\u0000))::\u0080\u0080\u00a9\u00a9\u00c5"+
+		"\u00c5\u00e0\u00e0\u0120\u0120\u0145\u0145G\u0000\u0011\u0011\u0013\u0013"+
+		"\u0019\u001a\u001e\u001e $((//1199==EEGGJLUUWW\\\\^`ccghjjlloorrttwwz"+
+		"|~\u007f\u0088\u0089\u0091\u0091\u0093\u0093\u0097\u0097\u00a1\u00a1\u00a3"+
+		"\u00a7\u00ab\u00ab\u00af\u00af\u00b5\u00b8\u00bc\u00bd\u00bf\u00bf\u00c4"+
+		"\u00c4\u00c9\u00c9\u00cb\u00cc\u00d1\u00d1\u00d3\u00d3\u00d5\u00d5\u00d9"+
+		"\u00d9\u00dd\u00dd\u00e2\u00e2\u00e5\u00e5\u00e8\u00e8\u00ee\u00f1\u00f5"+
+		"\u00f5\u00f7\u00fb\u00fd\u00fd\u0105\u0105\u010c\u010d\u0112\u0117\u0119"+
+		"\u0119\u011c\u011e\u0122\u0123\u012a\u012c\u0132\u0133\u0135\u0136\u0139"+
+		"\u0139\u013b\u013b\u0140\u0140\u0146\u0146\u0152\u0152\u0155\u0155\u0157"+
+		"\u0159\u015c\u015c\u0161\u0162H\u0000\u000f\u000f\u0016\u0016\u0018\u0018"+
+		"\u001b\u001b\u001f\u001f%%+.2488;<>>BBHHMMPQTT[[]]aadfiippuvxy}}\u0081"+
+		"\u0085\u0087\u0087\u008b\u008c\u008e\u008f\u0092\u0092\u0094\u0096\u0099"+
+		"\u009e\u00a8\u00a8\u00aa\u00aa\u00ae\u00ae\u00b1\u00b3\u00b9\u00bb\u00be"+
+		"\u00be\u00c0\u00c0\u00c2\u00c2\u00c7\u00c8\u00ca\u00ca\u00d2\u00d2\u00d6"+
+		"\u00d7\u00da\u00dc\u00e1\u00e1\u00e4\u00e4\u00e6\u00e6\u00e9\u00ea\u00ec"+
+		"\u00ed\u00f2\u00f4\u00f6\u00f6\u00fc\u00fc\u00fe\u00fe\u0100\u0101\u0104"+
+		"\u0104\u0106\u0106\u0109\u010b\u0110\u0110\u011a\u011b\u011f\u011f\u0127"+
+		"\u0127\u012d\u012d\u0137\u0138\u013f\u013f\u0141\u0141\u0143\u0144\u0149"+
+		"\u014e\u0151\u0151\u0153\u0153\u015b\u015b\u015e\u0160\u0004\u0000RRq"+
+		"q\u0098\u0098\u010f\u010f\u0005\u0000AAFF\u0108\u0108\u0142\u0142\u0154"+
+		"\u0154\u000b\u0000NNZZkk\u00a0\u00a0\u00d0\u00d0\u0118\u0118\u0121\u0121"+
+		"\u0128\u0129\u0134\u0134\u013c\u013c\u013e\u013e\u0102\u0000,\u0001\u0000"+
+		"\u0000\u0000\u0002D\u0001\u0000\u0000\u0000\u0004G\u0001\u0000\u0000\u0000"+
+		"\u0006x\u0001\u0000\u0000\u0000\bz\u0001\u0000\u0000\u0000\n\u00a5\u0001"+
+		"\u0000\u0000\u0000\f\u00a7\u0001\u0000\u0000\u0000\u000e\u00aa\u0001\u0000"+
+		"\u0000\u0000\u0010\u00b2\u0001\u0000\u0000\u0000\u0012\u00b4\u0001\u0000"+
+		"\u0000\u0000\u0014\u00bc\u0001\u0000\u0000\u0000\u0016\u00c3\u0001\u0000"+
+		"\u0000\u0000\u0018\u00cd\u0001\u0000\u0000\u0000\u001a\u00da\u0001\u0000"+
+		"\u0000\u0000\u001c\u00e0\u0001\u0000\u0000\u0000\u001e\u00e2\u0001\u0000"+
+		"\u0000\u0000 \u00e4\u0001\u0000\u0000\u0000\"\u00e6\u0001\u0000\u0000"+
+		"\u0000$\u00e8\u0001\u0000\u0000\u0000&\u00ea\u0001\u0000\u0000\u0000("+
+		"\u00ec\u0001\u0000\u0000\u0000*\u00ee\u0001\u0000\u0000\u0000,1\u0003"+
+		"\u0002\u0001\u0000-.\u0005\u0004\u0000\u0000.0\u0003\u0002\u0001\u0000"+
+		"/-\u0001\u0000\u0000\u000003\u0001\u0000\u0000\u00001/\u0001\u0000\u0000"+
+		"\u000012\u0001\u0000\u0000\u000024\u0001\u0000\u0000\u000031\u0001\u0000"+
+		"\u0000\u000045\u0005\u0004\u0000\u00005\u0001\u0001\u0000\u0000\u0000"+
+		"6E\u0003\u0004\u0002\u000078\u0005\t\u0000\u00008A\u0003\u001a\r\u0000"+
+		"9@\u0003\u0016\u000b\u0000:<\u0003\n\u0005\u0000;:\u0001\u0000\u0000\u0000"+
+		"<=\u0001\u0000\u0000\u0000=;\u0001\u0000\u0000\u0000=>\u0001\u0000\u0000"+
+		"\u0000>@\u0001\u0000\u0000\u0000?9\u0001\u0000\u0000\u0000?;\u0001\u0000"+
+		"\u0000\u0000@C\u0001\u0000\u0000\u0000A?\u0001\u0000\u0000\u0000AB\u0001"+
+		"\u0000\u0000\u0000BE\u0001\u0000\u0000\u0000CA\u0001\u0000\u0000\u0000"+
+		"D6\u0001\u0000\u0000\u0000D7\u0001\u0000\u0000\u0000E\u0003\u0001\u0000"+
+		"\u0000\u0000FH\u0003\u0016\u000b\u0000GF\u0001\u0000\u0000\u0000GH\u0001"+
+		"\u0000\u0000\u0000HT\u0001\u0000\u0000\u0000IO\u0003\u0006\u0003\u0000"+
+		"JK\u0003&\u0013\u0000KL\u0003\u0006\u0003\u0000LN\u0001\u0000\u0000\u0000"+
+		"MJ\u0001\u0000\u0000\u0000NQ\u0001\u0000\u0000\u0000OM\u0001\u0000\u0000"+
+		"\u0000OP\u0001\u0000\u0000\u0000PS\u0001\u0000\u0000\u0000QO\u0001\u0000"+
+		"\u0000\u0000RI\u0001\u0000\u0000\u0000SV\u0001\u0000\u0000\u0000TR\u0001"+
+		"\u0000\u0000\u0000TU\u0001\u0000\u0000\u0000UX\u0001\u0000\u0000\u0000"+
+		"VT\u0001\u0000\u0000\u0000WY\u0003\u0016\u000b\u0000XW\u0001\u0000\u0000"+
+		"\u0000XY\u0001\u0000\u0000\u0000Y\\\u0001\u0000\u0000\u0000Z[\u0005\u0007"+
+		"\u0000\u0000[]\u0003\u0012\t\u0000\\Z\u0001\u0000\u0000\u0000]^\u0001"+
+		"\u0000\u0000\u0000^\\\u0001\u0000\u0000\u0000^_\u0001\u0000\u0000\u0000"+
+		"_a\u0001\u0000\u0000\u0000`b\u0003\u0016\u000b\u0000a`\u0001\u0000\u0000"+
+		"\u0000ab\u0001\u0000\u0000\u0000b\u0005\u0001\u0000\u0000\u0000ce\u0003"+
+		"\u0014\n\u0000dc\u0001\u0000\u0000\u0000de\u0001\u0000\u0000\u0000ef\u0001"+
+		"\u0000\u0000\u0000fg\u0003\b\u0004\u0000gk\u0003\u0010\b\u0000hj\u0003"+
+		"\n\u0005\u0000ih\u0001\u0000\u0000\u0000jm\u0001\u0000\u0000\u0000ki\u0001"+
+		"\u0000\u0000\u0000kl\u0001\u0000\u0000\u0000ly\u0001\u0000\u0000\u0000"+
+		"mk\u0001\u0000\u0000\u0000np\u0003\u0014\n\u0000on\u0001\u0000\u0000\u0000"+
+		"op\u0001\u0000\u0000\u0000pq\u0001\u0000\u0000\u0000qu\u0003\u001c\u000e"+
+		"\u0000rt\u0003\n\u0005\u0000sr\u0001\u0000\u0000\u0000tw\u0001\u0000\u0000"+
+		"\u0000us\u0001\u0000\u0000\u0000uv\u0001\u0000\u0000\u0000vy\u0001\u0000"+
+		"\u0000\u0000wu\u0001\u0000\u0000\u0000xd\u0001\u0000\u0000\u0000xo\u0001"+
+		"\u0000\u0000\u0000y\u0007\u0001\u0000\u0000\u0000z{\u0005\u000b\u0000"+
+		"\u0000{\u007f\u0003\u001a\r\u0000|~\u0003\n\u0005\u0000}|\u0001\u0000"+
+		"\u0000\u0000~\u0081\u0001\u0000\u0000\u0000\u007f}\u0001\u0000\u0000\u0000"+
+		"\u007f\u0080\u0001\u0000\u0000\u0000\u0080\u0085\u0001\u0000\u0000\u0000"+
+		"\u0081\u007f\u0001\u0000\u0000\u0000\u0082\u0084\u0003\u0016\u000b\u0000"+
+		"\u0083\u0082\u0001\u0000\u0000\u0000\u0084\u0087\u0001\u0000\u0000\u0000"+
+		"\u0085\u0083\u0001\u0000\u0000\u0000\u0085\u0086\u0001\u0000\u0000\u0000"+
+		"\u0086\t\u0001\u0000\u0000\u0000\u0087\u0085\u0001\u0000\u0000\u0000\u0088"+
+		"\u0092\u0005\u0102\u0000\u0000\u0089\u008d\u0003\u001c\u000e\u0000\u008a"+
+		"\u008c\u0003\n\u0005\u0000\u008b\u008a\u0001\u0000\u0000\u0000\u008c\u008f"+
+		"\u0001\u0000\u0000\u0000\u008d\u008b\u0001\u0000\u0000\u0000\u008d\u008e"+
+		"\u0001\u0000\u0000\u0000\u008e\u0093\u0001\u0000\u0000\u0000\u008f\u008d"+
+		"\u0001\u0000\u0000\u0000\u0090\u0093\u0003\u000e\u0007\u0000\u0091\u0093"+
+		"\u0003\f\u0006\u0000\u0092\u0089\u0001\u0000\u0000\u0000\u0092\u0090\u0001"+
+		"\u0000\u0000\u0000\u0092\u0091\u0001\u0000\u0000\u0000\u0093\u00a6\u0001"+
+		"\u0000\u0000\u0000\u0094\u009e\u0005\u000e\u0000\u0000\u0095\u0099\u0003"+
+		"\u001c\u000e\u0000\u0096\u0098\u0003\n\u0005\u0000\u0097\u0096\u0001\u0000"+
+		"\u0000\u0000\u0098\u009b\u0001\u0000\u0000\u0000\u0099\u0097\u0001\u0000"+
+		"\u0000\u0000\u0099\u009a\u0001\u0000\u0000\u0000\u009a\u009f\u0001\u0000"+
+		"\u0000\u0000\u009b\u0099\u0001\u0000\u0000\u0000\u009c\u009f\u0003\u000e"+
+		"\u0007\u0000\u009d\u009f\u0003\f\u0006\u0000\u009e\u0095\u0001\u0000\u0000"+
+		"\u0000\u009e\u009c\u0001\u0000\u0000\u0000\u009e\u009d\u0001\u0000\u0000"+
+		"\u0000\u009f\u00a6\u0001\u0000\u0000\u0000\u00a0\u00a4\u0003\u001c\u000e"+
+		"\u0000\u00a1\u00a4\u0003\u000e\u0007\u0000\u00a2\u00a4\u0003\f\u0006\u0000"+
+		"\u00a3\u00a0\u0001\u0000\u0000\u0000\u00a3\u00a1\u0001\u0000\u0000\u0000"+
+		"\u00a3\u00a2\u0001\u0000\u0000\u0000\u00a4\u00a6\u0001\u0000\u0000\u0000"+
+		"\u00a5\u0088\u0001\u0000\u0000\u0000\u00a5\u0094\u0001\u0000\u0000\u0000"+
+		"\u00a5\u00a3\u0001\u0000\u0000\u0000\u00a6\u000b\u0001\u0000\u0000\u0000"+
+		"\u00a7\u00a8\u0005\n\u0000\u0000\u00a8\u00a9\u0003\u0004\u0002\u0000\u00a9"+
+		"\r\u0001\u0000\u0000\u0000\u00aa\u00ab\u0005\u000b\u0000\u0000\u00ab\u00af"+
+		"\u0003\u0012\t\u0000\u00ac\u00ae\u0003\u0016\u000b\u0000\u00ad\u00ac\u0001"+
+		"\u0000\u0000\u0000\u00ae\u00b1\u0001\u0000\u0000\u0000\u00af\u00ad\u0001"+
+		"\u0000\u0000\u0000\u00af\u00b0\u0001\u0000\u0000\u0000\u00b0\u000f\u0001"+
+		"\u0000\u0000\u0000\u00b1\u00af\u0001\u0000\u0000\u0000\u00b2\u00b3\u0007"+
+		"\u0000\u0000\u0000\u00b3\u0011\u0001\u0000\u0000\u0000\u00b4\u00b8\u0003"+
+		"\u001a\r\u0000\u00b5\u00b7\u0003\n\u0005\u0000\u00b6\u00b5\u0001\u0000"+
+		"\u0000\u0000\u00b7\u00ba\u0001\u0000\u0000\u0000\u00b8\u00b6\u0001\u0000"+
+		"\u0000\u0000\u00b8\u00b9\u0001\u0000\u0000\u0000\u00b9\u0013\u0001\u0000"+
+		"\u0000\u0000\u00ba\u00b8\u0001\u0000\u0000\u0000\u00bb\u00bd\u0003(\u0014"+
+		"\u0000\u00bc\u00bb\u0001\u0000\u0000\u0000\u00bc\u00bd\u0001\u0000\u0000"+
+		"\u0000\u00bd\u00bf\u0001\u0000\u0000\u0000\u00be\u00c0\u0003*\u0015\u0000"+
+		"\u00bf\u00be\u0001\u0000\u0000\u0000\u00c0\u00c1\u0001\u0000\u0000\u0000"+
+		"\u00c1\u00bf\u0001\u0000\u0000\u0000\u00c1\u00c2\u0001\u0000\u0000\u0000"+
+		"\u00c2\u0015\u0001\u0000\u0000\u0000\u00c3\u00ca\u0003\u0018\f\u0000\u00c4"+
+		"\u00c6\u0005\u0002\u0000\u0000\u00c5\u00c4\u0001\u0000\u0000\u0000\u00c5"+
+		"\u00c6\u0001\u0000\u0000\u0000\u00c6\u00c7\u0001\u0000\u0000\u0000\u00c7"+
+		"\u00c9\u0003\u0018\f\u0000\u00c8\u00c5\u0001\u0000\u0000\u0000\u00c9\u00cc"+
+		"\u0001\u0000\u0000\u0000\u00ca\u00c8\u0001\u0000\u0000\u0000\u00ca\u00cb"+
+		"\u0001\u0000\u0000\u0000\u00cb\u0017\u0001\u0000\u0000\u0000\u00cc\u00ca"+
+		"\u0001\u0000\u0000\u0000\u00cd\u00ce\u0007\u0001\u0000\u0000\u00ce\u00d4"+
+		"\u0003\u0006\u0003\u0000\u00cf\u00d0\u0003&\u0013\u0000\u00d0\u00d1\u0003"+
+		"\u0006\u0003\u0000\u00d1\u00d3\u0001\u0000\u0000\u0000\u00d2\u00cf\u0001"+
+		"\u0000\u0000\u0000\u00d3\u00d6\u0001\u0000\u0000\u0000\u00d4\u00d2\u0001"+
+		"\u0000\u0000\u0000\u00d4\u00d5\u0001\u0000\u0000\u0000\u00d5\u0019\u0001"+
+		"\u0000\u0000\u0000\u00d6\u00d4\u0001\u0000\u0000\u0000\u00d7\u00db\u0003"+
+		"\"\u0011\u0000\u00d8\u00db\u0003\u001e\u000f\u0000\u00d9\u00db\u0003$"+
+		"\u0012\u0000\u00da\u00d7\u0001\u0000\u0000\u0000\u00da\u00d8\u0001\u0000"+
+		"\u0000\u0000\u00da\u00d9\u0001\u0000\u0000\u0000\u00db\u001b\u0001\u0000"+
+		"\u0000\u0000\u00dc\u00e1\u0003 \u0010\u0000\u00dd\u00e1\u0003(\u0014\u0000"+
+		"\u00de\u00e1\u0003*\u0015\u0000\u00df\u00e1\u0003\u001a\r\u0000\u00e0"+
+		"\u00dc\u0001\u0000\u0000\u0000\u00e0\u00dd\u0001\u0000\u0000\u0000\u00e0"+
+		"\u00de\u0001\u0000\u0000\u0000\u00e0\u00df\u0001\u0000\u0000\u0000\u00e1"+
+		"\u001d\u0001\u0000\u0000\u0000\u00e2\u00e3\u0007\u0002\u0000\u0000\u00e3"+
+		"\u001f\u0001\u0000\u0000\u0000\u00e4\u00e5\u0007\u0003\u0000\u0000\u00e5"+
+		"!\u0001\u0000\u0000\u0000\u00e6\u00e7\u0007\u0004\u0000\u0000\u00e7#\u0001"+
+		"\u0000\u0000\u0000\u00e8\u00e9\u0007\u0005\u0000\u0000\u00e9%\u0001\u0000"+
+		"\u0000\u0000\u00ea\u00eb\u0007\u0006\u0000\u0000\u00eb\'\u0001\u0000\u0000"+
+		"\u0000\u00ec\u00ed\u0007\u0007\u0000\u0000\u00ed)\u0001\u0000\u0000\u0000"+
+		"\u00ee\u00ef\u0007\b\u0000\u0000\u00ef+\u0001\u0000\u0000\u0000!1=?AD"+
+		"GOTX^adkoux\u007f\u0085\u008d\u0092\u0099\u009e\u00a3\u00a5\u00af\u00b8"+
+		"\u00bc\u00c1\u00c5\u00ca\u00d4\u00da\u00e0";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

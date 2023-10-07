@@ -5,32 +5,32 @@ options {
 }
 
 sentences
-    : sentence (Period sentence)* Period
+    : sentence (Period sentence)* Period?
     ;
 
 
 sentence
-    : sentenceClause
-    | O contentWord
-      ( prepPhrase
-      | modifierClause+ )*
+    : sentenceClause ( connector sentenceClause )*
     ;
 
 sentenceClause
-    : prepPhrase?
-      ( nounPhrase ( connector nounPhrase )* )*
-      prepPhrase?
-      (Le verbPhrase)+
-      prepPhrase?
+    : preposition?
+      ( noun ( connector noun )* )*
+      preposition?
+      ( (Le|O) transVerbPhrase (newAgentAdjClause terminator)?
+      | (Le|O) verb)+
+      preposition?
+      ( connector preposition )*
     ;
 
-nounPhrase
-    : ( quantityPhrase? nounClause terminator modifierClause*
-      | quantityPhrase? expandedWord modifierClause* )
+noun
+    : ( quantity? nounClause terminator modifierClause*
+      | quantity? expandedWord modifierClause* )
     ;
 
 nounClause
-    : Te contentWord modifierClause* prepPhrase*
+    : sameAgentAdjClause
+    | newAgentAdjClause
     ;
 
 modifierClause
@@ -41,10 +41,10 @@ modifierClause
     | Wo
       ( expandedWord modifierClause*
       | sameAgentAdjClause
-      | newAgentAdjClause )
+      | newAgentAdjClause  )
     | ( expandedWord
-      | sameAgentAdjClause
-      | newAgentAdjClause )
+      | sameAgentAdjClause  Comma?
+      | newAgentAdjClause  )
     ;
 
 newAgentAdjClause
@@ -52,7 +52,8 @@ newAgentAdjClause
     ;
 
 sameAgentAdjClause
-    : Te verbPhrase prepPhrase*
+    : Te transVerbPhrase newAgentAdjClause? preposition?
+    | Te verb preposition?
     ;
 
 terminator
@@ -62,24 +63,30 @@ terminator
     ;
 
 
-verbPhrase
-    : contentWord modifierClause*
+verb
+    : baseModifier modifierClause*
+    | baseNoun modifierClause*
     ;
 
 
-quantityPhrase
+transVerbPhrase
+    : baseVerb modifierClause*
+    ;
+
+quantity
     : relativeQuantity? nominalQuantity+ 
     ;
 
 
-prepPhrase
+preposition
     : prepClause (Comma? prepClause)*
     ;
 
 prepClause
     : ( In|Men|Win|Po|An|Wija|Ke|Kan|So|Sun|Nenka )
-      nounPhrase
-      (connector nounPhrase)*
+      No?
+      noun
+      (connector noun)*
     ;
 
 contentWord
@@ -93,6 +100,7 @@ expandedWord
     | relativeQuantity
     | nominalQuantity
     | contentWord
+    | ProperNoun
     ;
 
 baseVerb
@@ -413,8 +421,6 @@ baseModifier
     | Lo
     | Tiku
     ;
-
-
 
 connector
     : Tan

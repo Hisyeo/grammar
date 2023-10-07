@@ -2,7 +2,19 @@ lexer grammar KokanuLexer;
 
 WS: [ \n\t\r]+ -> channel(HIDDEN);
 
-Comma : ',' ;
+ProperNoun : Uppercase Lowercase+
+    ;
+
+fragment Uppercase
+    : 'A' | 'E' | 'I' | 'O' | 'U' | 'P' | 'T' | 'M' | 'N' | 'L' | 'J' | 'K' | 'W' | 'S'
+    ;
+
+fragment Lowercase
+    : 'a' | 'e' | 'i' | 'o' | 'u' | 'p' | 't' | 'm' | 'n' | 'l' | 'j' | 'k' | 'w' | 's'
+    ;
+
+Comma : ',';
+
 Colon
     : ':'
     | '-'
