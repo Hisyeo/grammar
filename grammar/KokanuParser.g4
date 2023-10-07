@@ -17,8 +17,8 @@ sentenceClause
     : preposition?
       ( noun ( connector noun )* )*
       preposition?
-      ( (Le|O) transVerbPhrase (newAgentAdjClause terminator)?
-      | (Le|O) verb)+
+      ( (Le|O) No? transVerbPhrase (newAgentAdjClause terminator)?
+      | (Le|O) No? verb)+
       preposition?
       ( connector preposition )*
     ;
@@ -52,8 +52,8 @@ newAgentAdjClause
     ;
 
 sameAgentAdjClause
-    : Te transVerbPhrase newAgentAdjClause? preposition?
-    | Te verb preposition?
+    : Te We? transVerbPhrase newAgentAdjClause? preposition?
+    | Te We? verb preposition?
     ;
 
 terminator
@@ -96,14 +96,34 @@ contentWord
     ;
 
 expandedWord
-    : pronoun
-    | relativeQuantity
-    | nominalQuantity
-    | contentWord
-    | ProperNoun
+    : ( pronoun
+      | relativeQuantity
+      | nominalQuantity
+      | contentWord
+      | ProperNoun )
     ;
 
-baseVerb
+
+pronoun
+    : Ja
+    | Ka
+    | Mi
+    | Na
+    | Ne
+    | Sa
+    | Tu
+    | Usen
+    ;
+
+
+contentParticles
+    : We No? ( Mu No? )?
+    | Mu No? ( We No? )?
+    ;
+
+baseVerb: contentParticles? rawVerbs ;
+
+rawVerbs
     : Pese
     | Kilima
     | Iman
@@ -167,18 +187,9 @@ baseVerb
     | Onton
     ;
 
-pronoun
-    : Ja
-    | Ka
-    | Mi
-    | Na
-    | Ne
-    | Sa
-    | Tu
-    | Usen
-    ;
+baseNoun: contentParticles? rawNouns ;
 
-baseNoun
+rawNouns
     : Kapaja
     | Sito
     | Sala
@@ -298,7 +309,9 @@ baseNoun
     | Inpali
     ;
 
-baseModifier
+baseModifier: contentParticles? rawModifiers ;
+
+rawModifiers
     : Lijule
     | Akiki
     | Aja
