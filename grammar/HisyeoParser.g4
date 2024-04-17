@@ -10,52 +10,52 @@ sentences
 
 
 sentence
-    : freeVerbConstituent? constituent+ ( connector sentence )*
+    : freeVerbConstituent constituent* ( connector sentence )*
+    | constituent+ ( connector sentence )*
+    | freeVerbTransitiveConstituent transitiveConstituent* ( connector sentence )*
+    | transitiveConstituent+ ( connector sentence )*
     ;
 
 freeVerbConstituent
-    : verbMarker? verbModifier* transVerbPhrase
-    | verbMarker? verbModifier* verbPhrase
+    : verbMarker? verbModifier* verbPhrase
     ;
 
+freeVerbTransitiveConstituent
+    : verbMarker? verbModifier* transitiveVerbPhrase
+    ;
 
 constituent
     : preposition
-    | verbMarker verbModifier* transVerbPhrase
     | verbMarker verbModifier* verbPhrase
     ;
 
-nounPhrase
-    : ( quantity? nounClause (terminator modifierClause*)?
-      | quantity? expandedWord modifierClause* )
-    ;
-
-nounClause
-    : sameAgentAdjClause
-    | newAgentAdjClause
+transitiveConstituent
+    : transitivePreposition
+    | verbMarker verbModifier* transitiveVerbPhrase
     ;
 
 modifierClause
     : <assoc=right> Ye
       ( expandedWord modifierClause*
-      | sameAgentAdjClause
-      | newAgentAdjClause )
+      | sameAgentAdjectiveClause
+      | newAgentAdjectiveClause )
     | Wo
       ( expandedWord modifierClause*
-      | sameAgentAdjClause
-      | newAgentAdjClause  )
-    | ( expandedWord
-      | sameAgentAdjClause  Comma?
-      | newAgentAdjClause  )
+      | sameAgentAdjectiveClause
+      | newAgentAdjectiveClause  )
+    | expandedWord
+    | sameAgentAdjectiveClause  Comma?
+    | newAgentAdjectiveClause
+    | ProperNoun
     ;
 
-newAgentAdjClause
+newAgentAdjectiveClause
     : Vos sentence
     ;
 
-sameAgentAdjClause
-    : Do We? transVerbPhrase preposition*
-    | Do We? verbPhrase preposition*
+sameAgentAdjectiveClause
+    : Do verbMarker? verbModifier* transitiveVerbPhrase transitivePreposition*
+    | Do verbMarker? verbModifier* verbPhrase preposition*
     ;
 
 terminator
@@ -65,28 +65,44 @@ terminator
 
 
 verbPhrase
-    : baseModifier modifierClause*
-    | baseNoun modifierClause*
+    : quantity? baseModifier modifierClause*
+    | quantity? baseNoun modifierClause*
+    | quantity
     ;
 
 
-transVerbPhrase
-    : baseVerb modifierClause*
+transitiveVerbPhrase
+    : quantity? baseVerb modifierClause*
     ;
 
 quantity
     : relativeQuantity? nominalQuantity+ 
     ;
 
-
 preposition
-    : prepClause (Comma? prepClause)*
+    : intransitivePrepParticle prepPhrase
     ;
 
-prepClause
-    : ( Co|U|Ole|Win|Oxon|Hoi|Vio|Mut|Ovek|Sun|Nenko|Uc|Den|Lon|Gitno )
-      nounPhrase
-      (connector nounPhrase)*
+transitivePreposition
+    : (Co|intransitivePrepParticle) prepPhrase
+    ;
+
+intransitivePrepParticle
+    : U|Ole|Win|Oxon|Hoi|Vio|Mut|Ovek|Sun|Nenko|Uc|Den|Lon|Gitno
+    ;
+
+nounPhrase
+    : quantity? nounClause (terminator modifierClause*)?
+    | quantity? expandedWord modifierClause*
+    ;
+
+nounClause
+    : sameAgentAdjectiveClause
+    | newAgentAdjectiveClause
+    ;
+
+prepPhrase
+    : nounPhrase (connector nounPhrase)*
     ;
 
 contentWord
@@ -99,8 +115,7 @@ expandedWord
     : ( pronoun
       | relativeQuantity
       | nominalQuantity
-      | contentWord
-      | ProperNoun )
+      | contentWord )
     ;
 
 

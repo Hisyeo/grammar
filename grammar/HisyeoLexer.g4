@@ -6,11 +6,15 @@ ProperNoun : Uppercase Lowercase+
     ;
 
 fragment Uppercase
-    : 'A' | 'E' | 'I' | 'O' | 'U' | 'P' | 'T' | 'M' | 'N' | 'L' | 'J' | 'K' | 'W' | 'S'
+    : 'O' | 'P' | 'E' | 'U' | 'K' | 'S' | 'T' | 'I'
+    | 'Ö' | 'V' | 'Ë' | 'Ü' | 'G' | 'X' | 'D' | 'İ'
+    | 'C' | 'Z' | 'Y' | 'L' | 'W' | 'H' | 'N' | 'M'
     ;
 
 fragment Lowercase
-    : 'a' | 'e' | 'i' | 'o' | 'u' | 'p' | 't' | 'm' | 'n' | 'l' | 'j' | 'k' | 'w' | 's'
+    : 'o' | 'p' | 'e' | 'u' | 'k' | 's' | 't' | 'ı'
+    | 'ö' | 'v' | 'ë' | 'ü' | 'g' | 'x' | 'd' | 'i̇'
+    | 'c' | 'z' | 'y' | 'l' | 'w' | 'h' | 'n' | 'm'
     ;
 
 Comma : ',';
