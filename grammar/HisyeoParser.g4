@@ -135,8 +135,8 @@ pronoun
 
 
 contentParticles
-    : We Yok? ( (Oni|Voko) Yok? )?
-    | (Oni|Voko) Yok? ( We Yok? )?
+    : We Yok? ( (Oni|Voko|Kon) Yok? )?
+    | (Oni|Voko|Kon) Yok? ( We Yok? )?
     ;
 
 baseVerb: contentParticles? rawVerbs ;
