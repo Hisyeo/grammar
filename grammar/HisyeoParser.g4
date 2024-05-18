@@ -35,7 +35,7 @@ transitiveConstituent
     ;
 
 modifierClause
-    : <assoc=right> Ye
+    : <assoc=right> Wo? Ye
       ( expandedWord modifierClause*
       | sameAgentAdjectiveClause
       | newAgentAdjectiveClause )
