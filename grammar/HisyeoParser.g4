@@ -37,23 +37,23 @@ transitiveConstituent
 modifierClause
     : <assoc=right> Wo? Ye
       ( expandedWord modifierClause*
-      | sameAgentAdjectiveClause
-      | newAgentAdjectiveClause )
+      | sameAgentPredicateClause
+      | newAgentPredicateClause )
     | Wo
       ( expandedWord modifierClause*
-      | sameAgentAdjectiveClause
-      | newAgentAdjectiveClause  )
+      | sameAgentPredicateClause
+      | newAgentPredicateClause  )
     | expandedWord
-    | sameAgentAdjectiveClause  Comma?
-    | newAgentAdjectiveClause
+    | sameAgentPredicateClause  Comma?
+    | newAgentPredicateClause
     | ProperNoun
     ;
 
-newAgentAdjectiveClause
+newAgentPredicateClause
     : Vos sentence
     ;
 
-sameAgentAdjectiveClause
+sameAgentPredicateClause
     : Do verbMarker? verbModifier* transitiveVerbPhrase transitivePreposition*
     | Do verbMarker? verbModifier* verbPhrase preposition*
     ;
@@ -97,8 +97,8 @@ nounPhrase
     ;
 
 nounClause
-    : sameAgentAdjectiveClause
-    | newAgentAdjectiveClause
+    : sameAgentPredicateClause
+    | newAgentPredicateClause
     ;
 
 prepPhrase
@@ -228,7 +228,7 @@ rawVerbs
     | Xontun
     | Xevizec
     | Xiuvu
-    | Xiskilo
+    | Oitun
     | Xiwon
     | Xusten
     | Doho
@@ -249,7 +249,7 @@ rawVerbs
     | Poivon
     | Pokovoc
     | Poklon
-    | Pocitoc
+    | Tuek
     | Posol
     | Pon
     | Pesol
@@ -451,7 +451,7 @@ rawNouns
     | Xovo
     | Xolu
     | Xomutlo
-    | Xemetsem
+    | Xemetsen
     | Xicie
     | Xingo
     | Xiulo
@@ -470,6 +470,7 @@ rawNouns
     | Dinyouc
     | Dumoko
     | Duuncit
+    | Duwoni
     | Dulusi
     | Zoso
     | Zoston
@@ -600,6 +601,7 @@ rawNouns
     | Limien
     | Luhu
     | Luok
+    | Luici
     | Lucku
     | Yokuntik
     | Yogo
@@ -610,7 +612,7 @@ rawNouns
     | Yokue
     | Yocno
     | Yone
-    | Yelle
+    | Ixolo
     | Yinyunci
     ;
 
@@ -636,7 +638,7 @@ rawModifiers
     | Invultin
     | Iwote
     | Ipudu
-    | Ilcizuk
+    | Ilxizuk
     | Uklo
     | Usundul
     | Upolni
@@ -796,7 +798,7 @@ rawModifiers
     | Pinhun
     | Pilus
     | Puku
-    | Putun
+    | Podi
     | Punxin
     | Pundu
     | Puihi
@@ -830,7 +832,7 @@ rawModifiers
     | Mixovo
     | Mihuon
     | Miteten
-    | Muxgul
+    | Musgul
     | Muun
     | Mukno
     | Mustokin
@@ -845,11 +847,11 @@ rawModifiers
     | Nexodi
     | Nelo
     | Niok
+    | Niecni
     | Nupuso
     | Nulun
     | Nulto
     | Wohi
-    | Wodi
     | Wonkuk
     | Welto
     | Winit
@@ -879,7 +881,7 @@ rawModifiers
     ;
 
 connector
-    : Douk
+    : En
     | Pine
     | Moliyu
     | Lekin
