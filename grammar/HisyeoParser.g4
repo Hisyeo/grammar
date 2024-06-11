@@ -46,7 +46,11 @@ modifierClause
     | expandedWord
     | sameAgentPredicateClause  Comma?
     | newAgentPredicateClause
-    | ProperNoun
+    | properNoun
+    ;
+
+properNoun
+    : ProperNoun
     ;
 
 newAgentPredicateClause

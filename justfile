@@ -12,5 +12,5 @@ build-golang:
 build-cpp:
     cwd=$(pwd); antlr4 -Dlanguage=Cpp -listener -visitor -o out/cpp -lib $cwd/grammar $cwd/grammar/*.g4
 
-grun:
-    java org.antlr.v4.gui.TestRig Kokanu sentences "$(cat example.txt)"
+parse:
+     antlr4-parse ./grammar/HisyeoLexer.g4 ./grammar/HisyeoParser.g4 sentences ./example.txt -gui

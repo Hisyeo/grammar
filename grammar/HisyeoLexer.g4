@@ -13,7 +13,7 @@ fragment Uppercase
 
 fragment Lowercase
     : 'o' | 'p' | 'e' | 'u' | 'k' | 's' | 't' | 'ı'
-    | 'ö' | 'v' | 'ë' | 'ü' | 'g' | 'x' | 'd' | 'i̇'
+    | 'ö' | 'v' | 'ë' | 'ü' | 'g' | 'x' | 'd' | 'i'
     | 'c' | 'z' | 'y' | 'l' | 'w' | 'h' | 'n' | 'm'
     ;
 
@@ -544,7 +544,7 @@ Poyok : 'poyok';
 Pokovoc : 'pökövoc';
 Pokpun : 'pökpün';
 Poklon : 'pöklön';
-Tuec : 'tüek';
+Tuek : 'tüek';
 Posol : 'pösol';
 Pon : 'pön';
 Ponti : 'pöntı';
