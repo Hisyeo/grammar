@@ -8,75 +8,34 @@ sentences
     : sentence (Period sentence)* Period?
     ;
 
-
 sentence
-    : freeVerbConstituent constituent* ( connector sentence )*
-    | constituent+ ( connector sentence )*
-    | freeVerbTransitiveConstituent transitiveConstituent* ( connector sentence )*
-    | transitiveConstituent+ ( connector sentence )*
+    : freeAgentConstituent constituent* ( connector sentence )* postposition?
+    | constituent+ ( connector sentence )* postposition?
     ;
 
-freeVerbConstituent
-    : verbMarker? verbModifier* verbPhrase
-    ;
-
-freeVerbTransitiveConstituent
-    : verbMarker? verbModifier* transitiveVerbPhrase
+freeAgentConstituent
+    : prepPhrase
     ;
 
 constituent
     : preposition
-    | verbMarker verbModifier* verbPhrase
-    ;
-
-transitiveConstituent
-    : transitivePreposition
-    | verbMarker verbModifier* transitiveVerbPhrase
+    | verbMarker? transitiveVerb verbModifier* nounPhrase?
     ;
 
 modifierClause
-    : <assoc=right> Wo? Ye
-      ( expandedWord modifierClause*
-      | sameAgentPredicateClause
-      | newAgentPredicateClause )
-    | Wo
-      ( expandedWord modifierClause*
-      | sameAgentPredicateClause
-      | newAgentPredicateClause  )
-    | expandedWord
-    | sameAgentPredicateClause  Comma?
-    | newAgentPredicateClause
-    | properNoun
+    : <assoc=right> Et? Ye ( expandedWord modifierClause* | subordinateClause )
+    | Et ( nonVerbWord modifierClause* | subordinateClause  )
+    | nonVerbWord
+    | subordinateClause (postposition? Comma)??
+    | ProperNoun
     ;
 
-properNoun
-    : ProperNoun
+subordinateClause
+    : (Xe|Vos) sentence
     ;
 
-newAgentPredicateClause
-    : Vos sentence
-    ;
-
-sameAgentPredicateClause
-    : Do verbMarker? verbModifier* transitiveVerbPhrase transitivePreposition*
-    | Do verbMarker? verbModifier* verbPhrase preposition*
-    ;
-
-terminator
-    : Comma
-    | Period
-    ;
-
-
-verbPhrase
-    : quantity? baseModifier modifierClause*
-    | quantity? baseNoun modifierClause*
-    | quantity
-    ;
-
-
-transitiveVerbPhrase
-    : quantity? baseVerb modifierClause*
+transitiveVerb
+    : baseVerb | Li
     ;
 
 quantity
@@ -84,25 +43,20 @@ quantity
     ;
 
 preposition
-    : intransitivePrepParticle prepPhrase
+    : prepParticle prepPhrase
     ;
 
-transitivePreposition
-    : (Co|intransitivePrepParticle) prepPhrase
+prepParticle
+    : U|Ole|Hon|Oxon|Hoi|Vio|Mut|Ovek|Sun|Pi|Nenko|Oldis|Den|Lon|Gitno
     ;
 
-intransitivePrepParticle
-    : U|Ole|Win|Oxon|Hoi|Vio|Mut|Ovek|Sun|Nenko|Uc|Den|Lon|Gitno
+postposition
+    : Loicok|Voxo|Ko|Ci|Lotven|Ze
     ;
 
 nounPhrase
-    : quantity? nounClause (terminator modifierClause*)?
+    : quantity? subordinateClause (Comma modifierClause*)?
     | quantity? expandedWord modifierClause*
-    ;
-
-nounClause
-    : sameAgentPredicateClause
-    | newAgentPredicateClause
     ;
 
 prepPhrase
@@ -113,6 +67,14 @@ contentWord
     : baseNoun
     | baseVerb 
     | baseModifier
+    ;
+
+nonVerbWord
+    : ( pronoun
+      | relativeQuantity
+      | nominalQuantity
+      | baseNoun
+      | baseModifier )
     ;
 
 expandedWord
@@ -132,22 +94,22 @@ pronoun
     | Dizel
     | Zik
     | Noyo
-    | Ni
+    | Nu
     | Nimu
-    | Loi
+    | Ni
+    | Niun
     ;
 
 
 contentParticles
-    : We Yok? ( (Oni|Voko|Kon) Yok? )?
-    | (Oni|Voko|Kon) Yok? ( We Yok? )?
+    : (In|Des) (Oni|Voko|Kon)?
+    | (Oni|Voko|Kon) (In|Des)?
     ;
 
 baseVerb: contentParticles? rawVerbs ;
 
 verbMarker
-    : Li
-    | Koi
+    : Koi
     | Pit
     | Kuu
     | Ke
@@ -161,31 +123,31 @@ verbModifier
 
 rawVerbs
     : Outo
+    | Okot
     | Okulo
     | Ogolol
     | Opulu
     | Onkonu
     | Onkuol
+    | Oncemon
     | Ondo
+    | Oitun
     | Onton
     | Icwon
     | Isko
     | Imon
-    | Inkoton
     | Uskivo
     | Unon
     | Uslek
-    | Uvizet
     | Unhilun
     | Hopiyo
     | Hovo
+    | Hodoku
     | Helgo
     | Hevin
     | Huke
     | Hukun
-    | Husu
     | Kontol
-    | Konzilu
     | Koto
     | Koson
     | Kontesto
@@ -198,14 +160,13 @@ rawVerbs
     | Golo
     | Golun
     | Gocidon
-    | Golugi
-    | Guvuyo
     | Guvio
     | Guwolo
     | Touyen
     | Toswil
     | Tenkin
     | Tuluti
+    | Tuek
     | Tuu
     | Tulokon
     | Conwepo
@@ -215,26 +176,31 @@ rawVerbs
     | Cihun
     | Citse
     | Cukto
-    | Cutie
     | Cutne
     | Cuncion
     | Cunliu
+    | Culono
     | Cudo
     | Cungo
     | Culosun
+    | Socok
     | Sopole
     | Sopis
+    | Somo
     | Solu
+    | Seloho
     | Sityo
     | Siuvo
+    | Suoxic
     | Suko
     | Xokulu
+    | Xopo
     | Xontun
     | Xevizec
     | Xiuvu
-    | Oitun
     | Xiwon
     | Xusten
+    | Doicel
     | Doho
     | Dodou
     | Dostoc
@@ -247,15 +213,16 @@ rawVerbs
     | Dupono
     | Dungo
     | Zohit
-    | Zowopu
     | Zicou
+    | Zuwopu
     | Zuto
+    | Zuyi
     | Poivon
     | Pokovoc
     | Poklon
-    | Tuek
     | Posol
     | Pon
+    | Petido
     | Pesol
     | Pelexu
     | Peudo
@@ -264,31 +231,35 @@ rawVerbs
     | Piek
     | Pucono
     | Puswen
-    | Puldo
+    | Punyentoc
     | Vohoso
     | Volun
     | Visun
     | Viyuxit
     | Vizi
     | Vulkoi
-    | Vucun
+    | Vutsun
     | Vunpo
     | Mokon
-    | Moci
+    | Motsi
     | Monodo
-    | Mocile
+    | Motsile
     | Moniso
     | Muncoti
     | Nocido
     | Niwos
     | Niltugu
     | Wovok
+    | Wedo
+    | Weilun
     | Weko
     | Wekeso
     | Wetodu
     | Wetu
-    | Lozic
+    | Weloi
     | Lopotol
+    | Lozic
+    | Liun
     | Luvono
     | Lunsol
     | Yosten
@@ -305,26 +276,31 @@ rawNouns
     : Oudi
     | Okoxu
     | Oksun
+    | Oklumun
     | Ocuo
+    | Ostok
     | Opoki
+    | Opo
     | Onomu
     | Ongolo
     | Onvipi
+    | Onwoni
     | Ocoto
     | Osti
     | Ozil
     | Ongo
     | Eloi
     | Eleke
+    | Etso
     | Epol
     | Enkomon
-    | Enpokon
+    | Enpukun
     | Itihos
     | Istihol
-    | Igomo
     | Isenso
     | Isipo
     | Isponxu
+    | Ixolo
     | Ipuwe
     | Inpoli
     | Ile
@@ -346,26 +322,23 @@ rawNouns
     | Hovezi
     | Honcou
     | Honyo
-    | Howuncul
     | Holuk
     | Holmo
     | Henelo
-    | Hicu
+    | Hitsu
     | Hiskunco
     | Hustun
     | Huzon
     | Hunsuon
     | Huwu
+    | Huwuncul
     | Hulodek
     | Hulu
     | Kolowo
-    | Koli
     | Kokoku
     | Kotvusu
-    | Kocun
     | Kosmo
     | Komu
-    | Kol
     | Kolmudul
     | Kelos
     | Kistose
@@ -387,11 +360,15 @@ rawNouns
     | Kuncien
     | Kunpi
     | Kulunun
+    | Kuldu
+    | Gos
     | Gongoxi
     | Gonpu
     | Goyu
     | Geko
+    | Gito
     | Gisgul
+    | Guvuyo
     | Gundole
     | Guexo
     | Gueyu
@@ -400,15 +377,15 @@ rawNouns
     | Gumi
     | Gulu
     | Tohilok
+    | Tonpokcut
     | Towe
     | Tolen
     | Toliyo
     | Toliko
     | Tolxeto
-    | Toxuci
+    | Toxutsi
     | Tomos
     | Tetek
-    | Tenio
     | Titon
     | Tixo
     | Timiok
@@ -418,6 +395,8 @@ rawNouns
     | Comen
     | Conoi
     | Cocko
+    | Ceo
+    | Cen
     | Cino
     | Cingi
     | Cikinil
@@ -431,7 +410,6 @@ rawNouns
     | Sokovu
     | Sotnin
     | Soden
-    | Sopoi
     | Solilo
     | Sohouk
     | Sotun
@@ -439,6 +417,8 @@ rawNouns
     | Seki
     | Sekiton
     | Sedu
+    | Semoi
+    | Sel
     | Siskin
     | Sinsi
     | Sieto
@@ -448,6 +428,7 @@ rawNouns
     | Suhot
     | Sukyunik
     | Suvoun
+    | Sundipot
     | Sutuo
     | Suson
     | Sunpidu
@@ -456,25 +437,28 @@ rawNouns
     | Xolu
     | Xomutlo
     | Xemetsen
-    | Xicie
     | Xingo
     | Xiulo
+    | Xixulko
     | Ximol
     | Ximu
     | Xincuon
     | Xuk
     | Xuto
     | Xuxok
+    | Doi
     | Doinpi
     | Docui
     | Donus
     | Donuxin
+    | Deku
+    | Detoi
     | Dipo
     | Dinci
-    | Dinyouc
+    | Dinzou
     | Dumoko
-    | Duuncit
     | Duwoni
+    | Duuncit
     | Dulusi
     | Zoso
     | Zoston
@@ -483,6 +467,7 @@ rawNouns
     | Zonwul
     | Zowo
     | Zoloni
+    | Zoli
     | Zohun
     | Zogoc
     | Zesto
@@ -513,6 +498,7 @@ rawNouns
     | Piomu
     | Pinton
     | Puswelin
+    | Puyencok
     | Pudogo
     | Pumi
     | Puntut
@@ -522,14 +508,17 @@ rawNouns
     | Vonxin
     | Volo
     | Vohon
+    | Vodoloc
     | Vecko
     | Venuo
     | Vikwun
     | Vin
     | Vilo
+    | Vun
+    | Vuongok
     | Vuus
     | Vukuci
-    | Vunie
+    | Vuxupin
     | Motuo
     | Mocko
     | Mozun
@@ -548,7 +537,6 @@ rawNouns
     | Micin
     | Mutyu
     | Muni
-    | Mulo
     | Muesi
     | Muhoyon
     | Mukonun
@@ -572,16 +560,16 @@ rawNouns
     | Nukulo
     | Nucoto
     | Numuno
+    | Nuluhu
     | Nuyo
     | Wokut
     | Wokto
     | Wopi
-    | Wowe
+    | Wowoe
     | Woloko
     | Woyu
     | Wolik
     | Wexon
-    | Weloi
     | Wikse
     | Wixonu
     | Wik
@@ -590,53 +578,51 @@ rawNouns
     | Wuto
     | Wutun
     | Wulus
-    | Lotzo
+    | Wuot
+    | Lozo
     | Lozido
     | Lono
     | Longi
-    | Loslino
+    | Lolu
+    | Lonkin
     | Leknek
     | Lexetko
-    | Lenko
-    | Leso
     | Lisik
+    | Listo
     | Lismu
     | Lipu
     | Limien
     | Luhu
     | Luok
-    | Luici
+    | Luicu
     | Lucku
     | Yokuntik
     | Yogo
     | Yoskinyo
     | Yovuk
-    | Yonduyo
     | Youxin
-    | Yokue
     | Yocno
     | Yone
-    | Ixolo
     | Yinyunci
+    | Yukwoi
     ;
 
 baseModifier: contentParticles? rawModifiers ;
 
 rawModifiers
     : Oksios
+    | Otos
     | Osyen
     | Opunyun
     | Ovine
     | Omulto
-    | Onpule
-    | Onwiye
     | Oltu
     | Osole
     | Odon
     | Opok
-    | Opostu
-    | Eme
+    | Elentet
     | Evun
+    | Eme
     | Eleo
     | Ispulyol
     | Invultin
@@ -646,6 +632,8 @@ rawModifiers
     | Uklo
     | Usundul
     | Upolni
+    | Uvulit
+    | Unpol
     | Utok
     | Usowo
     | Umomi
@@ -668,15 +656,15 @@ rawModifiers
     | Hiyoli
     | Huluko
     | Huunhu
-    | Hudol
+    | Hudul
     | Hunsik
     | Kotonhon
     | Kocko
     | Koput
     | Konxo
     | Konpokpo
-    | Konpi
     | Konwo
+    | Kotikol
     | Koxente
     | Kodus
     | Konen
@@ -690,11 +678,13 @@ rawModifiers
     | Kiunlik
     | Kikolo
     | Kinoxi
+    | Kildo
     | Kutin
     | Kuonxun
+    | Kuzou
     | Kuyo
     | Gosil
-    | Govon
+    | Golvon
     | Gonzil
     | Golpinus
     | Go
@@ -707,9 +697,10 @@ rawModifiers
     | Guso
     | Gunokol
     | Gulopi
-    | Toci
+    | Totsi
     | Tocit
     | Tonko
+    | Tolki
     | Tigoyo
     | Tivulci
     | Tikel
@@ -722,6 +713,7 @@ rawModifiers
     | Conzodo
     | Colot
     | Cot
+    | Comel
     | Centik
     | Cenci
     | Cenpo
@@ -734,20 +726,20 @@ rawModifiers
     | Cunyu
     | Cuti
     | Cuxien
+    | Cupu
     | Cunvu
     | Sohou
-    | Socok
     | Sodolun
+    | Sodilu
     | Sopuni
     | Sovin
-    | Somo
     | Sonkon
     | Sonti
     | Sonsus
     | Sondonos
     | Soltustik
     | Senzo
-    | Sikisnot
+    | Selpo
     | Sinexis
     | Sumon
     | Sunpulno
@@ -756,65 +748,70 @@ rawModifiers
     | Sunkon
     | Suwit
     | Xoinpo
-    | Xodilu
     | Xopek
     | Xonluk
     | Xowose
     | Xolxili
     | Xopoi
     | Xon
-    | Xone
     | Xecinoc
-    | Xepo
     | Xentil
+    | Xiko
+    | Xisu
     | Xidetli
+    | Xiyocu
     | Xulmindo
+    | Dohil
     | Dode
     | Dondun
-    | Dohil
     | Dokcon
     | Didozu
     | Dile
+    | Dukwelit
     | Dusul
     | Dundon
-    | Zouk
     | Zomuni
     | Zonupi
     | Zoi
+    | Zelen
     | Zensi
     | Zigil
     | Zingu
     | Zilyois
     | Potuk
     | Potyoto
+    | Podi
     | Pomoge
     | Pono
-    | Pongovi
+    | Pongosi
     | Polimot
     | Poyok
     | Polute
     | Pelisis
+    | Pesu
     | Pislon
     | Pilit
     | Pikonte
+    | Picuon
     | Pis
     | Pipok
     | Pinhun
     | Pilus
     | Puku
-    | Podi
+    | Put
     | Punxin
     | Pundu
     | Puihi
     | Pugot
     | Pusin
     | Puslu
+    | Pudiko
     | Pulo
     | Vonmot
-    | Voskultu
     | Volton
     | Volni
     | Velkono
+    | Velcin
     | Vildonpun
     | Viki
     | Vitikos
@@ -823,20 +820,23 @@ rawModifiers
     | Vimosyos
     | Vunsut
     | Vunlit
-    | Vuxupin
     | Moskul
     | Moxo
     | Moziko
     | Momoki
     | Montuksol
+    | Mokuon
+    | Mocipo
     | Movi
+    | Monpili
     | Mevus
     | Menekxe
+    | Metlios
     | Meduson
     | Mixovo
     | Mihuon
     | Miteten
-    | Musgul
+    | Muilo
     | Muun
     | Mukno
     | Mustokin
@@ -853,9 +853,11 @@ rawModifiers
     | Niok
     | Niecni
     | Nupuso
+    | Nungo
     | Nulun
     | Nulto
     | Wohi
+    | Wodino
     | Wonkuk
     | Welto
     | Winit
@@ -863,12 +865,11 @@ rawModifiers
     | Wuktomu
     | Lohot
     | Losol
-    | Lomo
     | Londuluk
     | Lo
-    | Loncon
     | Legevu
     | Len
+    | Levotol
     | Lionxin
     | Liule
     | Lito
@@ -878,16 +879,17 @@ rawModifiers
     | Lucik
     | Lunti
     | Youmok
-    | Yotkuwo
+    | Yope
     | Yonlus
     | Youli
-    | Yugoi
+    | Yinsuk
+    | Yumon
     ;
 
 connector
     : En
+    | Un
     | Pine
-    | Moliyu
     | Lekin
     | Yodo
     ;
@@ -914,9 +916,9 @@ nominalQuantity
     | Tou
     | Telo
     | Tiu
-    | Tiso
+    | Eson
     | Tukwos
-    | Cin
+    | Elvu
     | Vun
     | Son
     | Ses
