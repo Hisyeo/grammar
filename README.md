@@ -1,5 +1,5 @@
 # ANTLR Hîsyêô Grammar
 
-> noyo bêûdo xe tûu xe kôto hoî boxô yê umo ulyô.
+>  hoî  fos  woyû  ûslêk  sî,  ônî  tuluti  onô  ôlê  ôntôn  lîbû  ûnhilun  sî  nîo  bi  fêlkonô  eswen.
 
 ![parseTree.png](parseTree.png)
