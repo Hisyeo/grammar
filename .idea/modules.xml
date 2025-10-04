@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/antlr-kokanu.iml" filepath="$PROJECT_DIR$/antlr-kokanu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grammar/grammar.iml" filepath="$PROJECT_DIR$/grammar/grammar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antlr-hisyeo.iml" filepath="$PROJECT_DIR$/antlr-hisyeo.iml" />
     </modules>
   </component>
 </project>

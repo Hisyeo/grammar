@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="antlr.antlr4.runtime" type="repository">
+    <properties maven-id="org.antlr:antlr4-runtime:4.2.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.2.2/antlr4-runtime-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/abego/treelayout/org.abego.treelayout.core/1.0.1/org.abego.treelayout.core-1.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-annotations/4.2.2/antlr4-annotations-4.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.2.2/antlr4-runtime-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/abego/treelayout/org.abego.treelayout.core/1.0.1/org.abego.treelayout.core-1.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-annotations/4.2.2/antlr4-annotations-4.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

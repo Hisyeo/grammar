@@ -1,5 +1,5 @@
-# ANTLR Hisyëö Grammar
+# ANTLR Hîsyêô Grammar
 
-> pëüdo ü noyo cö do tüu cö do köto hoi poxö yë umo ulyö.
+> noyo bêûdo xe tûu xe kôto hoî boxô yê umo ulyô.
 
 ![parseTree.png](parseTree.png)
