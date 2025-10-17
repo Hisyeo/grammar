@@ -7,94 +7,99 @@ options {
 import HisyeoWordParser;
 
 sentences
-    : sentence (Period sentence)* Period?
+    : QuestionStart? sentence
+    ( sentencePunctuation QuestionStart? sentence
+    | connector restrictedSentence
+    )* sentencePunctuation?
+    ;
+
+sentencePunctuation
+    : Period
+    | Colon
+    | QuestionEnd
     ;
 
 sentence
-    : freeAgentConstituent constituent* ( connector sentence )* postposition?
-    | restrictedSentence
+    : freeAgentConstituent constituent* postposition?
+    | connector? restrictedSentence postposition?
+    | interjection
     ;
 
 restrictedSentence
-    : constituent+ ( connector sentence )* postposition?
+    : constituent+ postposition?
     ;
 
 freeAgentConstituent
-    : prepPhrase
+    : nounPhrase (connector prepPhrase)*
     ;
 
 constituent
-    : preposition
-    | verbMarker? transitiveVerb verbModifier* nounPhrase?
+    : prepParticle prepPhrase                              #preposition
+    | verbMarker? transitiveVerb verbModifier* prepPhrase? #verbalPreposition
     ;
 
-modifierClause
-    : <assoc=right> Et? Ye ( expandedWord modifierClause* | subordinateClause )
-    | Et ( nonVerbWord modifierClause* | subordinateClause  )
-    | nonVerbWord
+adjectivalClause
+    : <assoc=right> Et? Ye ( adjectivalNucleus adjectivalClause* | subordinateClause )
+    | Et ( nominalNucleus adjectivalClause* | subordinateClause  )
+    | nominalNucleus
     | subordinateClause (postposition? Comma)??
-    | ProperNoun
+    | Et? ProperNoun
+    ;
+
+adjectivalNucleus
+    : nominalNucleus
+    | rawVerbs
     ;
 
 subordinateClause
-    : Fos sentence
+    : Fos sentence prepParticle?
     | Xe restrictedSentence
     ;
 
 transitiveVerb
-    : baseVerb | Li
+    : rawVerbs | Li
     ;
 
 quantity
-    : relativeQuantity? nominalQuantity+ 
-    ;
-
-preposition
-    : prepParticle prepPhrase
+    : relativeQuantity? nominalQuantity+
+    | relativeQuantity
     ;
 
 // Must update if words change
 prepParticle
-    : U|Ole|Hon|Til|Hoi|To|Mut|Ofek|Sun|Bi|Nenko|Oldis|Den|Lon|Gitno|Misli|Ilik|Cihou
+    : U|Ole|Noi|Hon|Til|Hoi|To|Mut|Ofek|Sun|Bi|Nenko|Oldis|Den|Lon|Gitno|Misli|Ilik|Cihou
     ;
 
 nounPhrase
-    : quantity? subordinateClause (Comma modifierClause*)?
-    | quantity? expandedWord modifierClause*
+    : quantity? subordinateClause (Comma adjectivalClause*)?
+    | quantity? nominalNucleus adjectivalClause*
+    | QuotationStart sentences QuotationEnd
+    ;
+
+verbalNounPhrase
+    : quantity? rawVerbs adjectivalClause*
     ;
 
 prepPhrase
-    : nounPhrase (connector nounPhrase)*
+    : (nounPhrase|verbalNounPhrase) (connector (nounPhrase|verbalNounPhrase))*
     ;
 
-contentWord
-    : baseNoun
-    | baseVerb 
-    | baseModifier
-    ;
-
-nonVerbWord
+nominalNucleus
     : ( pronoun
       | relativeQuantity
       | nominalQuantity
       | baseNoun
+      | verbalNoun
       | baseModifier )
     ;
 
-expandedWord
-    : ( pronoun
-      | relativeQuantity
-      | nominalQuantity
-      | contentWord )
-    ;
-
 // Must update if words change
-contentParticles
+verbalParticles
     : (In|Des) (Oni|Foko|Kon)?
     | (Oni|Foko|Kon) (In|Des)?
     ;
 
-baseVerb: contentParticles? rawVerbs ;
+verbalNoun: verbalParticles rawVerbs ;
 
 // Must update if words change
 verbMarker
@@ -109,6 +114,18 @@ verbModifier
     : Yok
     | Eo
     | Si
+    ;
+
+// Must update if words or secondary interjections change
+interjection
+    : Bioli
+    | Oiyo
+    | Yok
+    ;
+
+contentParticles
+    : (In|Des) (Foko|Kon)?
+    | (Foko|Kon) (In|Des)?
     ;
 
 baseNoun: contentParticles? rawNouns ;
@@ -152,5 +169,6 @@ nominalQuantity
     | Ziyon
     | Bole
     | Fiyen
+    | Boit
     | Nonku
     ;

@@ -2,7 +2,13 @@ lexer grammar HisyeoLexer;
 
 import HisyeoWordLexer;
 
-WS: [ \n\t\r]+ -> channel(HIDDEN);
+WS: [ \u202F\n\t\r]+ -> channel(HIDDEN);
+
+// simple interjection
+Oiyo
+    : 'oiyo'
+    ;
+
 
 ProperNoun : Uppercase Lowercase+
     ;
@@ -23,9 +29,28 @@ Comma : ',';
 
 Colon
     : ':'
-    | '-'
+    | '—'
     ;
 
 Period
     : '.'
+    | ';'
+    ;
+
+QuestionStart
+    : '¿'
+    ;
+
+QuestionEnd
+    : '?'
+    ;
+
+QuotationStart
+    : '“'
+    | '«'
+    ;
+
+QuotationEnd
+    : '”'
+    | '»'
     ;

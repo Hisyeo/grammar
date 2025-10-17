@@ -13,4 +13,4 @@ build-cpp:
     cwd=$(pwd); antlr4 -Dlanguage=Cpp -listener -visitor -o out/cpp -lib $cwd/grammar $cwd/grammar/*.g4
 
 parse:
-     antlr4-parse ./grammar/HisyeoLexer.g4 ./grammar/HisyeoParser.g4 sentences ./example.txt -gui
+     antlr4-parse ./grammar/HisyeoWordLexer.g4 ./grammar/HisyeoLexer.g4 ./grammar/HisyeoWordParser.g4 ./grammar/HisyeoParser.g4 sentences ./example.txt -gui
