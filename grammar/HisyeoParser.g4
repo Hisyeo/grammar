@@ -124,8 +124,8 @@ interjection
     ;
 
 contentParticles
-    : (In|Des) (Foko|Kon)?
-    | (Foko|Kon) (In|Des)?
+    : (In|Des) (Oni|Foko|Kon)?
+    | (Oni|Foko|Kon) (In|Des)?
     ;
 
 baseNoun: contentParticles? rawNouns ;
