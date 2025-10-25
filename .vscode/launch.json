@@ -6,7 +6,7 @@
             "type": "antlr-debug",
             "request": "launch",
             "input": "example.txt",
-            "grammar": "grammar/KokanuParser.g4",
+            "grammar": "grammar/HisyeoParser.g4",
             // "grammar": ["grammar/KokanuLexer.g4", "grammar/KokanuParser.g4"],
             // "actionFile": "grammars/exampleActions.js",
             "startRule": "sentences",
