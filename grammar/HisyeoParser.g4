@@ -10,7 +10,7 @@ sentences
     : QuestionStart? sentence
     ( sentencePunctuation QuestionStart? sentence
     | connector restrictedSentence
-    )* sentencePunctuation?
+    )* sentencePunctuation? EOF
     ;
 
 sentencePunctuation
@@ -20,13 +20,13 @@ sentencePunctuation
     ;
 
 sentence
-    : freeAgentConstituent constituent* postposition?
-    | connector? restrictedSentence postposition?
+    : freeAgentConstituent constituent* prepParticle? postposition?
+    | connector? restrictedSentence
     | interjection
     ;
 
 restrictedSentence
-    : constituent+ postposition?
+    : constituent+ prepParticle? postposition?
     ;
 
 freeAgentConstituent
