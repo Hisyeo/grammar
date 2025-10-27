@@ -35,8 +35,9 @@ freeAgentConstituent
     ;
 
 constituent
-    : prepParticle prepPhrase                              #preposition
-    | verbMarker? transitiveVerb verbModifier* prepPhrase? #verbalPreposition
+    : prepParticle prepPhrase                        #preposition
+    | verbMarker? Li verbModifier* prepPhrase        #copulativePreposition
+    | verbMarker? rawVerbs verbModifier* prepPhrase? #verbalPreposition
     ;
 
 adjectivalClause
@@ -55,10 +56,6 @@ adjectivalNucleus
 subordinateClause
     : Fos sentence prepParticle?
     | Xe restrictedSentence
-    ;
-
-transitiveVerb
-    : rawVerbs | Li
     ;
 
 quantity
