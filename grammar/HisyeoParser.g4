@@ -6,11 +6,12 @@ options {
 
 import HisyeoWordParser;
 
+document
+    : sentences EOF
+    ;
+
 sentences
-    : QuestionStart? sentence
-    ( sentencePunctuation QuestionStart? sentence
-    | connector restrictedSentence
-    )* sentencePunctuation? EOF
+    : (QuestionStart? sentence sentencePunctuation)+?
     ;
 
 sentencePunctuation
@@ -85,12 +86,12 @@ prepPhrase
     ;
 
 nominalNucleus
-    : ( pronoun
-      | relativeQuantity
-      | nominalQuantity
-      | baseNoun
-      | verbalNoun
-      | baseModifier )
+    : pronoun
+    | relativeQuantity
+    | nominalQuantity
+    | baseNoun
+    | verbalNoun
+    | baseModifier
     ;
 
 // Must update if words change
