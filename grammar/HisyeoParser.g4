@@ -6,8 +6,16 @@ options {
 
 import HisyeoWordParser;
 
-document
+sentencesStrict
     : sentences EOF
+    ;
+
+sentenceStrict
+    : sentence EOF
+    ;
+
+nounPhraseStrict
+    : prepPhrase EOF
     ;
 
 sentences
