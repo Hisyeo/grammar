@@ -30,6 +30,7 @@ Comma : ',';
 Colon
     : ':'
     | '—'
+    | '—'
     ;
 
 Period

@@ -138,8 +138,10 @@ baseNoun: contentParticles? rawNouns ;
 
 baseModifier: contentParticles? rawModifiers ;
 
+relativeQuantity: contentParticles? rawRelativeQuantity ;
+
 // Must update if words change
-relativeQuantity
+rawRelativeQuantity
     : Odigon
     | Eswen
     | Eto
@@ -154,8 +156,10 @@ relativeQuantity
     | Youti
     ;
 
+nominalQuantity: contentParticles? rawNominalQuantity ;
+
 // Must update if words change
-nominalQuantity
+rawNominalQuantity
     : Onsu
     | Kinse
     | Kut
