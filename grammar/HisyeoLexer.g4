@@ -25,6 +25,18 @@ fragment Lowercase
     | 'c' | 'z' | 'y' | 'l' | 'w' | 'h' | 'n' | 'm'
     ;
 
+
+RationalNumber: Digit+ (Comma Digit+)
+    ;
+
+WholeNumber: Digit+
+    ;
+
+fragment Digit
+    : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7'
+    | '8' | '9' | 'O' | 'B' | 'T' | 'Z' | 'K'
+    ;
+
 Comma : ',';
 
 Colon

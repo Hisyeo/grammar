@@ -53,7 +53,7 @@ adjectivalClause
     | Et ( nominalNucleus adjectivalClause* | subordinateClause  )
     | nominalNucleus
     | subordinateClause (postposition? Comma)??
-    | Et? ProperNoun
+    | Et? (ProperNoun | number)
     ;
 
 adjectivalNucleus
@@ -69,6 +69,7 @@ subordinateClause
 quantity
     : relativeQuantity? nominalQuantity+
     | relativeQuantity
+    | number
     ;
 
 // Must update if words change
@@ -155,6 +156,11 @@ rawRelativeQuantity
     | Menus
     | Youti
     ;
+
+
+number
+    : WholeNumber+ RationalNumber?
+    | RationalNumber ;
 
 nominalQuantity: contentParticles? rawNominalQuantity ;
 
