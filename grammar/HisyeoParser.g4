@@ -19,7 +19,7 @@ nounPhraseStrict
     ;
 
 sentences
-    : (QuestionStart? sentence sentencePunctuation)+?
+    : (QuestionStart? sentence (connector restrictedSentence)* sentencePunctuation)+?
     ;
 
 sentencePunctuation
@@ -81,6 +81,7 @@ nounPhrase
     : quantity? subordinateClause (Comma adjectivalClause*)?
     | quantity? nominalNucleus adjectivalClause*
     | QuotationStart sentences QuotationEnd
+    | QuotationStart prepPhrase QuotationEnd
     ;
 
 verbalNounPhrase
